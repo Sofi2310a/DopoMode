@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06 Loops</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theory4.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="../index.html" class="header-logo">DopoMode</a>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Main</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="theory.html" class="nav-link active">Theory</a>
+        </nav>
+      </div>
+
+   <div class="header-user">
+        <a href="/pages/profile.html" class="profile-link">
+          <span class="user-name">User67</span>
+          <div class="user-avatar">
+            <img src="../images/icon.png" alt="Profile">
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-container">
+    <aside class="sidebar">
+      <h2 class="sidebar-title">C++ course</h2>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="/pages/theory.html" class="menu-item">01 C++ Basics</a>
+        <a href="/pages/theory2.html" class="menu-item">02 Data Types</a>
+        <a href="/pages/theory3.html" class="menu-item">03 Operators</a>
+        <a href="/pages/theory4.html" class="menu-item">04 Conditions</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">PRACTICE</span>
+        <a href="/pages/theory5.html" class="menu-item">05 Basic Practice</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="/pages/theory6.html" class="menu-item active">06 Loops</a>
+        <a href="/pages/theory7.html" class="menu-item">07 Functions</a>
+        <a href="/pages/theory8.html" class="menu-item">08 Arrays &amp; Strings</a>
+        <a href="/pages/theory9.html" class="menu-item">09 Pointers</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">PRACTICE</span>
+        <a href="#" class="menu-item">10 Coding Practice</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="#" class="menu-item">11 Structs &amp; Enums</a>
+        <a href="#" class="menu-item">12 Classes &amp; Objects</a>
+        <a href="#" class="menu-item">13 Advanced OOP</a>
+        <a href="#" class="menu-item">14 STL &amp; Files</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">FINAL</span>
+        <a href="#" class="menu-item">15 Project</a>
+      </div>
+    </aside>
+
+    <main class="content-area">
+
+      <div class="search-bar">
+        <div class="search-input-wrap">
+          <input type="text" placeholder="Enter keyword" class="search-input">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+        <button class="btn-search" type="button">SEARCH</button>
+      </div>
+
+      <article class="lesson-article">
+
+        <h1>06 — Loops</h1>
+
+        <p>Imagine having to display the same message 100 times. Would you really want to write 100 separate lines of code?</p>
+        <p>That's exactly why we use <span class="text-pink">loops</span>. They let programs repeat actions automatically, saving time and making our programs easier to read.</p>
+        <p>In this lesson, you'll learn how to use three main types of loops in C++: <span class="text-pink">for</span>, <span class="text-pink">while</span>, and <span class="text-pink">do-while</span>.</p>
+
+        <h2>1. What Are Loops?</h2>
+        <p>A <span class="text-pink">loop</span> is a programming structure that repeats a block of code based on a <span class="text-pink">condition</span>.</p>
+        <p>Loops are commonly used for:</p>
+        <ul>
+          <li>Counting up or down.</li>
+          <li>Processing information step by step.</li>
+          <li>Repeating tasks without duplicating code.</li>
+        </ul>
+        <p>Each repetition of a loop is called an <span class="text-pink">iteration</span>.</p>
+        <p><em>Remember: A loop keeps repeating as long as its <span class="text-pink">condition</span> remains <span class="text-pink">true</span>.</em></p>
+
+        <h2>2. The for Loop</h2>
+        <p>The <span class="text-pink">for</span> loop is perfect when you know in advance how many times you want to repeat an action.</p>
+        <p>For example, let's display "Hello!" five times.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    for (int i = 1; i &lt;= 5; i++) {
+        std::cout &lt;&lt; "Hello!\n";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>Hello!
+Hello!
+Hello!
+Hello!
+Hello!</code></pre>
+
+        <p>Instead of writing five output statements, we used just one!</p>
+
+        <h3>How Does It Work?</h3>
+        <p>A typical <span class="text-pink">for</span> loop has three parts:</p>
+
+        <pre><code>for (initialization; condition; update) {
+    // Code to repeat
+}</code></pre>
+
+        <ul>
+          <li><span class="text-pink">Initialization</span> — runs once before the loop begins.</li>
+          <li><span class="text-pink">Condition</span> — is checked before each iteration. The loop continues while it's <span class="text-pink">true</span>.</li>
+          <li><span class="text-pink">Update</span> — runs after each completed iteration of the loop body.</li>
+        </ul>
+
+        <p>Let's trace the previous example:</p>
+        <ul>
+          <li><code>int i = 1</code> sets a counter starting at 1.</li>
+          <li><code>i &lt;= 5</code> allows the loop to continue while the counter is 5 or less.</li>
+          <li><code>i++</code> increases the counter by 1 after each run of the loop body.</li>
+        </ul>
+
+        <p><em>Remember: Use <span class="text-pink">for</span> when you know the number of repetitions in advance.</em></p>
+
+        <h2>3. The while Loop</h2>
+        <p>The <span class="text-pink">while</span> loop repeats a block of code as long as a <span class="text-pink">condition</span> is <span class="text-pink">true</span>.</p>
+        <p>It's especially useful when we don't know exactly how many repetitions will be needed.</p>
+
+        <pre><code>int number = 1;
+
+while (number &lt;= 5) {
+    std::cout &lt;&lt; number &lt;&lt; "\n";
+    number++;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>1
+2
+3
+4
+5</code></pre>
+
+        <h3>How Does It Work?</h3>
+        <ul>
+          <li>The program checks whether <code>number &lt;= 5</code>.</li>
+          <li>If the <span class="text-pink">condition</span> is <span class="text-pink">true</span>, it displays the number and increases it by one.</li>
+          <li>This repeats until <code>number</code> becomes 6. Then the <span class="text-pink">condition</span> becomes <span class="text-pink">false</span>, and the loop ends.</li>
+        </ul>
+
+        <p><em>Important: A <span class="text-pink">while</span> loop checks its <span class="text-pink">condition</span> before running. If the <span class="text-pink">condition</span> is <span class="text-pink">false</span> from the beginning, the loop body may not run at all.</em></p>
+
+        <h2>4. The do-while Loop</h2>
+        <p>The <span class="text-pink">do-while</span> loop is similar to <span class="text-pink">while</span>, except it checks its <span class="text-pink">condition</span> after executing the loop body.</p>
+
+        <pre><code>int number = 1;
+
+do {
+    std::cout &lt;&lt; number &lt;&lt; "\n";
+    number++;
+} while (number &lt;= 5);</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>1
+2
+3
+4
+5</code></pre>
+
+        <p>Now consider this example:</p>
+
+        <pre><code>int number = 10;
+
+do {
+    std::cout &lt;&lt; "This runs at least once!\n";
+} while (number &lt; 5);</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>This runs at least once!</code></pre>
+
+        <p>This behaves differently from the previous example, and there's an important difference.</p>
+        <p>Even though the <span class="text-pink">condition</span> is <span class="text-pink">false</span>, the message still appears once.</p>
+        <p>That makes <span class="text-pink">do-while</span> useful for situations like showing a menu or asking for input before deciding whether to repeat.</p>
+
+        <p><em>Remember: <span class="text-pink">do-while</span> always executes its body at least once.</em></p>
+
+        <h2>5. break and continue</h2>
+        <p>Sometimes you need extra control inside a loop.</p>
+        <p>C++ provides two useful statements: <span class="text-pink">break</span> and <span class="text-pink">continue</span>.</p>
+
+        <h3>break — Stop the Loop</h3>
+        <p><span class="text-pink">break</span> immediately exits the nearest enclosing loop.</p>
+
+        <pre><code>for (int i = 1; i &lt; 10; i++) {
+    if (i == 5) {
+        break;
+    }
+    std::cout &lt;&lt; i &lt;&lt; " ";
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>1 2 3 4</code></pre>
+
+        <p>When <code>i</code> becomes 5, <span class="text-pink">break</span> triggers and the loop stops completely.</p>
+
+        <h3>continue — Skip an Iteration</h3>
+        <p><span class="text-pink">continue</span> skips the remaining code in the current iteration and moves to the next one.</p>
+
+        <pre><code>for (int i = 1; i &lt;= 5; i++) {
+    if (i == 3) {
+        continue;
+    }
+    std::cout &lt;&lt; i &lt;&lt; " ";
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>1 2 4 5</code></pre>
+
+        <p>Here, the number 3 is skipped, but the loop continues.</p>
+
+        <p><em>Remember: <span class="text-pink">break</span> exits the loop early, while <span class="text-pink">continue</span> skips the remaining instructions in the current iteration.</em></p>
+
+        <h2>6. Nested Loops</h2>
+        <p>A <span class="text-pink">nested loop</span> is simply a loop inside another loop.</p>
+        <p>They're especially useful for creating tables, grids, and patterns.</p>
+        <p>Let's create a square made of stars.</p>
+
+        <pre><code>for (int row = 1; row &lt;= 3; row++) {
+    for (int column = 1; column &lt;= 3; column++) {
+        std::cout &lt;&lt; "* ";
+    }
+    std::cout &lt;&lt; "\n";
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>* * *
+* * *
+* * *</code></pre>
+
+        <p>Here's what's happening:</p>
+        <ul>
+          <li>The outer loop controls the rows.</li>
+          <li>The inner loop prints three stars for each row.</li>
+          <li>After each row finishes, <code>std::cout &lt;&lt; "\n";</code> moves to the next line.</li>
+        </ul>
+
+        <p>Each time the outer loop runs once, the inner loop completes all of its repetitions.</p>
+        <p><em>Remember: Nested loops run an inner loop inside an outer loop.</em></p>
+
+        <h2>7. Infinite Loops</h2>
+        <p>An <span class="text-pink">infinite loop</span> happens when a loop never stops because its stopping <span class="text-pink">condition</span> never becomes <span class="text-pink">false</span>.</p>
+        <p>Look at this example:</p>
+
+        <pre><code>int number = 1;
+
+while (number &lt;= 5) {
+    std::cout &lt;&lt; number &lt;&lt; "\n";
+}</code></pre>
+
+        <p>What's wrong?</p>
+        <p>The variable <code>number</code> never changes.</p>
+        <p>Since it always stays 1, the <span class="text-pink">condition</span> remains <span class="text-pink">true</span>, and the loop keeps printing the same number forever.</p>
+
+        <h3>How Do We Fix It?</h3>
+
+        <pre><code>int number = 1;
+
+while (number &lt;= 5) {
+    std::cout &lt;&lt; number &lt;&lt; "\n";
+    number++;
+}</code></pre>
+
+        <p>Now <code>number</code> increases on each iteration, and the loop stops when <code>number</code> becomes 6.</p>
+        <p>Some programs intentionally use loops that run continuously, such as game loops or background services. However, these programs also need ways to exit or respond to shutdown requests.</p>
+        <p><em>Remember: Always understand how your loop will end, unless continuous execution is intentional.</em></p>
+
+        <h2>8. Choosing the Right Loop</h2>
+        <p>All three loops can repeat code, and each has its strengths.</p>
+
+        <div class="table-wrap">
+          <table class="types-table">
+            <thead>
+              <tr>
+                <th>Loop</th>
+                <th>Used When</th>
+                <th>For Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>for</code></td>
+                <td>You know the number of repetitions in advance</td>
+                <td>Printing numbers from 1 to 100</td>
+              </tr>
+              <tr>
+                <td><code>while</code></td>
+                <td>You repeat while a condition is true before repeating</td>
+                <td>Reading input until a valid value is entered</td>
+              </tr>
+              <tr>
+                <td><code>do-while</code></td>
+                <td>The code must run at least once before checking the condition</td>
+                <td>Showing a menu and asking whether to continue</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>There isn't always just one "perfect" loop for a task — choose the one that makes your logic clearest and easiest to understand.</p>
+
+      </article>
+
+    </main>
+
+  </div>
+
+  <footer class="footer">
+    <img src="../images/rect.svg" alt="" class="footer-pattern">
+    <img src="../images/cloud.svg" alt="" class="footer-clouds">
+
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">DopoMode</div>
+        <p class="footer-tagline">Code smarter. Build harder. Master C++.</p>
+      </div>
+
+      <div class="footer-middle">
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="#" class="social-item">
+            <img src="../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="social-item">
+            <img src="../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+          <a href="#" class="social-item">
+            <img src="../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 DopeMode. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About Us</a>
+          <a href="theory.html">Theory</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

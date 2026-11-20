@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile — DopoMode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="/pages/main.html" class="header-logo">DopoMode</a>
+        <nav class="nav">
+          <a href="/pages/main.html" class="nav-link">Main</a>
+          <a href="/pages/about.html" class="nav-link">About Us</a> 
+          <a href="theory.html" class="nav-link">Theory</a>
+
+        </nav>
+      </div>
+
+      <div class="header-user">
+        <a href="/pages/profile.html" class="profile-link">
+          <span class="user-name">User67</span>
+          <div class="user-avatar">
+            <img src="../images/icon.png" alt="Profile">
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="profile-page">
+    <div class="profile-container">
+
+      <div class="profile-header-row">
+        <div class="profile-banner">
+          <div class="profile-avatar-wrap">
+
+            <img src="../images/Ellipse 18 (1).png" alt="Profile avatar" class="profile-avatar">
+          </div>
+
+          <div class="profile-identity">
+            <h1 class="profile-name">Alex Morgan</h1>
+            <p class="profile-email">alex.morgan@gmail.com</p>
+          </div>
+
+          <span class="profile-role">Student</span>
+        </div>
+
+        <button type="button" class="btn-edit" id="editProfileBtn">Edit</button>
+      </div>
+
+      <div class="profile-columns">
+
+        <div class="profile-col-left">
+
+          <section class="card-completed">
+            <h2 class="card-heading-center">Completed lessons</h2>
+            <div class="completed-body">
+              <div class="book-icon-wrap">
+                <img src="../images/open-book 1.png" alt="Book icon" class="book-icon">
+              </div>
+              <span class="lessons-count" id="fieldLessons">5</span>
+            </div>
+          </section>
+
+          <section class="card-contact">
+            <div class="contact-header">
+              <svg class="icon-user" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18" cy="11" r="6.5" fill="#2448ff"/>
+                <path d="M5 30C5 23.9249 10.8203 19 18 19C25.1797 19 31 23.9249 31 30V31.5H5V30Z" fill="#2448ff"/>
+              </svg>
+              <h2 class="contact-title">Contact Information</h2>
+            </div>
+
+            <div class="contact-body">
+              <div class="contact-labels">
+                <span>Name</span>
+                <span>Email</span>
+                <span>Phone n.</span>
+                <span>Gender</span>
+              </div>
+              <div class="contact-values">
+                <span id="fieldName">Varvara</span>
+                <span id="fieldEmail">Lela67@gmail.com</span>
+                <span id="fieldPhone">0658895600</span>
+                <span id="fieldGender">Male</span>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <div class="profile-col-right">
+
+          <section class="card-about">
+            <h2 class="card-title">About Me</h2>
+            <p class="card-text" id="fieldAbout">
+              Second-year Software Development &amp; Graphic Design student at IT STEP College, focusing on C++ (OOP), Python, and front-end web development (HTML, CSS, JS).
+            </p>
+          </section>
+
+          <section class="card-goals">
+            <h2 class="card-title">Learning goals</h2>
+            <ul class="goals-list" id="fieldGoals">
+              <li class="goal-item">
+                <span class="goal-badge goal-green"></span>
+                <span>Master C++ core concepts</span>
+              </li>
+              <li class="goal-item">
+                <span class="goal-badge goal-red"></span>
+                <span>Improve problem-solving skills</span>
+              </li>
+              <li class="goal-item">
+                <span class="goal-badge goal-red"></span>
+                <span>Build a personal project with C++</span>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <img src="../images/rect.svg" alt="" class="footer-pattern">
+    <img src="../images/cloud.svg" alt="" class="footer-clouds">
+
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">DopoMode</div>
+        <p class="footer-tagline">Code smarter. Build harder. Master C++.</p>
+      </div>
+
+      <div class="footer-middle">
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="#" class="social-item">
+            <img src="../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="social-item">
+            <img src="../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+          <a href="#" class="social-item">
+            <img src="../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 DopeMode. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/pages/about.html">About Us</a>
+          <a href="/pages/theory.html">Theory</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

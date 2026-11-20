@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #0b0a10;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-wrapper {
+    background-color: #0b0a10;
+    color: #ffffff;
+    padding: 20px 60px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: "Jersey 10", sans-serif;    
+    letter-spacing: 3px;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.nav-link,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-login {
+    padding: 10px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.btn-login:hover {
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-signin {
+    padding: 10px 22px;
+    background-color: #1652f0;
+    border: 1px solid #1652f0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.btn-signin:hover {
+    background-color: #1042c7;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.form-section {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title {
+    font-family: "Jersey 10", sans-serif;    
+    font-size: 90px;
+    font-weight: 700;
+    color: #0b0a10;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.social-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 45px;
+}
+
+.social-btn {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b0a10;
+    transition: 0.2s;
+}
+
+.social-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.form-subtitle {
+    font-size: 15px;
+    font-style: italic;
+    color: #444444;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.signin-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid #333333;
+    border-radius: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #0b0a10;
+    margin-bottom: 14px;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #888888;
+}
+
+.form-input:focus {
+    border-color: #1652f0;
+}
+
+.forgot-link {
+    font-size: 13px;
+    font-style: italic;
+    text-decoration: underline;
+    color: #555555;
+    margin-top: 2px;
+    margin-bottom: 45px;
+    transition: color 0.2s;
+}
+
+.forgot-link:hover {
+    color: #0b0a10;
+}
+
+.submit-btn {
+    background-color: #1652f0;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    padding: 15px 64px;
+    font-family: "Jersey 10", sans-serif;
+    letter-spacing: 3px;
+    font-size: 40px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #1042c7;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-img {
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}

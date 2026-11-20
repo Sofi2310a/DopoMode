@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08 Arrays & Strings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theory4.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="../index.html" class="header-logo">DopoMode</a>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Main</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="theory.html" class="nav-link active">Theory</a>
+        </nav>
+      </div>
+
+    <div class="header-user">
+        <a href="/pages/profile.html" class="profile-link">
+          <span class="user-name">User67</span>
+          <div class="user-avatar">
+            <img src="../images/icon.png" alt="Profile">
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="page-container">
+    <aside class="sidebar">
+      <h2 class="sidebar-title">C++ course</h2>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="/pages/theory.html" class="menu-item">01 C++ Basics</a>
+        <a href="/pages/theory2.html" class="menu-item">02 Data Types</a>
+        <a href="/pages/theory3.html" class="menu-item">03 Operators</a>
+        <a href="/pages/theory4.html" class="menu-item">04 Conditions</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">PRACTICE</span>
+        <a href="/pages/theory5.html" class="menu-item">05 Basic Practice</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="/pages/theory6.html" class="menu-item">06 Loops</a>
+        <a href="/pages/theory7.html" class="menu-item">07 Functions</a>
+        <a href="/pages/theory8.html" class="menu-item active">08 Arrays &amp; Strings</a>
+        <a href="#" class="menu-item">09 Pointers</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">PRACTICE</span>
+        <a href="#" class="menu-item">10 Coding Practice</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="#" class="menu-item">11 Structs &amp; Enums</a>
+        <a href="#" class="menu-item">12 Classes &amp; Objects</a>
+        <a href="#" class="menu-item">13 Advanced OOP</a>
+        <a href="#" class="menu-item">14 STL &amp; Files</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">FINAL</span>
+        <a href="#" class="menu-item">15 Project</a>
+      </div>
+    </aside>
+
+    <main class="content-area">
+
+      <div class="search-bar">
+        <div class="search-input-wrap">
+          <input type="text" placeholder="Enter keyword" class="search-input">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+        <button class="btn-search" type="button">SEARCH</button>
+      </div>
+
+      <article class="lesson-article">
+
+        <h1>08 — Arrays &amp; Strings</h1>
+
+        <p>Imagine you're writing a program that stores the scores of 100 players.</p>
+        <p>Creating 100 separate variables like <code>score1</code>, <code>score2</code>, <code>score3</code>... wouldn't be very practical, right?</p>
+        <p>In C++, <span class="text-pink">arrays</span> let you store multiple values of the same type in one collection, while <span class="text-pink">strings</span> let you work with text more easily.</p>
+        <p>Let's explore both!</p>
+
+        <h2>1. What Are Arrays?</h2>
+        <p>An <span class="text-pink">array</span> is a collection of elements of the same data type stored together in order.</p>
+        <p>Instead of creating five variables for five test scores, you can use one array.</p>
+
+        <pre><code>int scores[5] = {90, 85, 78, 92, 88};</code></pre>
+
+        <p>Here:</p>
+        <ul>
+          <li><code>int</code> is the data type of each element.</li>
+          <li><code>scores</code> is the array's name.</li>
+          <li><code>[5]</code> specifies that the array can hold 5 elements.</li>
+          <li><code>{90, 85, 78, 92, 88}</code> provides the initial values.</li>
+        </ul>
+        <p><em>Remember: All elements in a C++ array must have the same data type.</em></p>
+
+        <h2>2. Accessing Array Elements</h2>
+        <p>Each element in an array has an <span class="text-pink">index</span>, which is its position in the list.</p>
+        <p>In C++, array indexing starts at <span class="text-pink">0</span>, not 1.</p>
+        <p>So for a 5-element array, the valid indexes are <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, and <code>4</code>.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int scores[5] = {90, 85, 78, 92, 88};
+
+    std::cout &lt;&lt; "First score: " &lt;&lt; scores[0] &lt;&lt; "\n";
+    std::cout &lt;&lt; "Second score: " &lt;&lt; scores[1] &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>First score: 90
+Second score: 85</code></pre>
+
+        <h3>Changing an Element</h3>
+        <p>You can update an array element using its index, just like a regular variable.</p>
+
+        <pre><code>scores[1] = 95;
+std::cout &lt;&lt; "Updated second score: " &lt;&lt; scores[1] &lt;&lt; "\n";</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>Updated second score: 95</code></pre>
+
+        <p>Now the second element contains <code>95</code> instead of <code>85</code>.</p>
+        <p><em>Remember: The first element is always at index <code>0</code>.</em></p>
+
+        <h2>3. Arrays and Loops</h2>
+        <p>Arrays and loops work together naturally because loops can visit each element one by one.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    for (int i = 0; i &lt; 5; i++) {
+        std::cout &lt;&lt; numbers[i] &lt;&lt; " ";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>10 20 30 40 50</code></pre>
+
+        <p>The loop variable <code>i</code> goes from <code>0</code> to <code>4</code>, accessing <code>numbers[0]</code>, <code>numbers[1]</code>, <code>numbers[2]</code>, <code>numbers[3]</code>, and <code>numbers[4]</code>.</p>
+
+        <h3>Range-Based for Loop</h3>
+        <p>C++ also provides a simpler loop syntax for going through elements in an array.</p>
+
+        <pre><code>int numbers[5] = {10, 20, 30, 40, 50};
+
+for (int n : numbers) {
+    std::cout &lt;&lt; n &lt;&lt; " ";
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>10 20 30 40 50</code></pre>
+
+        <p>This is called a <span class="text-pink">range-based for loop</span>. It automatically visits each element, making the code shorter and easier to read.</p>
+        <p><em>Remember: Loops make it easy to display, process, or update every element in an array efficiently.</em></p>
+
+        <h2>4. Array Size and Common Mistakes</h2>
+        <p>A built-in C++ array has a fixed size once created.</p>
+
+        <pre><code>int numbers[3] = {5, 10, 15};</code></pre>
+
+        <p>This array contains exactly three elements, with indexes <code>0</code>, <code>1</code>, and <code>2</code>.</p>
+        <p>What happens if we try to access <code>numbers[5]</code>?</p>
+        <p>That goes <span class="text-pink">out of bounds</span> — reading or writing an element that doesn't exist! The program might display garbage values, crash, or behave unpredictably.</p>
+        <p><em>Important: Always stay within valid array indexes from <code>0</code> to <code>size - 1</code>. For collections that change size dynamically while a program runs, modern C++ also offers <code>std::vector</code>.</em></p>
+
+        <h2>5. Multidimensional Arrays</h2>
+        <p>Arrays can also have more than one dimension. A <span class="text-pink">2D array</span> can be thought of as a table with rows and columns.</p>
+
+        <pre><code>int grid[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
+};</code></pre>
+
+        <p>Here, <code>grid</code> has 2 rows and 3 columns.</p>
+        <ul>
+          <li>Row 0 contains <code>1, 2, 3</code>.</li>
+          <li>Row 1 contains <code>4, 5, 6</code>.</li>
+        </ul>
+        <p>The first index selects the row, and the second index selects the column. For example, <code>grid[1][2]</code> is <code>6</code>.</p>
+
+        <h3>Using Nested Loops</h3>
+        <p>Nested loops are often used to go through all elements of a 2D array.</p>
+
+        <pre><code>for (int row = 0; row &lt; 2; row++) {
+    for (int col = 0; col &lt; 3; col++) {
+        std::cout &lt;&lt; grid[row][col] &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; "\n";
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>1 2 3
+4 5 6</code></pre>
+
+        <p><em>Remember: 2D arrays are helpful for tables, game boards, and grids.</em></p>
+
+        <h2>6. What Are Strings?</h2>
+        <p>In C++, text is commonly stored using <span class="text-pink">std::string</span> from the <code>&lt;string&gt;</code> header.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::string greeting = "Hello, C++!";
+    std::cout &lt;&lt; greeting &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>Hello, C++!</code></pre>
+
+        <h3>char vs std::string</h3>
+        <p>Remember <code>char</code> from the Data Types lesson?</p>
+        <ul>
+          <li><code>char</code> holds a single character, like <code>'A'</code>.</li>
+          <li><code>std::string</code> holds a sequence of characters, like <code>"Apple"</code> or a full sentence.</li>
+        </ul>
+        <p><code>std::string</code> is much more flexible than raw character arrays for everyday text handling.</p>
+        <p><em>Remember: Include <code>&lt;string&gt;</code> when using <code>std::string</code>.</em></p>
+
+        <h2>7. Working with Strings</h2>
+        <p><code>std::string</code> makes common text operations straightforward.</p>
+
+        <h3>Combining Strings</h3>
+        <p>You can join strings together using the <code>+</code> operator.</p>
+
+        <pre><code>std::string firstName = "Alex";
+std::string lastName = "Smith";
+std::string fullName = firstName + " " + lastName;
+
+std::cout &lt;&lt; fullName &lt;&lt; "\n";</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>Alex Smith</code></pre>
+
+        <h3>Finding String Length</h3>
+        <p>The <code>length()</code> function returns the number of elements in a string.</p>
+
+        <pre><code>std::string text = "Hello";
+std::cout &lt;&lt; text.length() &lt;&lt; "\n";</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>5</code></pre>
+
+        <p>For ordinary English text, <code>length()</code> matches the number of characters. For text with accents, emojis, or multi-byte UTF-8 characters, note that <code>length()</code> counts bytes/code units rather than visual characters.</p>
+
+        <h3>Accessing Characters</h3>
+        <p>Just like an array, a string lets you access individual characters using indexes starting at <code>0</code>.</p>
+
+        <pre><code>std::string word = "Hello";
+std::cout &lt;&lt; word[0] &lt;&lt; "\n";</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>H</code></pre>
+
+        <p>You can also change a character by index:</p>
+
+        <pre><code>std::string word = "Hello";
+word[0] = 'J';
+std::cout &lt;&lt; word &lt;&lt; "\n";</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>Jello</code></pre>
+
+        <p>Be careful not to use an out-of-range index, which can cause undefined behavior.</p>
+        <p><em>Remember: Strings let you combine text, find its length, and access characters by index.</em></p>
+
+        <h2>8. Reading Strings from the User</h2>
+        <p>Using <code>std::cin &gt;&gt;</code> with a string stops reading at whitespace (such as a space, tab, or newline).</p>
+
+        <pre><code>std::string firstName;
+std::cout &lt;&lt; "Enter your first name: ";
+std::cin &gt;&gt; firstName;</code></pre>
+
+        <p>What if the user enters a full name with spaces?</p>
+
+        <h3>Reading an Entire Line</h3>
+        <p>To read a full line including spaces, use <code>std::getline(std::cin, variable)</code>.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::string fullName;
+
+    std::cout &lt;&lt; "Enter your full name: ";
+    std::getline(std::cin, fullName);
+
+    std::cout &lt;&lt; "Hello, " &lt;&lt; fullName &lt;&lt; "!\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Example Output:</p>
+        <pre class="output"><code>Enter your full name: Alex Smith
+Hello, Alex Smith!</code></pre>
+
+        <p>Now the program can read multi-word input like <code>Alex Smith</code> without cutting it off at the first space.</p>
+        <p><em>Remember: Use <code>std::getline</code> when you want to read an entire line that may contain spaces.</em></p>
+
+      </article>
+
+    </main>
+
+  </div>
+
+  <footer class="footer">
+    <img src="../images/rect.svg" alt="" class="footer-pattern">
+    <img src="../images/cloud.svg" alt="" class="footer-clouds">
+
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">DopoMode</div>
+        <p class="footer-tagline">Code smarter. Build harder. Master C++.</p>
+      </div>
+
+      <div class="footer-middle">
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="#" class="social-item">
+            <img src="../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="social-item">
+            <img src="../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+          <a href="#" class="social-item">
+            <img src="../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 DopeMode. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About Us</a>
+          <a href="theory.html">Theory</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

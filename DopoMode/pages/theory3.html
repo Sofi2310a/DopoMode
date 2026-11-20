@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 - Operators</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theory4.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="../index.html" class="header-logo">DopoMode</a>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Main</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="theory.html" class="nav-link active">Theory</a>
+        </nav>
+      </div>
+
+    <div class="header-user">
+        <a href="/pages/profile.html" class="profile-link">
+          <span class="user-name">User67</span>
+          <div class="user-avatar">
+            <img src="../images/icon.png" alt="Profile">
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-container">
+    <aside class="sidebar">
+      <h2 class="sidebar-title">C++ course</h2>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="/pages/theory.html" class="menu-item">01 C++ Basics</a>
+        <a href="/pages/theory2.html" class="menu-item">02 Data Types</a>
+        <a href="/pages/theory3.html" class="menu-item active">03 Operators</a>
+        <a href="/pages/theory4.html" class="menu-item">04 Conditions</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">PRACTICE</span>
+        <a href="/pages/theory5.html" class="menu-item">05 Basic Practice</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="/pages/theory6.html" class="menu-item">06 Loops</a>
+        <a href="/pages/theory7.html" class="menu-item">07 Functions</a>
+        <a href="/pages/theory8.html" class="menu-item">08 Arrays &amp; Strings</a>
+        <a href="/pages/theory9.html" class="menu-item">09 Pointers</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">PRACTICE</span>
+        <a href="#" class="menu-item">10 Coding Practice</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="#" class="menu-item">11 Structs &amp; Enums</a>
+        <a href="#" class="menu-item">12 Classes &amp; Objects</a>
+        <a href="#" class="menu-item">13 Advanced OOP</a>
+        <a href="#" class="menu-item">14 STL &amp; Files</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">FINAL</span>
+        <a href="#" class="menu-item">15 Project</a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content-area">
+
+      <div class="search-bar">
+        <div class="search-input-wrap">
+          <input type="text" placeholder="Enter keyword" class="search-input">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+        <button class="btn-search" type="button">SEARCH</button>
+      </div>
+
+      <article class="lesson-article">
+
+        <h1>03 — Operators</h1>
+
+        <p>Now that you know how to store information in variables, it's time to learn what you can do with it!</p>
+        <p>In this lesson, you'll discover how C++ performs calculations, compares values, and works with conditions.</p>
+        <p>These operations are essential for everything from simple calculators to interactive games.</p>
+
+        <!-- 1 -->
+        <h2>1. What Are Operators?</h2>
+        <p>Operators are symbols that tell C++ to perform an action on values or variables.</p>
+        <p>For example, the <code>+</code> operator adds two numbers:</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int result = 10 + 5;
+    std::cout &lt;&lt; result &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>15</code></pre>
+
+        <p>Here, <code>10</code> and <code>5</code> are the values we're working with, while <code>+</code> is the operator.</p>
+        <p>C++ provides different operators for calculations, comparisons, updating variables, and combining conditions.</p>
+        <p>Let's explore the most useful ones.</p>
+
+        <!-- 2 -->
+        <h2>2. Arithmetic Operators</h2>
+        <p>Arithmetic operators allow us to perform mathematical calculations.</p>
+
+        <div class="table-wrap">
+          <table class="types-table">
+            <thead><tr><th>Operator</th><th>Operation</th><th>Example</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr><td><code>+</code></td><td>Addition</td><td><code>5 + 3</code></td><td><code>8</code></td></tr>
+              <tr><td><code>-</code></td><td>Subtraction</td><td><code>5 - 3</code></td><td><code>2</code></td></tr>
+              <tr><td><code>*</code></td><td>Multiplication</td><td><code>5 * 3</code></td><td><code>15</code></td></tr>
+              <tr><td><code>/</code></td><td>Division</td><td><code>10 / 2</code></td><td><code>5</code></td></tr>
+              <tr><td><code>%</code></td><td>Remainder</td><td><code>10 % 3</code></td><td><code>1</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Let's try them in a program:</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int a = 10;
+    int b = 3;
+
+    std::cout &lt;&lt; "Sum: " &lt;&lt; a + b &lt;&lt; "\n";
+    std::cout &lt;&lt; "Division: " &lt;&lt; a / b &lt;&lt; "\n";
+    std::cout &lt;&lt; "Remainder: " &lt;&lt; a % b &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>Sum: 13
+Division: 3
+Remainder: 1</code></pre>
+
+        <h3>Integer Division</h3>
+        <p>Notice something interesting: <code>10 / 3</code> gives us <code>3</code>, not <code>3.33</code>.</p>
+        <p>That's because both numbers are integers. When dividing two integers, C++ discards the fractional part of the result. To get a decimal result, use floating-point numbers:</p>
+
+        <pre><code>double result = 10.0 / 3.0;
+std::cout &lt;&lt; result &lt;&lt; "\n";</code></pre>
+
+        <p class="output-label">Output (with default formatting):</p>
+        <pre class="output"><code>3.33333</code></pre>
+
+        <h3>What Does % Do?</h3>
+        <p>The <code>%</code> operator gives us the remainder of integer division.</p>
+        <p>For example:</p>
+
+        <pre><code>std::cout &lt;&lt; 10 % 3;</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>1</code></pre>
+
+        <p>Why? Because <code>3</code> fits into <code>10</code> three times, leaving a remainder of <code>1</code>.</p>
+        <p>This operator is useful for checking whether a number is even or odd.</p>
+        <p>For example, <code>number % 2</code> equals <code>0</code> for an even integer.</p>
+        <p><em>Remember: / performs division, while % calculates the remainder of integer division. Dividing by zero is not allowed for integer arithmetic.</em></p>
+
+        <!-- 3 -->
+        <h2>3. Assignment Operators</h2>
+        <p>Assignment operators allow us to store and update values in variables.</p>
+        <p>You've already used the basic assignment operator <code>=</code>:</p>
+
+        <pre><code>int score = 10;</code></pre>
+
+        <p>But C++ also provides shorter ways to update values.</p>
+
+        <div class="table-wrap">
+          <table class="types-table">
+            <thead><tr><th>Operator</th><th>Example</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td><code>=</code></td><td><code>x = 5</code></td><td>Assign 5 to x</td></tr>
+              <tr><td><code>+=</code></td><td><code>x += 3</code></td><td>Add 3 to x</td></tr>
+              <tr><td><code>-=</code></td><td><code>x -= 3</code></td><td>Subtract 3 from x</td></tr>
+              <tr><td><code>*=</code></td><td><code>x *= 3</code></td><td>Multiply x by 3</td></tr>
+              <tr><td><code>/=</code></td><td><code>x /= 3</code></td><td>Divide x by 3</td></tr>
+              <tr><td><code>%=</code></td><td><code>x %= 3</code></td><td>Store the remainder</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Imagine you're creating a game where a player earns points.</p>
+
+        <pre><code>int score = 10;
+score += 5;
+
+std::cout &lt;&lt; score &lt;&lt; "\n";</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>15</code></pre>
+
+        <p>Instead of writing:</p>
+        <pre><code>score = score + 5;</code></pre>
+
+        <p>We can simply write:</p>
+        <pre><code>score += 5;</code></pre>
+
+        <p>Both have the same effect in this example, but the second version is shorter.</p>
+        <p><em>Remember: Compound assignment operators make updating values easier and keep code concise.</em></p>
+
+        <!-- 4 -->
+        <h2>4. Comparison Operators</h2>
+        <p>Programs often need to compare values.</p>
+        <p>For example, a website might check whether someone is old enough to access certain content.</p>
+        <p>C++ provides comparison operators for this purpose.</p>
+
+        <div class="table-wrap">
+          <table class="types-table">
+            <thead><tr><th>Operator</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td><code>==</code></td><td>Equal to</td></tr>
+              <tr><td><code>!=</code></td><td>Not equal to</td></tr>
+              <tr><td><code>&gt;</code></td><td>Greater than</td></tr>
+              <tr><td><code>&lt;</code></td><td>Less than</td></tr>
+              <tr><td><code>&gt;=</code></td><td>Greater than or equal to</td></tr>
+              <tr><td><code>&lt;=</code></td><td>Less than or equal to</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>A comparison produces a Boolean result: <code>true</code> or <code>false</code>.</p>
+        <p>Let's check whether someone is at least 18 years old.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int age = 18;
+    std::cout &lt;&lt; std::boolalpha &lt;&lt; (age &gt;= 18) &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>true</code></pre>
+
+        <p>The comparison is true because 18 is equal to 18.</p>
+
+        <h3>Don't Confuse = vs ==</h3>
+        <p>This is one of the most common beginner mistakes!</p>
+
+        <pre><code>age = 18;</code></pre>
+        <p>The <code>=</code> operator assigns a value.</p>
+
+        <pre><code>age == 18;</code></pre>
+        <p>The <code>==</code> operator checks whether two values are equal.</p>
+
+        <p>They may look similar, but they perform completely different tasks.</p>
+        <p><em>Remember: Use = to assign values and == to compare them.</em></p>
+
+        <!-- 5 -->
+        <h2>5. Logical Operators</h2>
+        <p>Sometimes checking just one condition isn't enough. Imagine an event where a visitor must be at least 18 years old and have a ticket. We need to check two conditions at once. That's where logical operators come in.</p>
+
+        <div class="table-wrap">
+          <table class="types-table">
+            <thead><tr><th>Operator</th><th>Name</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td><code>&amp;&amp;</code></td><td>AND</td><td>True when both conditions are true</td></tr>
+              <tr><td><code>||</code></td><td>OR</td><td>True when at least one condition is true</td></tr>
+              <tr><td><code>!</code></td><td>NOT</td><td>Reverses a Boolean value</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>AND Operator (&amp;&amp;)</h3>
+        <p>Both conditions must be true.</p>
+
+        <pre><code>int age = 20;
+bool hasTicket = true;
+
+std::cout &lt;&lt; std::boolalpha &lt;&lt; (age &gt;= 18 &amp;&amp; hasTicket);</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>true</code></pre>
+
+        <p>The visitor is old enough and has a ticket, so the combined condition is true.</p>
+
+        <h3>OR Operator (||)</h3>
+        <p>Only one condition needs to be true.</p>
+
+        <pre><code>bool hasStudentCard = true;
+bool hasDiscountCode = false;
+
+std::cout &lt;&lt; std::boolalpha &lt;&lt; (hasStudentCard || hasDiscountCode);</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>true</code></pre>
+
+        <p>At least one condition is true, so the result is true.</p>
+
+        <h3>NOT Operator (!)</h3>
+        <p>The NOT operator reverses a Boolean value.</p>
+
+        <pre><code>bool isGameOver = false;
+
+std::cout &lt;&lt; std::boolalpha &lt;&lt; !isGameOver;</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>true</code></pre>
+
+        <p>Because <code>isGameOver</code> is <code>false</code>, <code>!isGameOver</code> becomes <code>true</code>.</p>
+        <p><em>Remember: Logical operators help programs combine conditions and make more complex decisions.</em></p>
+
+        <!-- 6 -->
+        <h2>6. Increment and Decrement</h2>
+        <p>Sometimes we simply need to increase or decrease a number by one.</p>
+        <p>For example, imagine counting how many players have joined a game.</p>
+        <p>C++ provides two convenient operators:</p>
+        <ul>
+          <li><code>++</code> increases a value by 1.</li>
+          <li><code>--</code> decreases a value by 1.</li>
+        </ul>
+
+        <p>Let's see them in action.</p>
+
+        <pre><code>int players = 5;
+
+players++;
+std::cout &lt;&lt; players &lt;&lt; "\n";
+
+players--;
+std::cout &lt;&lt; players &lt;&lt; "\n";</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>6
+5</code></pre>
+
+        <p>These operators are especially useful in counters and loops.</p>
+
+        <h3>Prefix and Postfix</h3>
+        <p>You may also encounter two ways to write these operators:</p>
+
+        <pre><code>++players;
+players++;</code></pre>
+
+        <p>Both increase the variable by one.</p>
+        <p>However, when used inside larger expressions, they behave differently:</p>
+        <ul>
+          <li><code>++players</code> increments the variable and produces its updated value.</li>
+          <li><code>players++</code> increments the variable but produces its previous value.</li>
+        </ul>
+        <p>For now, using either as a separate statement is straightforward. We'll explore their differences further when learning loops.</p>
+
+        <!-- 7 -->
+        <h2>7. Operator Precedence</h2>
+        <p>What happens when an expression contains several operators?</p>
+        <p>Consider this example:</p>
+
+        <pre><code>std::cout &lt;&lt; 5 + 3 * 2;</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>11</code></pre>
+
+        <p>Why isn't the answer 16?</p>
+        <p>Because multiplication has higher precedence than addition.</p>
+        <p>C++ groups the multiplication first:</p>
+
+        <pre><code>5 + (3 * 2) = 11</code></pre>
+
+        <h3>Using Parentheses</h3>
+        <p>We can change the grouping by adding parentheses.</p>
+
+        <pre><code>std::cout &lt;&lt; (5 + 3) * 2;</code></pre>
+
+        <p class="output-label">Output:</p>
+        <pre class="output"><code>16</code></pre>
+
+        <p>Now the addition is grouped first.</p>
+        <p>Operator precedence determines how an expression is grouped, but it does not always determine the order in which every part is evaluated.</p>
+        <p>For beginners, the best habit is simple: use parentheses whenever they make an expression easier to <strong>understand</strong>.</p>
+        <p>Clear code is always better than code that makes readers guess.</p>
+
+        <!-- 8 -->
+        <h2>8. Lesson Summary</h2>
+        <p>Operators are small symbols with an important role in programming. They allow your code to calculate numbers, update values, compare information, and evaluate conditions. You'll use them in almost every program you create. The best way to remember them is through practice. Try changing the numbers and operators in our examples and see how the results change. Next Lesson: 04 — Conditions Now that you know how to compare values and work with logical expressions, you're ready to make your programs smarter!</p>
+        <p>In the next lesson, you'll learn how to use if, else, and switch to make your programs choose different actions based on different situations.</p>
+
+      </article>
+
+    </main>
+
+  </div>
+
+  <footer class="footer">
+    <img src="../images/rect.svg" alt="" class="footer-pattern">
+    <img src="../images/cloud.svg" alt="" class="footer-clouds">
+
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">DopoMode</div>
+        <p class="footer-tagline">Code smarter. Build harder. Master C++.</p>
+      </div>
+
+      <div class="footer-middle">
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="#" class="social-item">
+            <img src="../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="social-item">
+            <img src="../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+          <a href="#" class="social-item">
+            <img src="../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 DopeMode. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About Us</a>
+          <a href="theory.html">Theory</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

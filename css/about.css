@@ -106,10 +106,11 @@ a {
 }
 
 .header-logo {
-    font-family: "Jersey 10", sans-serif;    
-    letter-spacing: 3px;
-    font-size: 40px;
-    color: #ffffff;
+  font-family: "Jersey 10", sans-serif;
+  letter-spacing: 4px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .nav {

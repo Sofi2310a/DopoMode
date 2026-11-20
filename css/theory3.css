@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +18,32 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.username {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
 
 .header {
   background-color: #0b0a10;
@@ -41,7 +70,8 @@ a {
 
 .header-logo {
   font-family: "Jersey 10", sans-serif;
-  font-size: clamp(22px, 3vw, 28px);
+  letter-spacing: 4px;
+  font-size: 40px;
   font-weight: 700;
   color: #ffffff;
 }
@@ -459,23 +489,26 @@ a {
   width: 100%;
 }
 
+
 .lesson-article h1,
 .lesson-article h2 {
   font-family: "Jersey 10", sans-serif;
+  letter-spacing: 8px;
   color: #1f4eff;
   font-weight: 700;
 }
 
 .lesson-article h1 {
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 25px;
 }
 
 .lesson-article h2 {
-  font-size: 23px;
+  font-size: 30px;
   margin-top: 50px;
   margin-bottom: 22px;
 }
+
 
 .lesson-article h3 {
   font-family: 'Montserrat', sans-serif;

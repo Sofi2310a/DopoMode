@@ -1,0 +1,167 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #0b0a10;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    background-color: #0b0a10;
+    color: #ffffff;
+    padding: 20px 60px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    font-family: "Silkscreen", "Montserrat", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-right: auto;
+}
+
+.nav a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-login,
+.btn-signin {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.btn-login {
+    border: 1px solid #ffffff;
+}
+
+.btn-signin {
+    background-color: #1652f0;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+
+.form-section {
+    width: 100%;
+    max-width: 450px;
+    padding-top: 10px;
+}
+
+.form-title {
+    font-family: "Jersey 10", "Montserrat", sans-serif;
+    font-size: 76px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+.form-subtitle {
+    font-size: 15px;
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.reset-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.form-input {
+    width: 100%;
+    height: 54px;
+    padding: 0 20px;
+    border: 1px solid #333333;
+    border-radius: 14px;
+    background-color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #0b0a10;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #999999;
+}
+
+.form-input:focus {
+    border-color: #1652f0;
+}
+
+.reset-btn {
+    width: 200px;
+    height: 64px;
+    margin: 35px auto 0;
+    background-color: #1652f0;
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    font-family: "Jersey 10", "Montserrat", sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: #1043cb;
+}
+
+.image-section {
+    width: 480px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.character-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

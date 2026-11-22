@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>08 Масиви та рядки</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item" href="theory2.html">02 Типи даних</a>
+<a class="menu-item" href="theory3.html">03 Оператори</a>
+<a class="menu-item" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory6.html">06 Цикли</a>
+<a class="menu-item" href="theory7.html">07 Функції</a>
+<a class="menu-item active" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item" href="#">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="#">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="#">11 Структури та перелічення</a>
+<a class="menu-item" href="#">12 Класи та об’єкти</a>
+<a class="menu-item" href="#">13 Просунуте ООП</a>
+<a class="menu-item" href="#">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item" href="#">15 Проєкт</a>
+</div>
+</aside>
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Введіть ключове слово" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">ПОШУК</button>
+</div>
+<article class="lesson-article">
+<h1>08 — Масиви та рядки</h1>
+<p>Уяви, що ти пишеш програму, яка зберігає результати 100 гравців.</p>
+<p>Створювати 100 окремих змінних, як-от <code>score1</code>, <code>score2</code>, <code>score3</code>..., було б не дуже практично, правда?</p>
+<p>У C++ <span class="text-pink">масиви</span> дозволяють зберігати кілька значень одного типу в одній колекції, а <span class="text-pink">рядки</span> — легше працювати з текстом.</p>
+<p>Дослідімо обидва!</p>
+<h2>1. Що таке масиви?</h2>
+<p><span class="text-pink">Масив</span> — це колекція елементів одного типу даних, що зберігаються разом у певному порядку.</p>
+<p>Замість створення п’яти змінних для п’яти результатів тестів можна використати один масив.</p>
+<pre><code>int scores[5] = {90, 85, 78, 92, 88};</code></pre>
+<p>Тут:</p>
+<ul>
+<li><code>int</code> — тип даних кожного елемента.</li>
+<li><code>scores</code> — ім’я масиву.</li>
+<li><code>[5]</code> вказує, що масив може містити 5 елементів.</li>
+<li><code>{90, 85, 78, 92, 88}</code> задає початкові значення.</li>
+</ul>
+<p><em>Пам’ятай: усі елементи масиву в C++ повинні мати однаковий тип даних.</em></p>
+<h2>2. Доступ до елементів масиву</h2>
+<p>Кожен елемент масиву має <span class="text-pink">індекс</span> — свою позицію в списку.</p>
+<p>У C++ індексація масивів починається з <span class="text-pink">0</span>, а не з 1.</p>
+<p>Тож для масиву з 5 елементів допустимі індекси: <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code> і <code>4</code>.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int scores[5] = {90, 85, 78, 92, 88};
+
+    std::cout &lt;&lt; "First score: " &lt;&lt; scores[0] &lt;&lt; "\n";
+    std::cout &lt;&lt; "Second score: " &lt;&lt; scores[1] &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>First score: 90
+Second score: 85</code></pre>
+<h3>Зміна елемента</h3>
+<p>Ти можеш оновити елемент масиву за його індексом, так само як звичайну змінну.</p>
+<pre><code>scores[1] = 95;
+std::cout &lt;&lt; "Updated second score: " &lt;&lt; scores[1] &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Updated second score: 95</code></pre>
+<p>Тепер другий елемент містить <code>95</code> замість <code>85</code>.</p>
+<p><em>Пам’ятай: перший елемент завжди має індекс <code>0</code>.</em></p>
+<h2>3. Масиви та цикли</h2>
+<p>Масиви та цикли природно працюють разом, адже цикли можуть по черзі відвідувати кожен елемент.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int numbers[5] = {10, 20, 30, 40, 50};
+
+    for (int i = 0; i &lt; 5; i++) {
+        std::cout &lt;&lt; numbers[i] &lt;&lt; " ";
+    }
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>10 20 30 40 50</code></pre>
+<p>Змінна циклу <code>i</code> змінюється від <code>0</code> до <code>4</code>, звертаючись до <code>numbers[0]</code>, <code>numbers[1]</code>, <code>numbers[2]</code>, <code>numbers[3]</code> і <code>numbers[4]</code>.</p>
+<h3>Цикл for за діапазоном</h3>
+<p>C++ також пропонує простіший синтаксис циклу для проходу по елементах масиву.</p>
+<pre><code>int numbers[5] = {10, 20, 30, 40, 50};
+
+for (int n : numbers) {
+    std::cout &lt;&lt; n &lt;&lt; " ";
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>10 20 30 40 50</code></pre>
+<p>Це називається <span class="text-pink">циклом for за діапазоном</span> (range-based for). Він автоматично відвідує кожен елемент, роблячи код коротшим і легшим для читання.</p>
+<p><em>Пам’ятай: цикли дозволяють ефективно виводити, обробляти або оновлювати кожен елемент масиву.</em></p>
+<h2>4. Розмір масиву та типові помилки</h2>
+<p>Вбудований масив C++ має фіксований розмір після створення.</p>
+<pre><code>int numbers[3] = {5, 10, 15};</code></pre>
+<p>Цей масив містить рівно три елементи з індексами <code>0</code>, <code>1</code> і <code>2</code>.</p>
+<p>Що станеться, якщо ми спробуємо звернутися до <code>numbers[5]</code>?</p>
+<p>Це вихід <span class="text-pink">за межі масиву</span> — читання або запис неіснуючого елемента! Програма може показати сміттєві значення, аварійно завершитися або поводитися непередбачувано.</p>
+<p><em>Важливо: завжди залишайся в межах допустимих індексів масиву від <code>0</code> до <code>size - 1</code>. Для колекцій, розмір яких динамічно змінюється під час роботи програми, сучасний C++ також пропонує <code>std::vector</code>.</em></p>
+<h2>5. Багатовимірні масиви</h2>
+<p>Масиви можуть мати більше одного виміру. <span class="text-pink">Двовимірний масив</span> можна уявити як таблицю з рядками та стовпцями.</p>
+<pre><code>int grid[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
+};</code></pre>
+<p>Тут <code>grid</code> має 2 рядки та 3 стовпці.</p>
+<ul>
+<li>Рядок 0 містить <code>1, 2, 3</code>.</li>
+<li>Рядок 1 містить <code>4, 5, 6</code>.</li>
+</ul>
+<p>Перший індекс вибирає рядок, а другий — стовпець. Наприклад, <code>grid[1][2]</code> дорівнює <code>6</code>.</p>
+<h3>Використання вкладених циклів</h3>
+<p>Вкладені цикли часто використовують для проходу по всіх елементах двовимірного масиву.</p>
+<pre><code>for (int row = 0; row &lt; 2; row++) {
+    for (int col = 0; col &lt; 3; col++) {
+        std::cout &lt;&lt; grid[row][col] &lt;&lt; " ";
+    }
+    std::cout &lt;&lt; "\n";
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>1 2 3
+4 5 6</code></pre>
+<p><em>Пам’ятай: двовимірні масиви корисні для таблиць, ігрових полів і сіток.</em></p>
+<h2>6. Що таке рядки?</h2>
+<p>У C++ текст зазвичай зберігають за допомогою <span class="text-pink">std::string</span> із заголовка <code>&lt;string&gt;</code>.</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::string greeting = "Hello, C++!";
+    std::cout &lt;&lt; greeting &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Hello, C++!</code></pre>
+<h3>char проти std::string</h3>
+<p>Пам’ятаєш <code>char</code> з уроку про типи даних?</p>
+<ul>
+<li><code>char</code> містить один символ, наприклад <code>'A'</code>.</li>
+<li><code>std::string</code> містить послідовність символів, наприклад <code>"Apple"</code> або ціле речення.</li>
+</ul>
+<p><code>std::string</code> набагато гнучкіший за «сирі» масиви символів для повсякденної роботи з текстом.</p>
+<p><em>Пам’ятай: підключай <code>&lt;string&gt;</code>, коли використовуєш <code>std::string</code>.</em></p>
+<h2>7. Робота з рядками</h2>
+<p><code>std::string</code> робить поширені операції з текстом простими.</p>
+<h3>Об’єднання рядків</h3>
+<p>Ти можеш з’єднувати рядки за допомогою оператора <code>+</code>.</p>
+<pre><code>std::string firstName = "Alex";
+std::string lastName = "Smith";
+std::string fullName = firstName + " " + lastName;
+
+std::cout &lt;&lt; fullName &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Alex Smith</code></pre>
+<h3>Визначення довжини рядка</h3>
+<p>Функція <code>length()</code> повертає кількість елементів у рядку.</p>
+<pre><code>std::string text = "Hello";
+std::cout &lt;&lt; text.length() &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>5</code></pre>
+<p>Для звичайного англійського тексту <code>length()</code> збігається з кількістю символів. Для тексту з діакритичними знаками, емодзі або багатобайтовими символами UTF-8 зауваж, що <code>length()</code> рахує байти/кодові одиниці, а не візуальні символи.</p>
+<h3>Доступ до символів</h3>
+<p>Так само, як і в масиві, рядок дозволяє звертатися до окремих символів за індексами, що починаються з <code>0</code>.</p>
+<pre><code>std::string word = "Hello";
+std::cout &lt;&lt; word[0] &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>H</code></pre>
+<p>Ти також можеш змінити символ за індексом:</p>
+<pre><code>std::string word = "Hello";
+word[0] = 'J';
+std::cout &lt;&lt; word &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Jello</code></pre>
+<p>Будь обережним і не використовуй індекс поза допустимим діапазоном, адже це може призвести до невизначеної поведінки.</p>
+<p><em>Пам’ятай: рядки дозволяють поєднувати текст, дізнаватися його довжину та звертатися до символів за індексом.</em></p>
+<h2>8. Читання рядків від користувача</h2>
+<p>Використання <code>std::cin &gt;&gt;</code> із рядком зупиняє читання на пробільному символі (такому як пробіл, табуляція чи новий рядок).</p>
+<pre><code>std::string firstName;
+std::cout &lt;&lt; "Enter your first name: ";
+std::cin &gt;&gt; firstName;</code></pre>
+<p>А що, якщо користувач вводить повне ім’я з пробілами?</p>
+<h3>Читання цілого рядка</h3>
+<p>Щоб прочитати повний рядок разом із пробілами, використовуй <code>std::getline(std::cin, variable)</code>.</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    std::string fullName;
+
+    std::cout &lt;&lt; "Enter your full name: ";
+    std::getline(std::cin, fullName);
+
+    std::cout &lt;&lt; "Hello, " &lt;&lt; fullName &lt;&lt; "!\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Приклад виводу:</p>
+<pre class="output"><code>Enter your full name: Alex Smith
+Hello, Alex Smith!</code></pre>
+<p>Тепер програма може читати ввід із кількох слів, наприклад <code>Alex Smith</code>, не обриваючи його на першому пробілі.</p>
+<p><em>Пам’ятай: використовуй <code>std::getline</code>, коли хочеш прочитати цілий рядок, що може містити пробіли.</em></p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

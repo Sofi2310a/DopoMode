@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>03 - Оператори</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item" href="theory2.html">02 Типи даних</a>
+<a class="menu-item active" href="theory3.html">03 Оператори</a>
+<a class="menu-item" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory6.html">06 Цикли</a>
+<a class="menu-item" href="theory7.html">07 Функції</a>
+<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item" href="theory9.html">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="#">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="#">11 Структури та перелічення</a>
+<a class="menu-item" href="#">12 Класи та об’єкти</a>
+<a class="menu-item" href="#">13 Просунуте ООП</a>
+<a class="menu-item" href="#">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item" href="#">15 Проєкт</a>
+</div>
+</aside>
+<!-- MAIN CONTENT -->
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Введіть ключове слово" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">ПОШУК</button>
+</div>
+<article class="lesson-article">
+<h1>03 — Оператори</h1>
+<p>Тепер, коли ти знаєш, як зберігати інформацію у змінних, настав час дізнатися, що з нею можна робити!</p>
+<p>У цьому уроці ти дізнаєшся, як C++ виконує обчислення, порівнює значення та працює з умовами.</p>
+<p>Ці операції необхідні для всього — від простих калькуляторів до інтерактивних ігор.</p>
+<!-- 1 -->
+<h2>1. Що таке оператори?</h2>
+<p>Оператори — це символи, які наказують C++ виконати дію над значеннями або змінними.</p>
+<p>Наприклад, оператор <code>+</code> додає два числа:</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int result = 10 + 5;
+    std::cout &lt;&lt; result &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>15</code></pre>
+<p>Тут <code>10</code> і <code>5</code> — значення, з якими ми працюємо, а <code>+</code> — оператор.</p>
+<p>C++ надає різні оператори для обчислень, порівнянь, оновлення змінних і об’єднання умов.</p>
+<p>Розгляньмо найкорисніші з них.</p>
+<!-- 2 -->
+<h2>2. Арифметичні оператори</h2>
+<p>Арифметичні оператори дозволяють виконувати математичні обчислення.</p>
+<div class="table-wrap">
+<table class="types-table">
+<thead><tr><th>Оператор</th><th>Операція</th><th>Приклад</th><th>Результат</th></tr></thead>
+<tbody>
+<tr><td><code>+</code></td><td>Додавання</td><td><code>5 + 3</code></td><td><code>8</code></td></tr>
+<tr><td><code>-</code></td><td>Віднімання</td><td><code>5 - 3</code></td><td><code>2</code></td></tr>
+<tr><td><code>*</code></td><td>Множення</td><td><code>5 * 3</code></td><td><code>15</code></td></tr>
+<tr><td><code>/</code></td><td>Ділення</td><td><code>10 / 2</code></td><td><code>5</code></td></tr>
+<tr><td><code>%</code></td><td>Остача</td><td><code>10 % 3</code></td><td><code>1</code></td></tr>
+</tbody>
+</table>
+</div>
+<p>Спробуймо їх у програмі:</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int a = 10;
+    int b = 3;
+
+    std::cout &lt;&lt; "Sum: " &lt;&lt; a + b &lt;&lt; "\n";
+    std::cout &lt;&lt; "Division: " &lt;&lt; a / b &lt;&lt; "\n";
+    std::cout &lt;&lt; "Remainder: " &lt;&lt; a % b &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Sum: 13
+Division: 3
+Remainder: 1</code></pre>
+<h3>Цілочисельне ділення</h3>
+<p>Зверни увагу на цікавий факт: <code>10 / 3</code> дає <code>3</code>, а не <code>3.33</code>.</p>
+<p>Це тому, що обидва числа цілі. Під час ділення двох цілих чисел C++ відкидає дробову частину результату. Щоб отримати десятковий результат, використовуй числа з плаваючою комою:</p>
+<pre><code>double result = 10.0 / 3.0;
+std::cout &lt;&lt; result &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід (зі стандартним форматуванням):</p>
+<pre class="output"><code>3.33333</code></pre>
+<h3>Що робить %?</h3>
+<p>Оператор <code>%</code> повертає остачу від цілочисельного ділення.</p>
+<p>Наприклад:</p>
+<pre><code>std::cout &lt;&lt; 10 % 3;</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>1</code></pre>
+<p>Чому? Тому що <code>3</code> вміщується в <code>10</code> тричі, залишаючи остачу <code>1</code>.</p>
+<p>Цей оператор корисний для перевірки, парне число чи непарне.</p>
+<p>Наприклад, <code>number % 2</code> дорівнює <code>0</code> для парного цілого числа.</p>
+<p><em>Пам’ятай: / виконує ділення, а % обчислює остачу від цілочисельного ділення. Ділити на нуль у цілочисельній арифметиці не можна.</em></p>
+<!-- 3 -->
+<h2>3. Оператори присвоєння</h2>
+<p>Оператори присвоєння дозволяють зберігати та оновлювати значення у змінних.</p>
+<p>Ти вже використовував базовий оператор присвоєння <code>=</code>:</p>
+<pre><code>int score = 10;</code></pre>
+<p>Але C++ також надає коротші способи оновлення значень.</p>
+<div class="table-wrap">
+<table class="types-table">
+<thead><tr><th>Оператор</th><th>Приклад</th><th>Значення</th></tr></thead>
+<tbody>
+<tr><td><code>=</code></td><td><code>x = 5</code></td><td>Присвоїти x значення 5</td></tr>
+<tr><td><code>+=</code></td><td><code>x += 3</code></td><td>Додати 3 до x</td></tr>
+<tr><td><code>-=</code></td><td><code>x -= 3</code></td><td>Відняти 3 від x</td></tr>
+<tr><td><code>*=</code></td><td><code>x *= 3</code></td><td>Помножити x на 3</td></tr>
+<tr><td><code>/=</code></td><td><code>x /= 3</code></td><td>Поділити x на 3</td></tr>
+<tr><td><code>%=</code></td><td><code>x %= 3</code></td><td>Зберегти остачу</td></tr>
+</tbody>
+</table>
+</div>
+<p>Уяви, що ти створюєш гру, у якій гравець заробляє бали.</p>
+<pre><code>int score = 10;
+score += 5;
+
+std::cout &lt;&lt; score &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>15</code></pre>
+<p>Замість того щоб писати:</p>
+<pre><code>score = score + 5;</code></pre>
+<p>Можна просто написати:</p>
+<pre><code>score += 5;</code></pre>
+<p>У цьому прикладі обидва варіанти дають однаковий результат, але другий коротший.</p>
+<p><em>Пам’ятай: складені оператори присвоєння полегшують оновлення значень і роблять код лаконічним.</em></p>
+<!-- 4 -->
+<h2>4. Оператори порівняння</h2>
+<p>Програмам часто потрібно порівнювати значення.</p>
+<p>Наприклад, вебсайт може перевіряти, чи достатньо людині років, щоб отримати доступ до певного вмісту.</p>
+<p>Для цього C++ надає оператори порівняння.</p>
+<div class="table-wrap">
+<table class="types-table">
+<thead><tr><th>Оператор</th><th>Значення</th></tr></thead>
+<tbody>
+<tr><td><code>==</code></td><td>Дорівнює</td></tr>
+<tr><td><code>!=</code></td><td>Не дорівнює</td></tr>
+<tr><td><code>&gt;</code></td><td>Більше</td></tr>
+<tr><td><code>&lt;</code></td><td>Менше</td></tr>
+<tr><td><code>&gt;=</code></td><td>Більше або дорівнює</td></tr>
+<tr><td><code>&lt;=</code></td><td>Менше або дорівнює</td></tr>
+</tbody>
+</table>
+</div>
+<p>Порівняння повертає логічний результат: <code>true</code> або <code>false</code>.</p>
+<p>Перевірімо, чи людині щонайменше 18 років.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int age = 18;
+    std::cout &lt;&lt; std::boolalpha &lt;&lt; (age &gt;= 18) &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>true</code></pre>
+<p>Порівняння істинне, тому що 18 дорівнює 18.</p>
+<h3>Не плутай = та ==</h3>
+<p>Це одна з найпоширеніших помилок початківців!</p>
+<pre><code>age = 18;</code></pre>
+<p>Оператор <code>=</code> присвоює значення.</p>
+<pre><code>age == 18;</code></pre>
+<p>Оператор <code>==</code> перевіряє, чи рівні два значення.</p>
+<p>Вони можуть виглядати схожими, але виконують зовсім різні завдання.</p>
+<p><em>Пам’ятай: використовуй =, щоб присвоювати значення, і ==, щоб порівнювати їх.</em></p>
+<!-- 5 -->
+<h2>5. Логічні оператори</h2>
+<p>Іноді перевірки лише однієї умови недостатньо. Уяви захід, на який відвідувач повинен мати щонайменше 18 років і квиток. Нам потрібно перевірити дві умови одночасно. Саме тут на допомогу приходять логічні оператори.</p>
+<div class="table-wrap">
+<table class="types-table">
+<thead><tr><th>Оператор</th><th>Ім’я</th><th>Значення</th></tr></thead>
+<tbody>
+<tr><td><code>&amp;&amp;</code></td><td>І (AND)</td><td>Істинно, коли обидві умови істинні</td></tr>
+<tr><td><code>||</code></td><td>АБО (OR)</td><td>Істинно, коли істинна принаймні одна умова</td></tr>
+<tr><td><code>!</code></td><td>НЕ (NOT)</td><td>Змінює логічне значення на протилежне</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Оператор AND (&amp;&amp;)</h3>
+<p>Обидві умови мають бути істинними.</p>
+<pre><code>int age = 20;
+bool hasTicket = true;
+
+std::cout &lt;&lt; std::boolalpha &lt;&lt; (age &gt;= 18 &amp;&amp; hasTicket);</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>true</code></pre>
+<p>Відвідувач достатньо дорослий і має квиток, тому складена умова істинна.</p>
+<h3>Оператор OR (||)</h3>
+<p>Достатньо, щоб істинною була лише одна умова.</p>
+<pre><code>bool hasStudentCard = true;
+bool hasDiscountCode = false;
+
+std::cout &lt;&lt; std::boolalpha &lt;&lt; (hasStudentCard || hasDiscountCode);</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>true</code></pre>
+<p>Принаймні одна умова істинна, тому результат істинний.</p>
+<h3>Оператор NOT (!)</h3>
+<p>Оператор NOT змінює логічне значення на протилежне.</p>
+<pre><code>bool isGameOver = false;
+
+std::cout &lt;&lt; std::boolalpha &lt;&lt; !isGameOver;</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>true</code></pre>
+<p>Оскільки <code>isGameOver</code> дорівнює <code>false</code>, <code>!isGameOver</code> стає <code>true</code>.</p>
+<p><em>Пам’ятай: логічні оператори допомагають програмам поєднувати умови та ухвалювати складніші рішення.</em></p>
+<!-- 6 -->
+<h2>6. Інкремент і декремент</h2>
+<p>Іноді нам просто потрібно збільшити або зменшити число на одиницю.</p>
+<p>Наприклад, уяви, що ми рахуємо, скільки гравців приєдналося до гри.</p>
+<p>C++ надає два зручні оператори:</p>
+<ul>
+<li><code>++</code> збільшує значення на 1.</li>
+<li><code>--</code> зменшує значення на 1.</li>
+</ul>
+<p>Подивімося на них у дії.</p>
+<pre><code>int players = 5;
+
+players++;
+std::cout &lt;&lt; players &lt;&lt; "\n";
+
+players--;
+std::cout &lt;&lt; players &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>6
+5</code></pre>
+<p>Ці оператори особливо корисні в лічильниках і циклах.</p>
+<h3>Префіксна та постфіксна форми</h3>
+<p>Ти також можеш зустріти два способи запису цих операторів:</p>
+<pre><code>++players;
+players++;</code></pre>
+<p>Обидва збільшують змінну на одиницю.</p>
+<p>Проте, коли їх використовують усередині складніших виразів, вони поводяться по-різному:</p>
+<ul>
+<li><code>++players</code> збільшує змінну та повертає її оновлене значення.</li>
+<li><code>players++</code> збільшує змінну, але повертає її попереднє значення.</li>
+</ul>
+<p>Поки що використання будь-якої з них як окремої інструкції не викликає складнощів. Докладніше їхню різницю ми розглянемо під час вивчення циклів.</p>
+<!-- 7 -->
+<h2>7. Пріоритет операторів</h2>
+<p>Що відбувається, коли вираз містить кілька операторів?</p>
+<p>Розглянь такий приклад:</p>
+<pre><code>std::cout &lt;&lt; 5 + 3 * 2;</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>11</code></pre>
+<p>Чому відповідь не 16?</p>
+<p>Тому що множення має вищий пріоритет, ніж додавання.</p>
+<p>C++ спочатку групує множення:</p>
+<pre><code>5 + (3 * 2) = 11</code></pre>
+<h3>Використання дужок</h3>
+<p>Ми можемо змінити групування, додавши дужки.</p>
+<pre><code>std::cout &lt;&lt; (5 + 3) * 2;</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>16</code></pre>
+<p>Тепер спочатку групується додавання.</p>
+<p>Пріоритет операторів визначає, як групується вираз, але не завжди визначає порядок обчислення кожної його частини.</p>
+<p>Для початківців найкраща звичка проста: використовуй дужки щоразу, коли вони роблять вираз легшим для <strong>розуміння</strong>.</p>
+<p>Зрозумілий код завжди кращий за код, який змушує читача вгадувати.</p>
+<!-- 8 -->
+<h2>8. Підсумок уроку</h2>
+<p>Оператори — це невеликі символи з важливою роллю в програмуванні. Вони дозволяють коду обчислювати числа, оновлювати значення, порівнювати інформацію та оцінювати умови. Ти використовуватимеш їх майже в кожній програмі, яку створиш. Найкращий спосіб запам’ятати їх — практика. Спробуй змінити числа та оператори в наших прикладах і подивись, як зміняться результати. Наступний урок: 04 — Умови. Тепер, коли ти знаєш, як порівнювати значення та працювати з логічними виразами, ти готовий зробити свої програми розумнішими!</p>
+<p>У наступному уроці ти навчишся використовувати if, else та switch, щоб програми обирали різні дії залежно від різних ситуацій.</p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

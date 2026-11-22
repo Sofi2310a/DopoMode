@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>06 Цикли</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item" href="theory2.html">02 Типи даних</a>
+<a class="menu-item" href="theory3.html">03 Оператори</a>
+<a class="menu-item" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item active" href="theory6.html">06 Цикли</a>
+<a class="menu-item" href="theory7.html">07 Функції</a>
+<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item" href="theory9.html">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="#">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="#">11 Структури та перелічення</a>
+<a class="menu-item" href="#">12 Класи та об’єкти</a>
+<a class="menu-item" href="#">13 Просунуте ООП</a>
+<a class="menu-item" href="#">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item" href="#">15 Проєкт</a>
+</div>
+</aside>
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Введіть ключове слово" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">ПОШУК</button>
+</div>
+<article class="lesson-article">
+<h1>06 — Цикли</h1>
+<p>Уяви, що потрібно вивести те саме повідомлення 100 разів. Невже ти справді хотів би писати 100 окремих рядків коду?</p>
+<p>Саме тому ми використовуємо <span class="text-pink">цикли</span>. Вони дозволяють програмам автоматично повторювати дії, заощаджуючи час і роблячи програми легшими для читання.</p>
+<p>У цьому уроці ти навчишся використовувати три основні типи циклів у C++: <span class="text-pink">for</span>, <span class="text-pink">while</span> і <span class="text-pink">do-while</span>.</p>
+<h2>1. Що таке цикли?</h2>
+<p><span class="text-pink">Цикл</span> — це програмна структура, яка повторює блок коду залежно від <span class="text-pink">умови</span>.</p>
+<p>Цикли зазвичай використовують для:</p>
+<ul>
+<li>Рахунку вгору чи вниз.</li>
+<li>Покрокової обробки інформації.</li>
+<li>Повторення завдань без дублювання коду.</li>
+</ul>
+<p>Кожне повторення циклу називається <span class="text-pink">ітерацією</span>.</p>
+<p><em>Пам’ятай: цикл повторюється доти, доки його <span class="text-pink">умова</span> залишається <span class="text-pink">істинною</span>.</em></p>
+<h2>2. Цикл for</h2>
+<p>Цикл <span class="text-pink">for</span> ідеально підходить, коли ти заздалегідь знаєш, скільки разів потрібно повторити дію.</p>
+<p>Наприклад, виведімо «Hello!» п’ять разів.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    for (int i = 1; i &lt;= 5; i++) {
+        std::cout &lt;&lt; "Hello!\n";
+    }
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Hello!
+Hello!
+Hello!
+Hello!
+Hello!</code></pre>
+<p>Замість того щоб писати п’ять інструкцій виводу, ми використали лише одну!</p>
+<h3>Як це працює?</h3>
+<p>Типовий цикл <span class="text-pink">for</span> має три частини:</p>
+<pre><code>for (initialization; condition; update) {
+    // Код, що повторюється
+}</code></pre>
+<ul>
+<li><span class="text-pink">Ініціалізація</span> — виконується один раз перед початком циклу.</li>
+<li><span class="text-pink">Умова</span> — перевіряється перед кожною ітерацією. Цикл продовжується, поки вона <span class="text-pink">істинна</span>.</li>
+<li><span class="text-pink">Оновлення</span> — виконується після кожної завершеної ітерації тіла циклу.</li>
+</ul>
+<p>Розберімо попередній приклад:</p>
+<ul>
+<li><code>int i = 1</code> задає лічильник, що починається з 1.</li>
+<li><code>i &lt;= 5</code> дозволяє циклу продовжуватися, поки лічильник не перевищує 5.</li>
+<li><code>i++</code> збільшує лічильник на 1 після кожного виконання тіла циклу.</li>
+</ul>
+<p><em>Пам’ятай: використовуй <span class="text-pink">for</span>, коли заздалегідь знаєш кількість повторень.</em></p>
+<h2>3. Цикл while</h2>
+<p>Цикл <span class="text-pink">while</span> повторює блок коду, доки <span class="text-pink">умова</span> <span class="text-pink">істинна</span>.</p>
+<p>Він особливо корисний, коли ми точно не знаємо, скільки повторень знадобиться.</p>
+<pre><code>int number = 1;
+
+while (number &lt;= 5) {
+    std::cout &lt;&lt; number &lt;&lt; "\n";
+    number++;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>1
+2
+3
+4
+5</code></pre>
+<h3>Як це працює?</h3>
+<ul>
+<li>Програма перевіряє, чи <code>number &lt;= 5</code>.</li>
+<li>Якщо <span class="text-pink">умова</span> <span class="text-pink">істинна</span>, вона виводить число та збільшує його на одиницю.</li>
+<li>Це повторюється, доки <code>number</code> не стане 6. Тоді <span class="text-pink">умова</span> стає <span class="text-pink">хибною</span>, і цикл завершується.</li>
+</ul>
+<p><em>Важливо: цикл <span class="text-pink">while</span> перевіряє свою <span class="text-pink">умову</span> перед виконанням. Якщо <span class="text-pink">умова</span> з самого початку <span class="text-pink">хибна</span>, тіло циклу може не виконатися жодного разу.</em></p>
+<h2>4. Цикл do-while</h2>
+<p>Цикл <span class="text-pink">do-while</span> схожий на <span class="text-pink">while</span>, але перевіряє свою <span class="text-pink">умову</span> після виконання тіла циклу.</p>
+<pre><code>int number = 1;
+
+do {
+    std::cout &lt;&lt; number &lt;&lt; "\n";
+    number++;
+} while (number &lt;= 5);</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>1
+2
+3
+4
+5</code></pre>
+<p>Тепер розглянь такий приклад:</p>
+<pre><code>int number = 10;
+
+do {
+    std::cout &lt;&lt; "This runs at least once!\n";
+} while (number &lt; 5);</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>This runs at least once!</code></pre>
+<p>Він поводиться інакше, ніж попередній приклад, і ця різниця важлива.</p>
+<p>Хоча <span class="text-pink">умова</span> <span class="text-pink">хибна</span>, повідомлення все одно з’являється один раз.</p>
+<p>Це робить <span class="text-pink">do-while</span> корисним у ситуаціях, як-от показ меню чи запит вводу перед тим, як вирішити, чи повторювати.</p>
+<p><em>Пам’ятай: <span class="text-pink">do-while</span> завжди виконує своє тіло принаймні один раз.</em></p>
+<h2>5. break і continue</h2>
+<p>Іноді потрібен додатковий контроль усередині циклу.</p>
+<p>C++ надає дві корисні інструкції: <span class="text-pink">break</span> і <span class="text-pink">continue</span>.</p>
+<h3>break — зупинити цикл</h3>
+<p><span class="text-pink">break</span> негайно виходить із найближчого циклу, що його охоплює.</p>
+<pre><code>for (int i = 1; i &lt; 10; i++) {
+    if (i == 5) {
+        break;
+    }
+    std::cout &lt;&lt; i &lt;&lt; " ";
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>1 2 3 4</code></pre>
+<p>Коли <code>i</code> стає 5, спрацьовує <span class="text-pink">break</span>, і цикл повністю зупиняється.</p>
+<h3>continue — пропустити ітерацію</h3>
+<p><span class="text-pink">continue</span> пропускає решту коду в поточній ітерації та переходить до наступної.</p>
+<pre><code>for (int i = 1; i &lt;= 5; i++) {
+    if (i == 3) {
+        continue;
+    }
+    std::cout &lt;&lt; i &lt;&lt; " ";
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>1 2 4 5</code></pre>
+<p>Тут число 3 пропускається, але цикл продовжується.</p>
+<p><em>Пам’ятай: <span class="text-pink">break</span> достроково виходить із циклу, а <span class="text-pink">continue</span> пропускає решту інструкцій у поточній ітерації.</em></p>
+<h2>6. Вкладені цикли</h2>
+<p><span class="text-pink">Вкладений цикл</span> — це просто цикл усередині іншого циклу.</p>
+<p>Вони особливо корисні для створення таблиць, сіток і візерунків.</p>
+<p>Створімо квадрат із зірочок.</p>
+<pre><code>for (int row = 1; row &lt;= 3; row++) {
+    for (int column = 1; column &lt;= 3; column++) {
+        std::cout &lt;&lt; "* ";
+    }
+    std::cout &lt;&lt; "\n";
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>* * *
+* * *
+* * *</code></pre>
+<p>Ось що відбувається:</p>
+<ul>
+<li>Зовнішній цикл керує рядками.</li>
+<li>Внутрішній цикл виводить три зірочки для кожного рядка.</li>
+<li>Після завершення кожного рядка <code>std::cout &lt;&lt; "\n";</code> переходить на наступний рядок.</li>
+</ul>
+<p>Щоразу, коли зовнішній цикл виконується один раз, внутрішній цикл виконує всі свої повторення.</p>
+<p><em>Пам’ятай: вкладені цикли запускають внутрішній цикл усередині зовнішнього.</em></p>
+<h2>7. Нескінченні цикли</h2>
+<p><span class="text-pink">Нескінченний цикл</span> виникає, коли цикл ніколи не зупиняється, тому що його <span class="text-pink">умова</span> завершення ніколи не стає <span class="text-pink">хибною</span>.</p>
+<p>Подивись на цей приклад:</p>
+<pre><code>int number = 1;
+
+while (number &lt;= 5) {
+    std::cout &lt;&lt; number &lt;&lt; "\n";
+}</code></pre>
+<p>У чому проблема?</p>
+<p>Змінна <code>number</code> ніколи не змінюється.</p>
+<p>Оскільки вона завжди дорівнює 1, <span class="text-pink">умова</span> залишається <span class="text-pink">істинною</span>, і цикл нескінченно виводить те саме число.</p>
+<h3>Як це виправити?</h3>
+<pre><code>int number = 1;
+
+while (number &lt;= 5) {
+    std::cout &lt;&lt; number &lt;&lt; "\n";
+    number++;
+}</code></pre>
+<p>Тепер <code>number</code> збільшується під час кожної ітерації, і цикл зупиняється, коли <code>number</code> стає 6.</p>
+<p>Деякі програми навмисно використовують цикли, що працюють безперервно, наприклад ігрові цикли або фонові служби. Проте таким програмам також потрібні способи виходу або реакції на запити про завершення роботи.</p>
+<p><em>Пам’ятай: завжди розумій, як завершиться твій цикл, якщо тільки безперервне виконання не є навмисним.</em></p>
+<h2>8. Вибір правильного циклу</h2>
+<p>Усі три цикли можуть повторювати код, і кожен має свої сильні сторони.</p>
+<div class="table-wrap">
+<table class="types-table">
+<thead>
+<tr>
+<th>Цикл</th>
+<th>Коли використовувати</th>
+<th>Приклад</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>for</code></td>
+<td>Ти заздалегідь знаєш кількість повторень</td>
+<td>Виведення чисел від 1 до 100</td>
+</tr>
+<tr>
+<td><code>while</code></td>
+<td>Ти повторюєш, доки умова істинна, причому перевіряєш її перед повторенням</td>
+<td>Читання вводу, доки не буде введено коректне значення</td>
+</tr>
+<tr>
+<td><code>do-while</code></td>
+<td>Код має виконатися принаймні один раз до перевірки умови</td>
+<td>Показ меню та запит, чи продовжувати</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Не завжди існує лише один «ідеальний» цикл для завдання — обирай той, який робить твою логіку найчіткішою та найзрозумілішою.</p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>07 Функції</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item" href="theory2.html">02 Типи даних</a>
+<a class="menu-item" href="theory3.html">03 Оператори</a>
+<a class="menu-item" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory6.html">06 Цикли</a>
+<a class="menu-item active" href="theory7.html">07 Функції</a>
+<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item" href="theory9.html">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="#">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="#">11 Структури та перелічення</a>
+<a class="menu-item" href="#">12 Класи та об’єкти</a>
+<a class="menu-item" href="#">13 Просунуте ООП</a>
+<a class="menu-item" href="#">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item" href="#">15 Проєкт</a>
+</div>
+</aside>
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Введіть ключове слово" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">ПОШУК</button>
+</div>
+<article class="lesson-article">
+<h1>07 — Функції</h1>
+<p>Уяви, що ти пишеш одне й те саме обчислення або логіку повідомлення в десяти різних місцях.</p>
+<p>Багаторазове копіювання одного й того самого коду забирає час і ускладнює оновлення програм, коли щось змінюється.</p>
+<p>У C++ <span class="text-pink">функції</span> дозволяють групувати інструкції в багаторазові блоки, які можна викликати, коли вони потрібні.</p>
+<p>У цьому уроці ти навчишся створювати функції, передавати в них інформацію, повертати значення та чистіше організовувати свій код.</p>
+<h2>1. Що таке функції?</h2>
+<p><span class="text-pink">Функція</span> — це багаторазовий блок коду, призначений для виконання конкретного завдання.</p>
+<p>Наприклад, функція може виводити привітання, обчислювати загальний бал або перевіряти, чи достатньо в гравця очок.</p>
+<p>Функції допомагають:</p>
+<ul>
+<li><span class="text-pink">Уникати повторень</span> — пиши код один раз і використовуй його в кількох місцях.</li>
+<li><span class="text-pink">Тримати порядок</span> — ділити великі програми на менші, легші для читання частини.</li>
+<li><span class="text-pink">Швидше знаходити помилки</span> — виправляти або оновлювати логіку в одному місці, а не шукати скрізь.</li>
+<li><span class="text-pink">Тестувати й налагоджувати</span> — перевіряти кожну частину програми окремо.</li>
+</ul>
+<p><em>Пам’ятай: функція групує певну дію, щоб ти міг використовувати її знову, коли потрібно.</em></p>
+<h2>2. Створення функції</h2>
+<p>Створімо просту функцію, яка виводить привітання.</p>
+<pre><code>#include &lt;iostream&gt;
+
+void greet() {
+    std::cout &lt;&lt; "Hello, World!\n";
+}
+
+int main() {
+    greet();
+    greet();
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Hello, World!
+Hello, World!</code></pre>
+<h3>Як це працює?</h3>
+<ul>
+<li><code>void</code> означає, що функція не повертає значення.</li>
+<li><code>greet</code> — це ім’я функції.</li>
+<li><code>()</code> містить параметри (тут порожні, бо додаткові дані не потрібні).</li>
+<li><code>{ ... }</code> містить інструкції, які виконуються під час виклику функції.</li>
+<li><code>greet();</code> усередині <code>main()</code> — це <span class="text-pink">виклик функції</span>.</li>
+</ul>
+<p>Щоразу, коли ми викликаємо <code>greet</code>, програма виконує інструкції всередині цієї функції.</p>
+<p><em>Пам’ятай: визначення функції каже C++, що вона робить; виклик функції фактично її запускає.</em></p>
+<h2>3. Параметри та аргументи</h2>
+<p>Функції стають ще гнучкішими, коли ти передаєш у них інформацію.</p>
+<p>Наприклад, привітаймо різних людей на ім’я.</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+void greet(std::string name) {
+    std::cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "!\n";
+}
+
+int main() {
+    greet("Alex");
+    greet("Emma");
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Hello, Alex!
+Hello, Emma!</code></pre>
+<h3>У чому різниця?</h3>
+<ul>
+<li><span class="text-pink">Параметр</span> — це змінна, указана у визначенні функції, наприклад <code>std::string name</code> у <code>void greet(std::string name)</code>.</li>
+<li><span class="text-pink">Аргумент</span> — це фактичне значення, що передається під час виклику функції, наприклад <code>"Alex"</code> або <code>"Emma"</code>.</li>
+</ul>
+<h3>Кілька параметрів</h3>
+<p>Функція може приймати більше одного параметра, розділеного комами.</p>
+<pre><code>void showSum(int a, int b) {
+    std::cout &lt;&lt; "Sum: " &lt;&lt; (a + b) &lt;&lt; "\n";
+}</code></pre>
+<p class="output-label">Виклик функції:</p>
+<pre class="output"><code>showSum(5, 3);</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Sum: 8</code></pre>
+<p>Аргументи зіставляються з параметрами за порядком: <code>5</code> потрапляє в <code>a</code>, а <code>3</code> — у <code>b</code>.</p>
+<p><em>Пам’ятай: параметри — це заповнювачі у визначенні; аргументи — це реальні значення, що передаються під час виклику.</em></p>
+<h2>4. Повернення значень</h2>
+<p>Іноді функція має щось обчислити й повернути результат, а не лише вивести його.</p>
+<p>Для цього вкажи тип повернення та використай ключове слово <span class="text-pink">return</span>.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(4, 6);
+    std::cout &lt;&lt; "Result: " &lt;&lt; result &lt;&lt; "\n";
+    std::cout &lt;&lt; "Another sum: " &lt;&lt; add(10, 15) &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Result: 10
+Another sum: 25</code></pre>
+<h3>У чому різниця між void та int?</h3>
+<ul>
+<li>Функція <span class="text-pink">void</span> виконує дію, не повертаючи значення.</li>
+<li>Функція з типом повернення, як-от <code>int</code>, <code>double</code> чи <code>std::string</code>, повертає значення цього типу викликачу за допомогою <code>return</code>.</li>
+<li><code>std::cout</code> виводить інформацію на екран, а <code>return</code> повертає значення в код, що викликав функцію.</li>
+</ul>
+<p><em>Пам’ятай: використовуй <code>return</code>, щоб повернути результат із функції, щоб його можна було зберегти або використати у виразах.</em></p>
+<h2>5. Перевантаження функцій</h2>
+<p>У C++ можна створювати кілька функцій з <span class="text-pink">однаковим іменем</span>, якщо їхні списки параметрів відрізняються за типом або кількістю.</p>
+<p>Ця можливість називається <span class="text-pink">перевантаженням функцій</span>.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+double add(double a, double b) {
+    return a + b;
+}
+
+int add(int a, int b, int c) {
+    return a + b + c;
+}
+
+int main() {
+    std::cout &lt;&lt; add(2, 3) &lt;&lt; "\n";
+    std::cout &lt;&lt; add(2.5, 3.5) &lt;&lt; "\n";
+    std::cout &lt;&lt; add(1, 2, 3) &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>5
+6
+6</code></pre>
+<p>C++ автоматично обирає відповідну версію на основі переданих аргументів.</p>
+<p>Зверни увагу, що зміни лише типу повернення недостатньо для коректного перевантаження.</p>
+<p><em>Пам’ятай: перевантажені функції мають однакове ім’я, але відрізняються параметрами.</em></p>
+<h2>6. Локальні та глобальні змінні</h2>
+<p>Місце, де ти оголошуєш змінну, визначає, де в програмі до неї можна звертатися. Це називається <span class="text-pink">областю видимості</span>.</p>
+<h3>Локальні змінні</h3>
+<p><span class="text-pink">Локальна змінна</span> оголошується всередині функції або іншого блоку коду й може використовуватися лише всередині цього блоку.</p>
+<pre><code>void showNumber() {
+    int number = 42;
+    std::cout &lt;&lt; number &lt;&lt; "\n";
+}</code></pre>
+<p><code>number</code> належить <code>showNumber()</code>. Спроба використати <code>number</code> безпосередньо з <code>main()</code> спричиняє помилку компілятора.</p>
+<p>Локальні змінні допомагають зберігати різні частини програми незалежними та захищеними від випадкових змін.</p>
+<h3>Глобальні змінні</h3>
+<p><span class="text-pink">Глобальна змінна</span> оголошується поза всіма функціями й доступна в усьому файлі після свого оголошення.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int score = 0;
+
+void showScore() {
+    std::cout &lt;&lt; "Score: " &lt;&lt; score &lt;&lt; "\n";
+}
+
+int main() {
+    score = 10;
+    showScore();
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Score: 10</code></pre>
+<p>Хоча глобальні змінні зручні в невеликих прикладах, надмірне покладання на них може ускладнити відстеження великих програм, адже багато частин коду можуть змінювати спільні дані.</p>
+<p><em>Пам’ятай: надавай перевагу локальним змінним і передавай значення через параметри, коли це можливо.</em></p>
+<h2>7. Оголошення функцій</h2>
+<p>У C++ функцію або змінну зазвичай потрібно оголосити до її використання в коді вище.</p>
+<p>Якщо ти хочеш розмістити визначення функцій нижче <code>main()</code>, можна написати <span class="text-pink">оголошення функції</span> (також називається <span class="text-pink">прототипом функції</span>) на початку.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int multiply(int a, int b);
+
+int main() {
+    std::cout &lt;&lt; multiply(3, 4) &lt;&lt; "\n";
+    return 0;
+}
+
+int multiply(int a, int b) {
+    return a * b;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>12</code></pre>
+<p>Оголошення повідомляє компілятору ім’я функції, тип повернення та типи параметрів до запуску <code>main()</code>, а повне тіло з’являється пізніше.</p>
+<p>Це особливо корисно під час організації більших файлів або коли <code>main()</code> потрібно залишити ближче до початку.</p>
+<p><em>Пам’ятай: оголошення функції вводить сигнатуру до того, як буде надано повне визначення.</em></p>
+<h2>8. Рекурсія</h2>
+<p><span class="text-pink">Рекурсія</span> виникає, коли функція викликає саму себе, щоб розв’язати задачу, розбиваючи її на менші частини.</p>
+<pre><code>#include &lt;iostream&gt;
+
+void countdown(int number) {
+    if (number &lt;= 0) {
+        return;
+    }
+
+    std::cout &lt;&lt; number &lt;&lt; " ";
+    countdown(number - 1);
+}
+
+int main() {
+    countdown(5);
+    std::cout &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>5 4 3 2 1</code></pre>
+<h3>Як це працює?</h3>
+<ul>
+<li><span class="text-pink">Базовий випадок</span> (<code>if (number &lt;= 0) return;</code>) зупиняє рекурсію, щоб вона не повторювалася нескінченно.</li>
+<li>Кожен виклик виконується з меншим значенням (<code>number - 1</code>), доки не досягне умови зупинки.</li>
+<li>Без базового випадку рекурсивна функція продовжує викликати саму себе, доки в програми не закінчиться пам’ять (переповнення стека).</li>
+</ul>
+<p><em>Пам’ятай: кожна рекурсивна функція потребує чіткої умови зупинки (базового випадку).</em></p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

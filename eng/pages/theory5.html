@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>05 Basic Practice</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory5.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+<script defer="" src="../../js/compiler_pract.js"></script>
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Main</a>
+<a class="nav-link" href="about_1.html">About Us</a>
+<a class="nav-link active" href="theory.html">Theory</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Change language">EN</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Profile" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">C++ course</h2>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="theory.html">01 C++ Basics</a>
+<a class="menu-item" href="theory2.html">02 Data Types</a>
+<a class="menu-item" href="theory3.html">03 Operators</a>
+<a class="menu-item" href="theory4.html">04 Conditions</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">PRACTICE</span>
+<a class="menu-item active" href="theory5.html">05 Basic Practice</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="theory6.html">06 Loops</a>
+<a class="menu-item" href="theory7.html">07 Functions</a>
+<a class="menu-item" href="theory8.html">08 Arrays &amp; Strings</a>
+<a class="menu-item" href="theory9.html">09 Pointers</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">PRACTICE</span>
+<a class="menu-item" href="#">10 Coding Practice</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="#">11 Structs &amp; Enums</a>
+<a class="menu-item" href="#">12 Classes &amp; Objects</a>
+<a class="menu-item" href="#">13 Advanced OOP</a>
+<a class="menu-item" href="#">14 STL &amp; Files</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">FINAL</span>
+<a class="menu-item" href="#">15 Project</a>
+</div>
+</aside>
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Enter keyword" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">SEARCH</button>
+</div>
+<article class="lesson-article">
+<h1>05 — Basic Practice</h1>
+<h2>1. Let's Start Coding!</h2>
+<p>Now it's time to practice what you've learned!</p>
+<p>In the previous lessons, you explored <span class="accent">variables</span>, <span class="accent">data types</span>, <span class="accent">operators</span>, and <span class="accent">conditions</span>. Let's use this knowledge to create simple C++ programs.</p>
+<p><span class="accent">Your Goal:</span> Complete 4 programming tasks, starting with basic calculations and finishing with a small interactive application.</p>
+<p>Try solving each task on your own before looking for help.</p>
+<!-- TASK 01 -->
+<h2>2. Task 01 — Simple Calculator</h2>
+<p class="difficulty">Difficulty: <span class="accent">Easy</span></p>
+<p>Create a program that asks the user for two numbers and performs basic mathematical operations.</p>
+<p class="sub-label">Requirements:</p>
+<ul>
+<li>Use <span class="accent">double</span> to store both numbers.</li>
+<li>Calculate addition, subtraction, multiplication, and division.</li>
+<li>Display the results using <span class="accent">cout</span>.</li>
+<li>Prevent <span class="accent">division by zero</span>.</li>
+</ul>
+<p class="sub-label">Example Output:</p>
+<pre class="output"><code>Enter first number: 10
+Enter second number: 5
+
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2</code></pre>
+<p class="hint-line"><strong>Hint:</strong> Use the operators <code>+</code>, <code>-</code>, <code>*</code>, and <code>/</code>.</p>
+<div class="compiler" data-task="1">
+<div class="compiler-bar">
+<span>main.cpp</span>
+<select aria-label="C++ standard" class="std-select">
+<option value="c++17">C++17</option>
+<option selected="" value="c++20">C++20</option>
+<option value="c++14">C++14</option>
+<option value="c++11">C++11</option>
+</select>
+<button class="btn-reset" type="button">Reset</button>
+<button class="btn-run" type="button">▶ RUN</button>
+</div>
+<textarea autocapitalize="off" autocomplete="off" class="code-editor" spellcheck="false"></textarea>
+<div class="console">
+<div class="console-title">OUTPUT</div>
+<div class="console-output">Press RUN (or Ctrl + Enter) to compile and run your code.</div>
+</div>
+</div>
+<!-- TASK 02 -->
+<h2>3. Task 02 — Age Checker</h2>
+<p class="difficulty">Difficulty: <span class="accent">Easy</span></p>
+<p>Create a program that determines a person's age category.</p>
+<p class="sub-label">Requirements:</p>
+<ul>
+<li>Under 13 → <span class="accent">Child</span></li>
+<li>13–17 → <span class="accent">Teenager</span></li>
+<li>18–64 → <span class="accent">Adult</span></li>
+<li>65 or older → <span class="accent">Senior</span></li>
+</ul>
+<p>Use <span class="accent">if</span>, <span class="accent">else if</span>, and <span class="accent">else</span> statements. Assume the user enters a valid age.</p>
+<p class="sub-label">Example Output:</p>
+<pre class="output"><code>Enter your age: 16
+Category: Teenager</code></pre>
+<p class="hint-line"><strong>Hint:</strong> Check the age conditions in the correct order.</p>
+<div class="compiler" data-task="2">
+<div class="compiler-bar">
+<span>main.cpp</span>
+<select aria-label="C++ standard" class="std-select">
+<option value="c++17">C++17</option>
+<option selected="" value="c++20">C++20</option>
+<option value="c++14">C++14</option>
+<option value="c++11">C++11</option>
+</select>
+<button class="btn-reset" type="button">Reset</button>
+<button class="btn-run" type="button">▶ RUN</button>
+</div>
+<textarea autocapitalize="off" autocomplete="off" class="code-editor" spellcheck="false"></textarea>
+<div class="console">
+<div class="console-title">OUTPUT</div>
+<div class="console-output">Press RUN (or Ctrl + Enter) to compile and run your code.</div>
+</div>
+</div>
+<!-- TASK 03 -->
+<h2>4. Task 03 — Grade Calculator</h2>
+<p class="difficulty">Difficulty: <span class="accent">Medium</span></p>
+<p>Create a program that converts a numerical score into a letter grade.</p>
+<p class="sub-label">Requirements:</p>
+<div class="table-wrap">
+<table class="types-table">
+<thead>
+<tr>
+<th>Score</th>
+<th>Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>90–100</td><td>A</td></tr>
+<tr><td>80–89</td><td>B</td></tr>
+<tr><td>70–79</td><td>C</td></tr>
+<tr><td>60–69</td><td>D</td></tr>
+<tr><td>0–59</td><td>F</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>Ask the user to enter a score.</li>
+<li>Use <span class="accent">if-else if</span> statements.</li>
+<li>Display the corresponding grade.</li>
+<li>Handle scores outside the range <span class="accent">0–100</span>.</li>
+</ul>
+<p class="sub-label">Example Output:</p>
+<pre class="output"><code>Enter your score: 85
+Your grade: B</code></pre>
+<p class="hint-line"><strong>Hint:</strong> Start by checking whether the score is valid.</p>
+<div class="compiler" data-task="3">
+<div class="compiler-bar">
+<span>main.cpp</span>
+<select aria-label="C++ standard" class="std-select">
+<option value="c++17">C++17</option>
+<option selected="" value="c++20">C++20</option>
+<option value="c++14">C++14</option>
+<option value="c++11">C++11</option>
+</select>
+<button class="btn-reset" type="button">Reset</button>
+<button class="btn-run" type="button">▶ RUN</button>
+</div>
+<textarea autocapitalize="off" autocomplete="off" class="code-editor" spellcheck="false"></textarea>
+<div class="console">
+<div class="console-title">OUTPUT</div>
+<div class="console-output">Press RUN (or Ctrl + Enter) to compile and run your code.</div>
+</div>
+</div>
+<!-- TASK 04 -->
+<h2>5. Task 04 — Smart Calculator</h2>
+<p class="difficulty">Difficulty: <span class="accent">Medium</span></p>
+<p>Create a calculator that lets the user choose an operation.</p>
+<p class="sub-label">Requirements:</p>
+<ul>
+<li>Display a menu with four operations.</li>
+<li>Use <span class="accent">switch</span> to process the user's choice.</li>
+<li>Ask for two numbers.</li>
+<li>Display the result.</li>
+<li>Handle <span class="accent">invalid choices</span> and <span class="accent">division by zero</span>.</li>
+</ul>
+<p class="sub-label">Example Output:</p>
+<pre class="output"><code>SMART CALCULATOR
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+
+Choose an operation: 3
+Enter first number: 8
+Enter second number: 5
+Result: 40</code></pre>
+<p class="hint-line"><strong>Hint:</strong> Use <code>switch</code>, <code>case</code>, <code>break</code>, and <code>default</code>.</p>
+<div class="compiler" data-task="4">
+<div class="compiler-bar">
+<span>main.cpp</span>
+<select aria-label="C++ standard" class="std-select">
+<option value="c++17">C++17</option>
+<option selected="" value="c++20">C++20</option>
+<option value="c++14">C++14</option>
+<option value="c++11">C++11</option>
+</select>
+<button class="btn-reset" type="button">Reset</button>
+<button class="btn-run" type="button">▶ RUN</button>
+</div>
+<textarea autocapitalize="off" autocomplete="off" class="code-editor" spellcheck="false"></textarea>
+<div class="console">
+<div class="console-title">OUTPUT</div>
+<div class="console-output">Press RUN (or Ctrl + Enter) to compile and run your code.</div>
+</div>
+</div>
+<!-- SUMMARY -->
+<h2>6. Practice Summary</h2>
+<p>By completing these four tasks, you will practice:</p>
+<ul>
+<li>Working with variables and data types.</li>
+<li>Performing mathematical calculations.</li>
+<li>Comparing values using operators.</li>
+<li>Making decisions with <span class="accent">if-else</span>.</li>
+<li>Selecting operations using <span class="accent">switch</span>.</li>
+<li>Handling simple user input errors.</li>
+</ul>
+<p class="hint">The code is compiled on a remote server (GCC), so an internet connection is required.</p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Code smarter. Build harder. Master C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. All rights reserved.</p>
+<div class="footer-links">
+<a href="about_1.html">About Us</a>
+<a href="theory.html">Theory</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DopoMode</title>
+  <meta http-equiv="refresh" content="0; url=eng/index.html">
+  <script>
+    // Send returning visitors to the language they used last (default: English)
+    (function () {
+      var lang = 'eng';
+      try { if (localStorage.getItem('dopomode-lang') === 'ukr') lang = 'ukr'; } catch (e) {}
+      location.replace(lang + '/index.html');
+    })();
+  </script>
+</head>
+<body>
+  <p><a href="eng/index.html">English</a> · <a href="ukr/index.html">Українська</a></p>
+</body>
+</html>

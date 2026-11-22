@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>09 Вказівники</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item" href="theory2.html">02 Типи даних</a>
+<a class="menu-item" href="theory3.html">03 Оператори</a>
+<a class="menu-item" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory6.html">06 Цикли</a>
+<a class="menu-item" href="theory7.html">07 Функції</a>
+<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item active" href="theory9.html">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="#">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="#">11 Структури та перелічення</a>
+<a class="menu-item" href="#">12 Класи та об’єкти</a>
+<a class="menu-item" href="#">13 Просунуте ООП</a>
+<a class="menu-item" href="#">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item" href="#">15 Проєкт</a>
+</div>
+</aside>
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Введіть ключове слово" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">ПОШУК</button>
+</div>
+<article class="lesson-article">
+<h1>09 — Вказівники</h1>
+<p>Кожна змінна в програмі має своє місце в пам’яті. А що, якби ти міг звертатися до цього місця безпосередньо?</p>
+<p>У C++ <span class="text-pink">вказівники</span> — це змінні, які зберігають адреси пам’яті замість звичайних значень.</p>
+<p>Вони є однією з найважливіших концепцій C++ і допомагають зрозуміти, як за лаштунками працюють пам’ять, масиви, функції та динамічне виділення пам’яті.</p>
+<p>Розберімо їх крок за кроком!</p>
+<h2>1. Що таке вказівники?</h2>
+<p><span class="text-pink">Вказівник</span> — це змінна, яка зберігає <span class="text-pink">адресу пам’яті</span> іншої змінної або об’єкта.</p>
+<p>Замість того щоб безпосередньо містити число, як-от <code>42</code>, вказівник містить адресу, за якою <code>42</code> зберігається в пам’яті.</p>
+<p>Чим корисні вказівники?</p>
+<ul>
+<li>Робота з пам’яттю — доступ до об’єктів за їхніми адресами.</li>
+<li>Зміна змінних усередині функцій — дозволяє функції безпосередньо оновлювати наявну змінну.</li>
+<li>Динамічні структури даних — створення зв’язних списків, дерев і графів.</li>
+<li>Продуктивність — доступ до великих об’єктів без зайвого копіювання.</li>
+</ul>
+<p><em>Пам’ятай: звичайна змінна зберігає значення, а вказівник — адресу пам’яті.</em></p>
+<h2>2. Адреси пам’яті</h2>
+<p>Коли ти створюєш змінну, C++ зберігає її десь у пам’яті комп’ютера.</p>
+<p>Дізнатися адресу пам’яті змінної можна за допомогою <span class="text-pink">оператора взяття адреси</span> (<code>&amp;</code>).</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int number = 42;
+
+    std::cout &lt;&lt; "Value: " &lt;&lt; number &lt;&lt; "\n";
+    std::cout &lt;&lt; "Address: " &lt;&lt; &amp;number &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Приклад виводу:</p>
+<pre class="output"><code>Value: 42
+Address: 0x7ffee4b2c8ac</code></pre>
+<p>Точна адреса виглядає як шістнадцяткове число й може змінюватися під час кожного запуску програми.</p>
+<p><em>Пам’ятай: <code>&amp;variable</code> дає адресу пам’яті, за якою зберігається ця змінна.</em></p>
+<h2>3. Створення вказівника</h2>
+<p>Щоб створити вказівник, запиши тип даних об’єкта, на який він вказує, а потім зірочку (<code>*</code>).</p>
+<pre><code>int number = 42;
+int* ptr = &amp;number;</code></pre>
+<p>Тут:</p>
+<ul>
+<li><code>int*</code> означає «вказівник на <code>int</code>».</li>
+<li><code>ptr</code> — це ім’я вказівника.</li>
+<li><code>&amp;number</code> отримує адресу <code>number</code> і зберігає її в <code>ptr</code>.</li>
+</ul>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int number = 42;
+    int* ptr = &amp;number;
+
+    std::cout &lt;&lt; "Address of number: " &lt;&lt; &amp;number &lt;&lt; "\n";
+    std::cout &lt;&lt; "Value stored in ptr: " &lt;&lt; ptr &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Приклад виводу:</p>
+<pre class="output"><code>Address of number: 0x7ffee4b2c8ac
+Value stored in ptr: 0x7ffee4b2c8ac</code></pre>
+<p>Обидва рядки виводять однакову адресу, тому що <code>ptr</code> вказує на <code>number</code>.</p>
+<p><em>Пам’ятай: <code>*</code> використовують для оголошення вказівника, а <code>&amp;</code> отримує адресу об’єкта.</em></p>
+<h2>4. Розіменування вказівників</h2>
+<p>Коли вказівник зберігає адресу, ти можеш отримати доступ до значення за цією адресою за допомогою <span class="text-pink">оператора розіменування</span> (<code>*</code>).</p>
+<p>Розіменування вказівника означає доступ до об’єкта, на який він вказує.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int number = 42;
+    int* ptr = &amp;number;
+
+    std::cout &lt;&lt; "Address: " &lt;&lt; ptr &lt;&lt; "\n";
+    std::cout &lt;&lt; "Value: " &lt;&lt; *ptr &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Address: 0x7ffee4b2c8ac
+Value: 42</code></pre>
+<h3>Зміна значення через вказівник</h3>
+<p>Ти також можеш змінити вихідну змінну через вказівник.</p>
+<pre><code>int number = 42;
+int* ptr = &amp;number;
+
+*ptr = 100;
+
+std::cout &lt;&lt; "Updated number: " &lt;&lt; number &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Updated number: 100</code></pre>
+<p>Зміна <code>*ptr</code> безпосередньо оновлює <code>number</code>, тому що обидва посилаються на ту саму ділянку пам’яті.</p>
+<p><em>Пам’ятай: <code>ptr</code> дає адресу, а <code>*ptr</code> дає доступ до значення за цією адресою.</em></p>
+<h2>5. Нульові вказівники</h2>
+<p>Іноді вказівник поки що не повинен ні на що вказувати.</p>
+<p>У сучасному C++ порожній вказівник ініціалізують за допомогою <span class="text-pink">nullptr</span>.</p>
+<pre><code>int* ptr = nullptr;</code></pre>
+<p>Нульовий вказівник не вказує на коректний об’єкт. Його завжди слід перевіряти, перш ніж намагатися через нього до чогось звернутися.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int* ptr = nullptr;
+
+    if (ptr != nullptr) {
+        std::cout &lt;&lt; *ptr &lt;&lt; "\n";
+    } else {
+        std::cout &lt;&lt; "Pointer is null!\n";
+    }
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Pointer is null!</code></pre>
+<p>Ніколи не розіменовуй нульовий вказівник — це спричиняє невизначену поведінку і зазвичай аварійно завершує програму.</p>
+<p><em>Пам’ятай: ініціалізуй невикористані вказівники значенням <code>nullptr</code> і перевіряй перед розіменуванням.</em></p>
+<h2>6. Вказівники та функції</h2>
+<p>За замовчуванням C++ передає аргументи за значенням, тобто функція отримує копію змінної.</p>
+<p>За допомогою вказівників функція може отримати адресу змінної та змінити вихідну змінну.</p>
+<pre><code>#include &lt;iostream&gt;
+
+void doubleValue(int* value) {
+    *value = (*value) * 2;
+}
+
+int main() {
+    int number = 10;
+    doubleValue(&amp;number);
+
+    std::cout &lt;&lt; "Number: " &lt;&lt; number &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Number: 20</code></pre>
+<h3>Як це працює?</h3>
+<ul>
+<li><code>&amp;number</code> передає адресу <code>number</code> у функцію.</li>
+<li><code>int* value</code> отримує цю адресу.</li>
+<li><code>*value</code> змінює вихідну змінну в <code>main()</code>.</li>
+</ul>
+<p><em>Пам’ятай: передача вказівника дозволяє функції змінювати вихідний об’єкт за його адресою.</em></p>
+<h2>7. Вказівники та масиви</h2>
+<p>У багатьох виразах ім’я масиву перетворюється на вказівник на його перший елемент.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int numbers[3] = {10, 20, 30};
+    int* ptr = numbers;
+
+    std::cout &lt;&lt; *ptr &lt;&lt; "\n";
+    std::cout &lt;&lt; *(ptr + 1) &lt;&lt; "\n";
+    std::cout &lt;&lt; *(ptr + 2) &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>10
+20
+30</code></pre>
+<h3>Що тут відбувається?</h3>
+<ul>
+<li><code>ptr</code> вказує на <code>numbers[0]</code>.</li>
+<li><code>ptr + 1</code> переходить до наступного <code>int</code> у пам’яті (<code>numbers[1]</code>).</li>
+<li><code>ptr + 2</code> переходить до <code>numbers[2]</code>.</li>
+</ul>
+<p>Зауваж, що масиви та вказівники не тотожні — наприклад, <code>sizeof(numbers)</code> повертає розмір усього масиву, а <code>sizeof(ptr)</code> — розмір самого вказівника, — хоча вони тісно пов’язані!</p>
+<p><em>Пам’ятай: арифметика вказівників може переміщатися елементами одного масиву, але розіменування поза межами масиву некоректне.</em></p>
+<h2>8. Динамічна пам’ять</h2>
+<p>Зазвичай змінні створюються автоматично й знищуються, коли закінчується їхня область видимості.</p>
+<p>C++ також дозволяє виділяти пам’ять динамічно під час виконання програми за допомогою <span class="text-pink">new</span> та звільняти її за допомогою <span class="text-pink">delete</span>.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int* ptr = new int;
+    *ptr = 25;
+
+    std::cout &lt;&lt; "Dynamic value: " &lt;&lt; *ptr &lt;&lt; "\n";
+
+    delete ptr;
+    ptr = nullptr;
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Dynamic value: 25</code></pre>
+<h3>Як це працює?</h3>
+<ul>
+<li><code>new int</code> виділяє в купі (heap) пам’ять для одного <code>int</code> і повертає його адресу.</li>
+<li><code>*ptr = 25</code> зберігає значення в цій пам’яті.</li>
+<li><code>delete ptr</code> знищує об’єкт і звільняє пам’ять, коли робота з нею завершена.</li>
+<li><code>ptr = nullptr</code> дозволяє не залишати після себе висячий вказівник.</li>
+</ul>
+<h3>Що таке витік пам’яті?</h3>
+<p>Якщо динамічно виділену пам’ять ніколи не звільнено за допомогою <code>delete</code>, вона залишається зарезервованою до завершення програми. Це називається <span class="text-pink">витоком пам’яті</span>.</p>
+<p>У сучасному C++ часто віддають перевагу розумним вказівникам, як-от <code>std::unique_ptr</code>, тому що вони автоматично очищають пам’ять.</p>
+<p><em>Пам’ятай: кожному «сирому» <code>new</code> має відповідати <code>delete</code> (а <code>new[]</code> — <code>delete[]</code>).</em></p>
+<h2>9. Типові помилки зі вказівниками</h2>
+<p>Вказівники потужні, тому навіть дрібні помилки можуть спричинити серйозні баги.</p>
+<h3>Неініціалізовані вказівники</h3>
+<p>Ніколи не використовуй вказівник, перш ніж присвоїти йому коректну адресу або <code>nullptr</code>.</p>
+<pre><code>int* ptr; // Не ініціалізовано!
+// *ptr = 10; // Невизначена поведінка!</code></pre>
+<p>Цей локальний вказівник має невизначене значення. Його розіменування до ініціалізації може призвести до невизначеної поведінки.</p>
+<h3>Висячі вказівники</h3>
+<p><span class="text-pink">Висячий вказівник</span> посилається на об’єкт, якого більше не існує, наприклад на пам’ять, яку вже звільнено.</p>
+<pre><code>int* ptr = new int(5);
+delete ptr;
+// *ptr = 10; // Не розіменовуй після delete!
+ptr = nullptr;</code></pre>
+<p>Після виклику <code>delete</code> не використовуй стару адресу знову; можна скинути вказівник на <code>nullptr</code>.</p>
+<h3>Доступ до недійсної пам’яті</h3>
+<p>Спроба звернутися до пам’яті поза межами коректних об’єктів або масивів може аварійно завершити програму або пошкодити дані.</p>
+<p>Наприклад:</p>
+<pre><code>int numbers[3] = {10, 20, 30};
+int* ptr = numbers;
+// *(ptr + 5) = 99; // Вихід за межі!</code></pre>
+<p><em>Пам’ятай: правильно ініціалізуй вказівники, уникай висячих вказівників і ніколи не розіменовуй недійсні адреси.</em></p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

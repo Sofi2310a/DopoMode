@@ -127,7 +127,7 @@ a {
 }
 
 .sidebar-title {
-  font-family: 'Silkscreen', monospace;
+  font-family: "Jersey 10", sans-serif;
   font-size: 22px;
   font-weight: 700;
   color: #0b0a10;
@@ -379,8 +379,9 @@ a {
 }
 
 .footer-brand {
-  font-family: 'Silkscreen', monospace;
-  font-size: 34px;
+  font-family: "Jersey 10", sans-serif;
+  letter-spacing: 4px;
+  font-size: 50px;
   font-weight: 700;
   margin-bottom: 8px;
 }
@@ -496,17 +497,16 @@ a {
   color: #1f4eff;
   font-weight: 700;
 }
-
 .lesson-article h1 {
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 25px;
 }
 
 .lesson-article h2 {
-  font-size: 23px;
+  font-size: 40px;
   margin-top: 50px;
-  margin-bottom: 22px;
 }
+
 
 .lesson-article h3 {
   font-family: 'Montserrat', sans-serif;

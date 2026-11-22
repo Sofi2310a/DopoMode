@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ Course - 13 Advanced OOP — DopoMode</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/theory13.css">
+  <script src="/js/search.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="/pages/main.html" class="header-logo">DopoMode</a>
+
+        <nav class="nav">
+          <a href="/pages/main.html" class="nav-link">Main</a>
+          <a href="/pages/about_1.html" class="nav-link">About Us</a>
+          <a href="theory.html" class="nav-link active">Theory</a>
+        </nav>
+      </div>
+
+      <div class="header-actions">
+        <a href="/pages/profile.html" class="profile-link">
+          <img src="/images/user.png" alt="Profile" class="profile-icon">
+          <span class="username">User67</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- PAGE CONTENT -->
+
+  <div class="page-container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+      <h2 class="sidebar-title">C++ course</h2>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="/pages/theory.html" class="menu-item">01 C++ Basics</a>
+        <a href="/pages/theory2.html" class="menu-item">02 Data Types</a>
+        <a href="/pages/theory3.html" class="menu-item">03 Operators</a>
+        <a href="/pages/theory4.html" class="menu-item">04 Conditions</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">PRACTICE</span>
+        <a href="/pages/theory5.html" class="menu-item">05 Basic Practice</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="/pages/theory6.html" class="menu-item">06 Loops</a>
+        <a href="/pages/theory7.html" class="menu-item">07 Functions</a>
+        <a href="/pages/theory8.html" class="menu-item">08 Arrays &amp; Strings</a>
+        <a href="/pages/theory9.html" class="menu-item">09 Pointers</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">PRACTICE</span>
+        <a href="/pages/theory10.html" class="menu-item">10 Coding Practice</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">THEORY</span>
+        <a href="/pages/theory11.html" class="menu-item">11 Structs &amp; Enums</a>
+        <a href="/pages/theory12.html" class="menu-item">12 Classes &amp; Objects</a>
+        <a href="/pages/theory13.html" class="menu-item active" aria-current="page">13 Advanced OOP</a>
+        <a href="/pages/theory14.html" class="menu-item">14 STL &amp; Files</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">FINAL</span>
+        <a href="/pages/theory15.html" class="menu-item">15 Project</a>
+      </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="content-area">
+
+      <div class="search-bar">
+        <div class="search-input-wrap">
+          <input type="text" placeholder="Enter keyword" class="search-input">
+
+          <svg class="search-icon" width="18" height="18"
+               viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+
+        <button class="btn-search" type="button">SEARCH</button>
+      </div>
+
+
+      <!-- LESSON ARTICLE -->
+
+      <article class="lesson-article">
+
+        <h1>13 — Advanced OOP</h1>
+
+        <p>You've already learned how to create classes, work with objects, and protect data using encapsulation.</p>
+
+        <p>But what happens when different classes need to share features or behave differently?</p>
+
+        <p>That's where Advanced Object-Oriented Programming (OOP) comes in!</p>
+
+        <p>In this lesson, you'll explore inheritance, polymorphism, virtual functions, abstract classes, and other tools that help developers build flexible C++ applications.</p>
+
+
+        <!-- SECTION 1 -->
+
+        <h2>1. Inheritance</h2>
+
+        <p>Imagine you're creating a game with warriors, archers, and mages.</p>
+
+        <p>All characters have common features, such as a name, but each character type has its own abilities.</p>
+
+        <p>Instead of repeating the same code, we can use inheritance.</p>
+
+        <p>Inheritance allows a new class to build on an existing class.</p>
+
+        <ul class="plain-list">
+          <li>Base class — provides common features.</li>
+          <li>Derived class — inherits those features and can add its own.</li>
+        </ul>
+
+        <p>Let's create a warrior character.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Character {
+public:
+    std::string name;
+
+    void introduce() const {
+        std::cout &lt;&lt; "I am " &lt;&lt; name &lt;&lt; "\n";
+    }
+};
+
+class Warrior : public Character {
+public:
+    void attack() const {
+        std::cout &lt;&lt; "Warrior attacks!\n";
+    }
+};
+
+int main() {
+    Warrior player;
+
+    player.name = "Alex";
+    player.introduce();
+    player.attack();
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>I am Alex
+Warrior attacks!</code></pre>
+
+        <h3 class="lesson-subheading">How Does It Work?</h3>
+
+        <p>The Warrior class inherits from Character using:</p>
+
+        <pre><code>class Warrior : public Character</code></pre>
+
+        <p>This means Warrior can use the public features of Character while adding new ones.</p>
+
+        <p>Here, introduce() comes from the base class, while attack() belongs to Warrior.</p>
+
+        <p><strong>Remember:</strong> Inheritance helps you share behavior between related classes without duplicating code.</p>
+
+
+        <!-- SECTION 2 -->
+
+        <h2>2. Types of Inheritance</h2>
+
+        <p>C++ supports several forms of inheritance.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Single</td>
+                <td>One class inherits from one base class</td>
+              </tr>
+              <tr>
+                <td>Multilevel</td>
+                <td>A derived class becomes the base for another class</td>
+              </tr>
+              <tr>
+                <td>Multiple</td>
+                <td>A class inherits from several base classes</td>
+              </tr>
+              <tr>
+                <td>Hierarchical</td>
+                <td>Several classes inherit from one base class</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Let's look at hierarchical inheritance.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+class Animal {
+public:
+    void breathe() const {
+        std::cout &lt;&lt; "Breathing...\n";
+    }
+};
+
+class Dog : public Animal {
+};
+
+class Cat : public Animal {
+};
+
+int main() {
+    Dog dog;
+    Cat cat;
+
+    dog.breathe();
+    cat.breathe();
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Breathing...
+Breathing...</code></pre>
+
+        <p>Both Dog and Cat inherit the breathe() function from Animal.</p>
+
+        <h3 class="lesson-subheading">When Should You Use Inheritance?</h3>
+
+        <p>Inheritance works best when classes have a meaningful "is-a" relationship.</p>
+
+        <p>For example:</p>
+
+        <p>A dog is an animal.</p>
+
+        <p>A warrior is a character.</p>
+
+        <p>However, inheritance isn't always the best choice. Sometimes combining objects is simpler, as you'll discover later in this lesson.</p>
+
+
+        <!-- SECTION 3 -->
+
+        <h2>3. Polymorphism</h2>
+
+        <p>Now imagine a game containing different animals.</p>
+
+        <p>Every animal can make a sound, but dogs bark and cats meow.</p>
+
+        <p>How can we call the same function and get different results?</p>
+
+        <p>We use polymorphism!</p>
+
+        <p>Polymorphism allows different object types to respond differently to the same operation.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+class Animal {
+public:
+    virtual void makeSound() const {
+        std::cout &lt;&lt; "Animal makes a sound\n";
+    }
+
+    virtual ~Animal() = default;
+};
+
+class Dog : public Animal {
+public:
+    void makeSound() const override {
+        std::cout &lt;&lt; "Woof!\n";
+    }
+};
+
+class Cat : public Animal {
+public:
+    void makeSound() const override {
+        std::cout &lt;&lt; "Meow!\n";
+    }
+};
+
+int main() {
+    Dog dog;
+    Cat cat;
+
+    Animal* animals[2] = {&amp;dog, &amp;cat};
+
+    for (Animal* animal : animals) {
+        animal-&gt;makeSound();
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Woof!
+Meow!</code></pre>
+
+        <h3 class="lesson-subheading">Why Does This Work?</h3>
+
+        <p>Both objects are accessed through pointers of type Animal*.</p>
+
+        <p>However, because makeSound() is virtual, C++ calls the version belonging to the actual object.</p>
+
+        <p>The dog barks, and the cat meows.</p>
+
+        <p>This behavior is called runtime polymorphism.</p>
+
+        <p><strong>Remember:</strong> Polymorphism allows you to use a common interface while different objects provide their own behavior.</p>
+
+
+        <!-- SECTION 4 -->
+
+        <h2>4. Virtual Functions</h2>
+
+        <p>Virtual functions make runtime polymorphism possible.</p>
+
+        <p>A virtual function is a member function that derived classes can override to provide their own behavior.</p>
+
+        <p>We declare one using the virtual keyword.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+class Vehicle {
+public:
+    virtual void start() const {
+        std::cout &lt;&lt; "Vehicle starts\n";
+    }
+
+    virtual ~Vehicle() = default;
+};
+
+class Car : public Vehicle {
+public:
+    void start() const override {
+        std::cout &lt;&lt; "Car engine starts\n";
+    }
+};
+
+int main() {
+    Car car;
+    Vehicle* vehicle = &amp;car;
+
+    vehicle-&gt;start();
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Car engine starts</code></pre>
+
+        <h3 class="lesson-subheading">What Do virtual and override Mean?</h3>
+
+        <ul class="plain-list">
+          <li>virtual — allows derived classes to customize behavior that is selected at runtime through a base-class pointer or reference.</li>
+          <li>override — tells the compiler that a derived function is intended to override an inherited virtual function.</li>
+        </ul>
+
+        <p>The override keyword is especially useful because the compiler can detect mistakes in function names or parameter types.</p>
+
+        <p>Notice the virtual destructor in the base class:</p>
+
+        <pre><code>virtual ~Vehicle() = default;</code></pre>
+
+        <p>This is an important practice for polymorphic base classes, especially when derived objects might be destroyed through base-class pointers.</p>
+
+        <p><strong>Remember:</strong> Virtual functions allow the correct derived-class behavior to be selected when working through base-class pointers or references.</p>
+
+
+        <!-- SECTION 5 -->
+
+        <h2>5. Abstract Classes</h2>
+
+        <p>Sometimes we want a class to define what its derived classes must do without providing every implementation.</p>
+
+        <p>For example, every shape should be able to calculate its area, but rectangles and circles use different formulas.</p>
+
+        <p>An abstract class helps us define this common requirement.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+class Shape {
+public:
+    virtual double area() const = 0;
+
+    virtual ~Shape() = default;
+};
+
+class Rectangle : public Shape {
+private:
+    double width;
+    double height;
+
+public:
+    Rectangle(double w, double h)
+        : width(w), height(h) {
+    }
+
+    double area() const override {
+        return width * height;
+    }
+};
+
+int main() {
+    Rectangle rect(5, 3);
+
+    std::cout &lt;&lt; rect.area() &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>15</code></pre>
+
+        <h3 class="lesson-subheading">What Makes a Class Abstract?</h3>
+
+        <p>Look at this line:</p>
+
+        <pre><code>virtual double area() const = 0;</code></pre>
+
+        <p>The = 0 makes area() a pure virtual function.</p>
+
+        <p>Because Shape contains a pure virtual function, we cannot create a Shape object directly.</p>
+
+        <p>The Rectangle class provides an implementation of area(), making it possible to create rectangle objects.</p>
+
+        <p><strong>Remember:</strong> Abstract classes define common interfaces that concrete derived classes can implement.</p>
+
+
+        <!-- SECTION 6 -->
+
+        <h2>6. Operator Overloading</h2>
+
+        <p>You've already used operators such as +, -, and ==.</p>
+
+        <p>But what if you create your own class and want those operators to work with its objects?</p>
+
+        <p>C++ allows you to define how existing operators behave with custom types. This is called operator overloading.</p>
+
+        <p>Let's create a class representing a point in two-dimensional space.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+class Point {
+public:
+    int x;
+    int y;
+
+    Point(int xValue, int yValue)
+        : x(xValue), y(yValue) {
+    }
+
+    Point operator+(const Point&amp; other) const {
+        return Point(x + other.x, y + other.y);
+    }
+};
+
+int main() {
+    Point p1(2, 3);
+    Point p2(4, 5);
+
+    Point result = p1 + p2;
+
+    std::cout &lt;&lt; result.x &lt;&lt; ", "
+              &lt;&lt; result.y &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>6, 8</code></pre>
+
+        <h3 class="lesson-subheading">How Does It Work?</h3>
+
+        <p>The function:</p>
+
+        <pre><code>Point operator+(const Point&amp; other) const</code></pre>
+
+        <p>defines how two Point objects are added.</p>
+
+        <p>It creates a new point by adding their coordinates.</p>
+
+        <p>So this:</p>
+
+        <pre><code>Point result = p1 + p2;</code></pre>
+
+        <p>works much like addition with ordinary numbers.</p>
+
+        <p>Operator overloading can make your classes more convenient, but the meaning of an operator should remain clear and predictable.</p>
+
+        <p><strong>Remember:</strong> Operator overloading lets custom types work naturally with existing C++ operators.</p>
+
+
+        <!-- SECTION 7 -->
+
+        <h2>7. Composition vs Inheritance</h2>
+
+        <p>Not every relationship between classes should use inheritance.</p>
+
+        <p>Imagine a car and its engine.</p>
+
+        <p>A car has an engine, but a car is not an engine.</p>
+
+        <p>This relationship is better represented using composition.</p>
+
+        <p>Composition means building a class using objects of other classes.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+class Engine {
+public:
+    void start() const {
+        std::cout &lt;&lt; "Engine started!\n";
+    }
+};
+
+class Car {
+private:
+    Engine engine;
+
+public:
+    void startCar() const {
+        engine.start();
+    }
+};
+
+int main() {
+    Car car;
+
+    car.startCar();
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Engine started!</code></pre>
+
+        <p>The Car class contains an Engine object and uses its functionality.</p>
+
+        <h3 class="lesson-subheading">What's the Difference?</h3>
+
+        <div class="table-wrap">
+          <table class="data-table comparison-table">
+            <thead>
+              <tr>
+                <th>Inheritance</th>
+                <th>Composition</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Represents an "is-a" relationship</td>
+                <td>Represents a "has-a" relationship</td>
+              </tr>
+              <tr>
+                <td>Builds on a base class</td>
+                <td>Combines objects</td>
+              </tr>
+              <tr>
+                <td>Shares an inherited interface or behavior</td>
+                <td>Uses contained objects to provide functionality</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Both approaches are useful, but composition is often more flexible when classes don't have a genuine inheritance relationship.</p>
+
+        <p><strong>Remember:</strong> Use inheritance for meaningful type relationships and composition when one object contains another.</p>
+
+      </article>
+
+    </main>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <img src="../images/rect.svg" alt="" class="footer-pattern">
+    <img src="../images/cloud.svg" alt="" class="footer-clouds">
+
+    <div class="footer-container">
+
+      <div class="footer-top">
+        <div class="footer-brand">DopoMode</div>
+        <p class="footer-tagline">Code smarter. Build harder. Master C++.</p>
+      </div>
+
+      <div class="footer-middle">
+
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="#" class="social-item">
+            <img src="../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+
+          <a href="#" class="social-item">
+            <img src="../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+
+          <a href="#" class="social-item">
+            <img src="../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 DopeMode. All rights reserved.</p>
+
+        <div class="footer-links">
+          <a href="/pages/about_1.html">About Us</a>
+          <a href="/pages/theory.html">Theory</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

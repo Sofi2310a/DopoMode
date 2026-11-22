@@ -379,10 +379,12 @@ a {
 
 .footer-brand {
   font-family: "Jersey 10", sans-serif;
-  font-size: 34px;
+  letter-spacing: 4px;
+  font-size: 50px;
   font-weight: 700;
   margin-bottom: 8px;
 }
+
 
 .footer-tagline {
   font-size: 16px;
@@ -498,15 +500,15 @@ a {
 }
 
 .lesson-article h1 {
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 25px;
 }
 
 .lesson-article h2 {
-  font-size: 30px;
+  font-size: 40px;
   margin-top: 50px;
-  margin-bottom: 22px;
 }
+
 
 .lesson-article h3 {
   font-family: 'Montserrat', sans-serif;

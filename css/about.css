@@ -106,11 +106,10 @@ a {
 }
 
 .header-logo {
-  font-family: "Jersey 10", sans-serif;
-  letter-spacing: 4px;
-  font-size: 40px;
-  font-weight: 700;
-  color: #ffffff;
+    font-family: "Jersey 10", "Montserrat", sans-serif;    
+    letter-spacing: 3px;
+    font-size: 40px;
+    color: #ffffff;
 }
 
 .nav {
@@ -262,7 +261,7 @@ a {
 }
 
 .footer-brand {
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   font-size: clamp(26px, 4vw, 34px);
   font-weight: 700;
   margin-bottom: 8px;

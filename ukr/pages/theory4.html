@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>04 Умови</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item" href="theory2.html">02 Типи даних</a>
+<a class="menu-item" href="theory3.html">03 Оператори</a>
+<a class="menu-item active" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory6.html">06 Цикли</a>
+<a class="menu-item" href="theory7.html">07 Функції</a>
+<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item" href="theory9.html">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory10.html">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+<a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+<a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+<a class="menu-item" href="theory14.html">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item" href="theory15.html">15 Проєкт</a>
+</div>
+</aside>
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Введіть ключове слово" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">ПОШУК</button>
+</div>
+<article class="lesson-article">
+<h1>04 — Умови</h1>
+<p>Що, якби твоя програма могла ухвалювати рішення?</p>
+<p>Уяви гру, яка перевіряє, чи достатньо в гравця балів, щоб розблокувати новий рівень, або застосунок, що перевіряє вік користувача.</p>
+<p>У C++ <span class="text-pink">умови</span> дозволяють програмам обирати різні дії залежно від того, <span class="text-pink">істинне</span> щось чи <span class="text-pink">хибне</span>.</p>
+<p>Дізнаймося, як вони працюють!</p>
+<h2>1. Інструкція if</h2>
+<p>Інструкція <span class="text-pink">if</span> виконує блок коду лише тоді, коли <span class="text-pink">умова</span> <span class="text-pink">істинна</span>.</p>
+<p>Наприклад, перевіримо, чи достатньо людині років, щоб потрапити на захід.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int age = 20;
+
+    if (age &gt;= 18) {
+        std::cout &lt;&lt; "Access granted!\n";
+    }
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Access granted!</code></pre>
+<p>Програма перевіряє, чи вік не менший за 18.</p>
+<p>Якщо <span class="text-pink">умова</span> <span class="text-pink">істинна</span>, з’являється повідомлення. В іншому випадку код у фігурних дужках пропускається.</p>
+<p><em>Пам’ятай: <span class="text-pink">if</span> виконує код лише тоді, коли його <span class="text-pink">умова</span> <span class="text-pink">істинна</span>.</em></p>
+<h2>2. Інструкція if-else</h2>
+<p>Іноді нам потрібно обрати одну з двох можливих дій.</p>
+<p>Саме тут з’являється <span class="text-pink">else</span>.</p>
+<pre><code>int temperature = 15;
+
+if (temperature &gt;= 20) {
+    std::cout &lt;&lt; "It is warm!\n";
+} else {
+    std::cout &lt;&lt; "It is cold!\n";
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>It is cold!</code></pre>
+<p>Оскільки температура нижча за 20, програма виконує блок <span class="text-pink">else</span>.</p>
+<p><em>Пам’ятай: <span class="text-pink">if</span> обробляє випадок, коли умова <span class="text-pink">істинна</span>, а <span class="text-pink">else</span> — альтернативний.</em></p>
+<h2>3. Інструкція else-if</h2>
+<p>А що, якщо можливих результатів більше двох?</p>
+<p>Ми можемо використати <span class="text-pink">else if</span>, щоб перевірити додаткові умови.</p>
+<pre><code>int score = 85;
+
+if (score &gt;= 90) {
+    std::cout &lt;&lt; "Excellent!\n";
+} else if (score &gt;= 70) {
+    std::cout &lt;&lt; "Good!\n";
+} else if (score &gt;= 50) {
+    std::cout &lt;&lt; "Passed!\n";
+} else {
+    std::cout &lt;&lt; "Failed!\n";
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Good!</code></pre>
+<p>C++ перевіряє умови зверху вниз.</p>
+<p>Щойно він знаходить <span class="text-pink">істинну</span> умову, він виконує відповідний блок і пропускає решту гілок.</p>
+<p><em>Пам’ятай: <span class="text-pink">else if</span> допомагає обрати між кількома можливими результатами.</em></p>
+<h2>4. Поєднання умов</h2>
+<p>Іноді однієї умови недостатньо.</p>
+<p>Уяви концерт, на який відвідувачам має бути щонайменше 18 років і потрібен квиток.</p>
+<p>Ми можемо поєднувати умови за допомогою логічних операторів.</p>
+<div class="table-wrap">
+<table class="types-table">
+<thead><tr><th>Оператор</th><th>Ім’я</th><th>Значення</th></tr></thead>
+<tbody>
+<tr><td><code>&amp;&amp;</code></td><td>І (AND)</td><td>Обидві умови мають бути істинними</td></tr>
+<tr><td><code>||</code></td><td>АБО (OR)</td><td>Принаймні одна умова має бути істинною</td></tr>
+<tr><td><code>!</code></td><td>НЕ (NOT)</td><td>Змінює логічне значення на протилежне</td></tr>
+</tbody>
+</table>
+</div>
+<p>Спробуймо приклад:</p>
+<pre><code>int age = 20;
+bool hasTicket = true;
+
+if (age &gt;= 18 &amp;&amp; hasTicket) {
+    std::cout &lt;&lt; "Access granted!\n";
+} else {
+    std::cout &lt;&lt; "Access denied!\n";
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Access granted!</code></pre>
+<p>Обидві умови істинні, тому доступ надано.</p>
+<p>Ці оператори дозволяють створювати точніші правила для твоїх програм.</p>
+<h2>5. Інструкція switch</h2>
+<p>Коли потрібно порівняти одне значення з кількома фіксованими варіантами, <span class="text-pink">switch</span> може бути зручною альтернативою кільком інструкціям <span class="text-pink">else if</span>.</p>
+<p>Наприклад, виведімо день тижня.</p>
+<pre><code>int day = 2;
+
+switch (day) {
+    case 1:
+        std::cout &lt;&lt; "Monday\n";
+        break;
+    case 2:
+        std::cout &lt;&lt; "Tuesday\n";
+        break;
+    case 3:
+        std::cout &lt;&lt; "Wednesday\n";
+        break;
+    default:
+        std::cout &lt;&lt; "Unknown day\n";
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Tuesday</code></pre>
+<p>Ось як це працює:</p>
+<ul>
+<li><span class="text-pink">switch</span> перевіряє значення.</li>
+<li><span class="text-pink">case</span> визначає можливий збіг.</li>
+<li><span class="text-pink">break</span> виходить із switch.</li>
+<li><span class="text-pink">default</span> обробляє значення, які не збігаються з жодним case.</li>
+</ul>
+<p>Без <span class="text-pink">break</span> виконання може перейти до наступного case.</p>
+<p><em>Важливо: звичайний C++ <span class="text-pink">switch</span> працює з цілими числами, символами та значеннями перелічень, але не безпосередньо з std::string.</em></p>
+<h2>6. Тернарний оператор</h2>
+<p>C++ пропонує коротший спосіб вибору між двома значеннями за допомогою тернарного оператора <span class="text-pink">?:</span>.</p>
+<p>Його структура: <span class="text-pink">умова</span> ? valueIfTrue : valueIfFalse</p>
+<p>Подивімося на приклад:</p>
+<pre><code>int age = 20;
+
+std::string result = (age &gt;= 18) ? "Adult" : "Minor";
+
+std::cout &lt;&lt; result &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Adult</code></pre>
+<p>Якщо <span class="text-pink">умова</span> <span class="text-pink">істинна</span>, обирається перше значення. В іншому випадку обирається друге.</p>
+<p>Це корисно для простих рішень, але для складнішої логіки зазвичай зрозуміліший <span class="text-pink">if-else</span>.</p>
+<h2>7. Вкладені умови</h2>
+<p>Іноді одне рішення залежить від іншого.</p>
+<p>Наприклад, відвідувач має бути дорослим, перш ніж ми перевіримо, чи є в нього посвідчення особи.</p>
+<pre><code>int age = 20;
+bool hasID = true;
+
+if (age &gt;= 18) {
+    if (hasID) {
+        std::cout &lt;&lt; "Entry allowed!\n";
+    } else {
+        std::cout &lt;&lt; "ID required!\n";
+    }
+} else {
+    std::cout &lt;&lt; "You are too young!\n";
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Entry allowed!</code></pre>
+<p>Спочатку програма перевіряє вік. Якщо відвідувач достатньо дорослий, вона перевіряє наявність посвідчення.</p>
+<p>Це називається <span class="text-pink">вкладеною умовою</span>.</p>
+<p><span class="text-pink">Вкладені умови</span> корисні, але занадто багато рівнів може ускладнити читання коду.</p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

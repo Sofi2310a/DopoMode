@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+html[lang="uk"] .header-logo,
+html[lang="uk"] .logo { font-family: 'Press Start 2P', monospace; font-size: 16px; letter-spacing: 0; }
+html[lang="uk"] .footer-brand { font-family: 'Press Start 2P', monospace; font-size: 16px; letter-spacing: 0; }
+
+
+html[lang="uk"] .hero-title { font-family: 'Press Start 2P', monospace; font-size: clamp(28px, 7vw, 48px); letter-spacing: 0; line-height: 1.3; }
+
+
+html[lang="uk"] .form-title { font-family: 'Press Start 2P', monospace; font-size: 32px; line-height: 1.3; }
+html[lang="uk"] .title { font-family: 'Press Start 2P', monospace; font-size: 40px; line-height: 1.3; }
+html[lang="uk"] .page-title { font-family: 'Press Start 2P', monospace; font-size: 32px; letter-spacing: 0; line-height: 1.3; }
+
+
+html[lang="uk"] .reset-btn,
+html[lang="uk"] .blue-btn,
+html[lang="uk"] .submit-btn { font-family: 'Press Start 2P', monospace; font-size: 16px; letter-spacing: 0; }
+html[lang="uk"] .btn-start,
+html[lang="uk"] .btn-buy { font-family: 'Press Start 2P', monospace; font-size: 12px; letter-spacing: 0; }
+
+
+html[lang="uk"] .sidebar-title { font-family: 'Press Start 2P', monospace; font-size: 16px; line-height: 1.4; }
+html[lang="uk"] .lesson-article h1,
+html[lang="uk"] .lesson-article h2 { font-family: 'Press Start 2P', monospace; line-height: 1.4; }

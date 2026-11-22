@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>15 Проєкт</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/theory15.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item" href="theory2.html">02 Типи даних</a>
+<a class="menu-item" href="theory3.html">03 Оператори</a>
+<a class="menu-item" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory6.html">06 Цикли</a>
+<a class="menu-item" href="theory7.html">07 Функції</a>
+<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item" href="theory9.html">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory10.html">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+<a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+<a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+<a class="menu-item" href="theory14.html">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item active" href="theory15.html">15 Проєкт</a>
+</div>
+</aside>
+<main class="content-area">
+
+      <!-- SEARCH -->
+
+      <div class="search-bar">
+
+        <div class="search-input-wrap">
+          <input
+            type="text"
+            placeholder="Enter keyword"
+            class="search-input"
+            aria-label="Search lessons"
+          >
+
+          <svg class="search-icon" width="18" height="18"
+               viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+
+        <button class="btn-search" type="button">SEARCH</button>
+
+      </div>
+
+
+
+      <article class="lesson-article">
+
+        <h1>15 — Final Project</h1>
+
+        <p>Congratulations! You've reached the final project of your C++ course!</p>
+
+        <p>You've learned how to use variables, conditions, loops, functions, arrays, pointers, classes, containers, and files.</p>
+
+        <p>Now it's time to bring everything together and create a real application.</p>
+
+        <p>Your challenge is to build a Student Management System — a console application that allows users to add, view, search, update, and delete student records.</p>
+
+        <p>This project will help you understand how different C++ concepts work together in a complete program.</p>
+
+
+
+        <h2>1. Project Overview</h2>
+
+        <p class="project-level">Intermediate</p>
+        <p class="project-type">Final Project</p>
+
+        <p>Project Name: Student Management System</p>
+
+        <p>Your application will manage student information through a simple text-based menu.</p>
+
+        <p>Each student should have four properties:</p>
+
+        <ul class="plain-list">
+          <li>ID — a unique number identifying the student.</li>
+          <li>Name — the student's full name.</li>
+          <li>Age — the student's age.</li>
+          <li>Grade — the student's average score.</li>
+        </ul>
+
+        <p>The application must also save student records to a file so they remain available after the program closes.</p>
+
+        <h3 class="lesson-subheading">Example Menu</h3>
+
+        <pre class="output"><code>===== STUDENT MANAGEMENT =====
+
+1. Add Student
+2. View Students
+3. Search Student
+4. Update Student
+5. Delete Student
+6. Save Students
+0. Exit
+
+Choose an option:</code></pre>
+
+        <p>The menu should keep appearing until the user chooses 0 to exit.</p>
+
+        <p>Instead of writing the entire application at once, we'll build it step by step.</p>
+
+
+        <!-- SECTION 2 -->
+
+        <h2>2. Step 01 — Create the Student Class</h2>
+
+        <p>Let's start by defining what a student looks like in our program.</p>
+
+        <p>We'll use a class to keep related information and behavior together.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;fstream&gt;
+#include &lt;limits&gt;
+
+class Student {
+public:
+    int id;
+    std::string name;
+    int age;
+    double grade;
+
+    Student(int i, std::string n, int a, double g)
+        : id(i), name(n), age(a), grade(g) {
+    }
+
+    void display() const {
+        std::cout &lt;&lt; "ID: " &lt;&lt; id &lt;&lt; "\n";
+        std::cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; "\n";
+        std::cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; "\n";
+        std::cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; "\n";
+    }
+};</code></pre>
+
+        <h3 class="lesson-subheading">How Does It Work?</h3>
+
+        <p>The Student class contains four data members and a function called display().</p>
+
+        <p>The constructor initializes a student with the information we provide.</p>
+
+        <p>For example:</p>
+
+        <pre><code>Student student1(1, "Alex", 18, 95.5);
+
+student1.display();</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>ID: 1
+Name: Alex
+Age: 18
+Grade: 95.5</code></pre>
+
+        <p>For simplicity, our class uses public data members. In larger applications, private members and controlled access can help protect data.</p>
+
+        <p><strong>Remember:</strong> Classes allow us to organize related information and behavior into reusable objects.</p>
+
+
+        <!-- SECTION 3 -->
+
+        <h2>3. Step 02 — Store Students in a Vector</h2>
+
+        <p>A school can have many students, and we don't know exactly how many records our application will need.</p>
+
+        <p>That's why we'll use std::vector.</p>
+
+        <p>Unlike regular arrays, vectors can grow when new elements are added.</p>
+
+        <pre><code>std::vector&lt;Student&gt; students;</code></pre>
+
+        <p>To add a student:</p>
+
+        <pre><code>students.emplace_back(1, "Alex", 18, 95.5);</code></pre>
+
+        <p>Now let's create a function that displays all students.</p>
+
+        <pre><code>void viewStudents(const std::vector&lt;Student&gt;&amp; students) {
+    if (students.empty()) {
+        std::cout &lt;&lt; "No students found.\n";
+        return;
+    }
+
+    for (const Student&amp; student : students) {
+        student.display();
+        std::cout &lt;&lt; "----------\n";
+    }
+}</code></pre>
+
+        <p>The range-based for loop visits every student in the vector.</p>
+
+        <p>We use const Student&amp; to access each student without making an unnecessary copy.</p>
+
+        <h3 class="lesson-subheading">Your Task</h3>
+
+        <p>Create an addStudent() function that:</p>
+
+        <ol>
+          <li>Asks the user for an ID, name, age, and grade.</li>
+          <li>Checks that the ID isn't already used.</li>
+          <li>Validates the entered information.</li>
+          <li>Adds the new student to the vector.</li>
+        </ol>
+
+        <p>Important: Every student must have a unique ID.</p>
+
+
+        <!-- SECTION 4 -->
+
+        <h2>4. Step 03 — Search for Students</h2>
+
+        <p>Now let's add a search feature.</p>
+
+        <p>Imagine having 100 students in your system. Finding one manually would take too much time.</p>
+
+        <p>Instead, we'll create a function that searches by student ID.</p>
+
+        <pre><code>Student* findStudent(std::vector&lt;Student&gt;&amp; students, int id) {
+    for (Student&amp; student : students) {
+        if (student.id == id) {
+            return &amp;student;
+        }
+    }
+
+    return nullptr;
+}</code></pre>
+
+        <h3 class="lesson-subheading">How Does It Work?</h3>
+
+        <p>The function checks each student until it finds a matching ID.</p>
+
+        <p>If a match is found, it returns a pointer to that student.</p>
+
+        <p>Otherwise, it returns nullptr.</p>
+
+        <p>Here's how to use it:</p>
+
+        <pre><code>Student* result = findStudent(students, 1);
+
+if (result != nullptr) {
+    result-&gt;display();
+} else {
+    std::cout &lt;&lt; "Student not found.\n";
+}</code></pre>
+
+        <p>Important: Pointers to vector elements can become invalid when the vector is modified. Use the result immediately and don't keep it after operations that may invalidate it.</p>
+
+        <h3 class="lesson-subheading">Your Task</h3>
+
+        <p>Add a menu option that asks for a student ID and displays the matching student's information.</p>
+
+
+
+        <h2>5. Step 04 — Update and Delete Students</h2>
+
+        <p>Our application can now store and search for students.</p>
+
+        <p>Next, let's allow users to edit or remove records.</p>
+
+
+        <h3 class="lesson-subheading">Updating a Student</h3>
+
+        <p>Create an updateStudent() function that:</p>
+
+        <ol>
+          <li>Asks for the student's ID.</li>
+          <li>Finds the matching student.</li>
+          <li>Displays a message if no student is found.</li>
+          <li>Asks for the new name, age, and grade.</li>
+          <li>Updates the existing record after validating the new information.</li>
+        </ol>
+
+        <p>You can reuse the findStudent() function to locate the student.</p>
+
+
+        <h3 class="lesson-subheading">Deleting a Student</h3>
+
+        <p>To remove a student, we can use the vector's erase() function.</p>
+
+        <pre><code>void deleteStudent(std::vector&lt;Student&gt;&amp; students, int id) {
+    for (auto it = students.begin();
+         it != students.end(); ++it) {
+
+        if (it-&gt;id == id) {
+            students.erase(it);
+            std::cout &lt;&lt; "Student deleted!\n";
+            return;
+        }
+    }
+
+    std::cout &lt;&lt; "Student not found.\n";
+}</code></pre>
+
+        <p>The function searches for a matching ID and removes that record.</p>
+
+        <p>After calling erase(), the removed element and subsequent elements may no longer be accessible through previously saved iterators or pointers.</p>
+
+
+        <h3 class="lesson-subheading">What Is CRUD?</h3>
+
+        <p>These four operations have a common name in software development:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Operation</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Create</td>
+                <td>Add a new record</td>
+              </tr>
+              <tr>
+                <td>Read</td>
+                <td>View or search for a record</td>
+              </tr>
+              <tr>
+                <td>Update</td>
+                <td>Modify an existing record</td>
+              </tr>
+              <tr>
+                <td>Delete</td>
+                <td>Remove a record</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Together, they're known as CRUD.</p>
+
+        <p>You'll encounter these operations in databases, websites, and many real applications.</p>
+
+
+
+        <h2>6. Step 05 — Save Students to a File</h2>
+
+        <p>There's one important problem with our application so far.</p>
+
+        <p>When the program closes, the student records stored in memory disappear.</p>
+
+        <p>To keep them, we need file handling.</p>
+
+        <p>Let's save our student data to a text file.</p>
+
+        <pre><code>void saveStudents(const std::vector&lt;Student&gt;&amp; students) {
+    std::ofstream file("students.txt");
+
+    if (!file.is_open()) {
+        std::cout &lt;&lt; "Cannot open file!\n";
+        return;
+    }
+
+    for (const Student&amp; student : students) {
+        file &lt;&lt; student.id &lt;&lt; "\n";
+        file &lt;&lt; student.name &lt;&lt; "\n";
+        file &lt;&lt; student.age &lt;&lt; "\n";
+        file &lt;&lt; student.grade &lt;&lt; "\n";
+    }
+
+    file.close();
+
+    if (file) {
+        std::cout &lt;&lt; "Students saved!\n";
+    } else {
+        std::cout &lt;&lt; "Error saving students!\n";
+    }
+}</code></pre>
+
+
+        <h3 class="lesson-subheading">Example File Content</h3>
+
+        <pre class="output"><code>1
+Alex
+18
+95.5
+2
+Emma
+19
+92</code></pre>
+
+        <p>Each student occupies four lines in the file.</p>
+
+        <p>The first line contains the ID, followed by the name, age, and grade.</p>
+
+        <p>Opening an existing file with std::ofstream in this way normally replaces its previous contents, so the application should report saving errors clearly.</p>
+
+
+        <h3 class="lesson-subheading">Your Task</h3>
+
+        <p>Create a function named loadStudents() that:</p>
+
+        <ol>
+          <li>Opens students.txt when the program starts.</li>
+          <li>Reads four fields for each student.</li>
+          <li>Creates a Student object from each valid record.</li>
+          <li>Adds the student to the vector.</li>
+          <li>Handles missing files, incomplete records, invalid values, and duplicate IDs.</li>
+        </ol>
+
+        <p>For this project, keep names on one line without embedded newline characters. Use a consistent numeric format and locale when saving and loading grades.</p>
+
+        <p>Remember: Saving data allows your application to keep information between sessions.</p>
+
+
+        <!-- SECTION 7 -->
+
+        <h2>7. Step 06 — Create the Main Menu</h2>
+
+        <p>Now it's time to connect everything into one application.</p>
+
+        <p>We'll use a do-while loop to keep the menu running and a switch statement to handle the user's choices.</p>
+
+        <p>The following example is a starting template. It assumes the Student class and the functions shown earlier have already been defined.</p>
+
+        <pre><code>int main() {
+    std::vector&lt;Student&gt; students;
+    int choice = -1;
+
+    do {
+        std::cout &lt;&lt; "\n===== STUDENT MANAGEMENT =====\n";
+        std::cout &lt;&lt; "1. Add Student\n";
+        std::cout &lt;&lt; "2. View Students\n";
+        std::cout &lt;&lt; "3. Search Student\n";
+        std::cout &lt;&lt; "4. Update Student\n";
+        std::cout &lt;&lt; "5. Delete Student\n";
+        std::cout &lt;&lt; "6. Save Students\n";
+        std::cout &lt;&lt; "0. Exit\n";
+        std::cout &lt;&lt; "Choose an option: ";
+
+        if (!(std::cin &gt;&gt; choice)) {
+            if (std::cin.eof()) {
+                std::cout &lt;&lt; "\nInput ended.\n";
+                break;
+            }
+
+            std::cout &lt;&lt; "Invalid input!\n";
+            std::cin.clear();
+            std::cin.ignore(
+                std::numeric_limits&lt;std::streamsize&gt;::max(),
+                '\n'
+            );
+            continue;
+        }
+
+        std::cin.ignore(
+            std::numeric_limits&lt;std::streamsize&gt;::max(),
+            '\n'
+        );
+
+        switch (choice) {
+            case 1:
+                std::cout &lt;&lt; "Add Student selected\n";
+                break;
+
+            case 2:
+                viewStudents(students);
+                break;
+
+            case 3:
+                std::cout &lt;&lt; "Search Student selected\n";
+                break;
+
+            case 4:
+                std::cout &lt;&lt; "Update Student selected\n";
+                break;
+
+            case 5:
+                std::cout &lt;&lt; "Delete Student selected\n";
+                break;
+
+            case 6:
+                saveStudents(students);
+                break;
+
+            case 0:
+                std::cout &lt;&lt; "Goodbye!\n";
+                break;
+
+            default:
+                std::cout &lt;&lt; "Invalid option!\n";
+        }
+
+    } while (choice != 0);
+
+    return 0;
+}</code></pre>
+
+
+        <h3 class="lesson-subheading">Your Task</h3>
+
+        <p>Replace the placeholder messages with calls to your completed functions.</p>
+
+        <p>Also, make sure your program:</p>
+
+        <ul class="plain-list">
+          <li>Loads saved records when it starts.</li>
+          <li>Handles invalid input without getting stuck.</li>
+          <li>Continues displaying the menu after each operation.</li>
+          <li>Saves records when the user chooses option 6.</li>
+        </ul>
+
+        <p>Bonus: Automatically save changes before exiting.</p>
+
+
+
+        <h2>8. Final Project Checklist</h2>
+
+        <p>Before submitting your application, make sure you've completed every requirement.</p>
+
+        <p class="checklist-label"><strong>Project Progress</strong></p>
+
+        <p class="progress-count" id="progress-count" aria-live="polite">0 / 11 completed</p>
+
+        <div class="project-checklist" id="project-checklist">
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Create a Student class with ID, name, age, and grade</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Use std::vector to store student objects</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Build an interactive menu using a loop</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Add students with unique IDs</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Display all student records</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Search for students by ID</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Update existing student records</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Delete student records</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Save records to a text file</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Load saved records when the program starts</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Handle invalid input and missing records</span>
+          </label>
+
+        </div>
+
+
+        <h3 class="lesson-subheading">Bonus Challenges</h3>
+
+        <p>Finished everything? Try improving your application!</p>
+
+        <ul class="plain-list">
+          <li>Sort students by their grades.</li>
+          <li>Find the student with the highest grade.</li>
+          <li>Calculate the average grade of all students.</li>
+          <li>Automatically save records before exiting.</li>
+        </ul>
+
+        <p>These features will give you more practice with algorithms, vectors, and file handling.</p>
+
+
+
+        <h2>9. Test Your Application</h2>
+
+        <p>A program that compiles successfully isn't necessarily free of errors.</p>
+
+        <p>Before considering your project complete, test different situations.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Test</th>
+                <th>Expected Result</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Add a student</td>
+                <td>The student appears in the list</td>
+              </tr>
+              <tr>
+                <td>Add a duplicate ID</td>
+                <td>The record is rejected</td>
+              </tr>
+              <tr>
+                <td>Search for an existing ID</td>
+                <td>Student details appear</td>
+              </tr>
+              <tr>
+                <td>Search for an unknown ID</td>
+                <td>A clear message appears</td>
+              </tr>
+              <tr>
+                <td>Update a student</td>
+                <td>The new information is displayed</td>
+              </tr>
+              <tr>
+                <td>Delete a student</td>
+                <td>The record disappears</td>
+              </tr>
+              <tr>
+                <td>Save and restart</td>
+                <td>Previously saved records are restored</td>
+              </tr>
+              <tr>
+                <td>Enter invalid information</td>
+                <td>The program handles it safely</td>
+              </tr>
+              <tr>
+                <td>Load a damaged file</td>
+                <td>Invalid records are handled without crashing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Pay special attention to unexpected input, such as letters where numbers are required, negative ages, invalid grades, and incomplete files.</p>
+
+        <p>Remember: Testing is part of programming, not something you do only after finishing the code.</p>
+
+
+
+        <h2>10. Final Summary</h2>
+
+        <p>By completing the Student Management System, you'll combine many of the skills you've developed throughout the course.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Concept</th>
+                <th>How You'll Use It</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Variables</td>
+                <td>Store student details and menu choices</td>
+              </tr>
+              <tr>
+                <td>Conditions</td>
+                <td>Validate information and make decisions</td>
+              </tr>
+              <tr>
+                <td>Loops</td>
+                <td>Display menus and process records</td>
+              </tr>
+              <tr>
+                <td>Functions</td>
+                <td>Organize different operations</td>
+              </tr>
+              <tr>
+                <td>Classes</td>
+                <td>Represent student records</td>
+              </tr>
+              <tr>
+                <td>Pointers</td>
+                <td>Access existing objects</td>
+              </tr>
+              <tr>
+                <td>Vectors</td>
+                <td>Store collections of students</td>
+              </tr>
+              <tr>
+                <td>STL</td>
+                <td>Manage and process data</td>
+              </tr>
+              <tr>
+                <td>File Handling</td>
+                <td>Save and load records</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+        <h2 class="final-thoughts-title">Final Thoughts</h2>
+
+        <p><strong>Congratulations on reaching the end of your C++ course!</strong></p>
+
+        <p>You've come a long way — from writing your first Hello, World! program to designing an application that manages real information.</p>
+
+        <p>The Student Management System brings together many important programming concepts in one practical project.</p>
+
+        <p>It won't be perfect on your first attempt, and that's completely normal. Focus on getting each feature working, testing it carefully, and improving your code step by step.</p>
+
+
+        <h3 class="lesson-subheading">What's Next?</h3>
+
+        <p>Your C++ journey doesn't end here.</p>
+
+        <p>Keep building projects, explore more modern C++ features, and challenge yourself to solve increasingly difficult problems.</p>
+
+        <p>You could turn your Student Management System into a larger application with more information, better search features, or a graphical interface.</p>
+
+        <p>The most important skill you've developed isn't remembering syntax. It's learning how to break problems into smaller steps and turn your ideas into working software.</p>
+
+        <p><strong>You've built your foundation. Now it's time to create something of your own!</strong></p>
+
+      </article>
+
+    </main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const checklist = document.getElementById("project-checklist");
+      const counter = document.getElementById("progress-count");
+
+      if (!checklist || !counter) return;
+
+      const checkboxes = Array.from(
+        checklist.querySelectorAll('input[type="checkbox"]')
+      );
+
+      function updateProgress() {
+        const completed = checkboxes.filter(box => box.checked).length;
+        counter.textContent = `${completed} / ${checkboxes.length} completed`;
+      }
+
+      checklist.addEventListener("change", updateProgress);
+      updateProgress();
+    });
+  </script>
+</body>
+</html>

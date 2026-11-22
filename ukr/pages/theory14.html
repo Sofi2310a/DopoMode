@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>14 STL і файли</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/theory14.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item" href="theory2.html">02 Типи даних</a>
+<a class="menu-item" href="theory3.html">03 Оператори</a>
+<a class="menu-item" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory6.html">06 Цикли</a>
+<a class="menu-item" href="theory7.html">07 Функції</a>
+<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item" href="theory9.html">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory10.html">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+<a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+<a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+<a class="menu-item active" href="theory14.html">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item" href="theory15.html">15 Проєкт</a>
+</div>
+</aside>
+<main class="content-area">
+
+      <div class="search-bar">
+
+        <div class="search-input-wrap">
+          <input type="text" placeholder="Enter keyword" class="search-input">
+
+          <svg class="search-icon" width="18" height="18"
+               viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+
+        </div>
+
+        <button class="btn-search" type="button">SEARCH</button>
+
+      </div>
+
+
+
+      <article class="lesson-article">
+
+        <h1>14 — STL &amp; Files</h1>
+
+
+
+        <h2>1. What Is STL?</h2>
+
+        <p>The Standard Template Library (STL) is a collection of ready-to-use tools for storing, organizing, and processing data in C++.</p>
+
+        <p>Instead of creating every data structure or algorithm yourself, you can use existing components from the C++ standard library.</p>
+
+        <p>The STL includes three important parts:</p>
+
+        <ul class="plain-list">
+          <li>Containers — store collections of data.</li>
+          <li>Algorithms — perform operations such as sorting and searching.</li>
+          <li>Iterators — provide a way to access elements inside containers.</li>
+        </ul>
+
+        <p>Using STL makes code shorter, easier to maintain, and more efficient.</p>
+
+        <p><strong>Key Point:</strong> STL provides reusable tools that help programmers work with data without writing everything from scratch.</p>
+
+        <h3 class="practice-heading">Practice Exercise</h3>
+
+        <p>Identify one real-world situation where a container, an algorithm, and an iterator would each be useful.</p>
+
+
+
+        <h2>2. Vectors</h2>
+
+        <p>A vector is a dynamic array that can automatically grow or shrink as elements are added or removed.</p>
+
+        <p>Unlike regular arrays, vectors do not require you to specify a fixed number of elements.</p>
+
+        <p>To use vectors, include the &lt;vector&gt; header.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; numbers = {10, 20, 30};
+
+    numbers.push_back(40);
+
+    for (int number : numbers) {
+        cout &lt;&lt; number &lt;&lt; " ";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>10 20 30 40</code></pre>
+
+        <h3 class="lesson-subheading">Common Vector Operations</h3>
+
+        <div class="table-wrap">
+          <table class="data-table">
+
+            <thead>
+              <tr>
+                <th>Operation</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>push_back()</td>
+                <td>Adds an element to the end</td>
+              </tr>
+              <tr>
+                <td>pop_back()</td>
+                <td>Removes the last element</td>
+              </tr>
+              <tr>
+                <td>size()</td>
+                <td>Returns the number of elements</td>
+              </tr>
+              <tr>
+                <td>empty()</td>
+                <td>Checks whether the vector is empty</td>
+              </tr>
+              <tr>
+                <td>at()</td>
+                <td>Accesses an element with bounds checking</td>
+              </tr>
+              <tr>
+                <td>clear()</td>
+                <td>Removes all elements</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+        <p>Example:</p>
+
+        <pre><code>vector&lt;int&gt; scores = {80, 90, 100};
+
+cout &lt;&lt; scores.at(0) &lt;&lt; endl;
+cout &lt;&lt; scores.size();</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>80
+3</code></pre>
+
+        <p><strong>Remember:</strong> Use vector when you need a collection of elements whose size may change.</p>
+
+        <h3 class="practice-heading">Practice Exercise</h3>
+
+        <p>Create a vector with three scores. Add one more score using push_back(), remove the last element using pop_back(), and print the remaining values and size.</p>
+
+
+
+        <h2>3. Other STL Containers</h2>
+
+        <p>C++ provides different containers for different purposes.</p>
+
+        <h3 class="lesson-subheading">array — Fixed-Size Collection</h3>
+
+        <p>The std::array container stores a fixed number of elements.</p>
+
+        <pre><code>#include &lt;array&gt;
+
+array&lt;int, 3&gt; numbers = {10, 20, 30};</code></pre>
+
+        <p>Unlike a traditional C-style array, std::array provides useful functions such as .size() and .at().</p>
+
+
+        <h3 class="lesson-subheading">map — Key-Value Pairs</h3>
+
+        <p>A map stores information as pairs of keys and values.</p>
+
+        <p>For example, we can store student names and their scores.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    map&lt;string, int&gt; scores;
+
+    scores["Alex"] = 90;
+    scores["Emma"] = 95;
+
+    cout &lt;&lt; scores["Emma"];
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>95</code></pre>
+
+        <p>Each key in a map is unique, and its elements are ordered by key.</p>
+
+
+        <h3 class="lesson-subheading">set — Unique Values</h3>
+
+        <p>A set stores unique values in sorted order.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;set&gt;
+using namespace std;
+
+int main() {
+    set&lt;int&gt; numbers = {5, 2, 5, 1};
+
+    for (int number : numbers) {
+        cout &lt;&lt; number &lt;&lt; " ";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>1 2 5</code></pre>
+
+        <p>The repeated value 5 is stored only once.</p>
+
+        <p><strong>Key Point:</strong> Choose containers based on how you need to organize and access your data.</p>
+
+        <h3 class="practice-heading">Practice Exercise</h3>
+
+        <p>Create a map that stores the scores of two students and a set containing {4, 2, 4, 1}. Print a student's score and the unique set elements.</p>
+
+
+
+        <h2>4. STL Algorithms</h2>
+
+        <p>Algorithms are ready-made functions that perform common operations on collections of data.</p>
+
+        <p>The &lt;algorithm&gt; header provides many useful functions.</p>
+
+        <p>Some of the most common are:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+
+            <thead>
+              <tr>
+                <th>Algorithm</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>sort()</td>
+                <td>Sorts elements</td>
+              </tr>
+              <tr>
+                <td>find()</td>
+                <td>Searches for a value</td>
+              </tr>
+              <tr>
+                <td>reverse()</td>
+                <td>Reverses the order of elements</td>
+              </tr>
+              <tr>
+                <td>count()</td>
+                <td>Counts occurrences of a value</td>
+              </tr>
+              <tr>
+                <td>max_element()</td>
+                <td>Finds the largest element</td>
+              </tr>
+              <tr>
+                <td>min_element()</td>
+                <td>Finds the smallest element</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+
+        <h3 class="lesson-subheading">Sorting a Vector</h3>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; numbers = {5, 2, 8, 1, 3};
+
+    sort(numbers.begin(), numbers.end());
+
+    for (int number : numbers) {
+        cout &lt;&lt; number &lt;&lt; " ";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>1 2 3 5 8</code></pre>
+
+        <p>The sort() function arranges the numbers in ascending order.</p>
+
+
+        <h3 class="lesson-subheading">Finding an Element</h3>
+
+        <pre><code>vector&lt;int&gt; numbers = {10, 20, 30};
+
+auto result = find(numbers.begin(), numbers.end(), 20);
+
+if (result != numbers.end()) {
+    cout &lt;&lt; "Number found!";
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Number found!</code></pre>
+
+        <p>The find() function returns an iterator to the matching element. If the value is not found, it returns the end iterator.</p>
+
+        <p><strong>Remember:</strong> STL algorithms allow you to perform common operations without manually writing complex loops.</p>
+
+        <h3 class="practice-heading">Practice Exercise</h3>
+
+        <p>Create a vector containing {9, 3, 7, 3, 1}. Sort it, then use count() to determine how many times 3 appears.</p>
+
+
+
+        <h2>5. Iterators</h2>
+
+        <p>An iterator is an object used to access elements in a container.</p>
+
+        <p>Iterators work similarly to pointers, allowing us to move through collections.</p>
+
+        <p>Example:</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; numbers = {10, 20, 30};
+
+    for (auto it = numbers.begin(); it != numbers.end(); ++it) {
+        cout &lt;&lt; *it &lt;&lt; " ";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>10 20 30</code></pre>
+
+        <p>Here:</p>
+
+        <ul class="plain-list">
+          <li>begin() — returns an iterator to the first element.</li>
+          <li>end() — returns an iterator representing the position after the last element.</li>
+          <li>++it — moves to the next element.</li>
+          <li>*it — accesses the current element.</li>
+        </ul>
+
+        <p><strong>Important:</strong> The iterator returned by end() must not be dereferenced.</p>
+
+        <p>Iterators are especially useful when working with STL algorithms.</p>
+
+        <p><strong>Key Point:</strong> Iterators provide a common way to access elements in different containers.</p>
+
+        <h3 class="practice-heading">Practice Exercise</h3>
+
+        <p>Print each element of a vector using begin(), end(), ++it, and *it. Do not dereference end().</p>
+
+
+
+        <h2>6. What Is File Handling?</h2>
+
+        <p>Normally, information stored in variables disappears when a program finishes.</p>
+
+        <p>File handling allows programs to save information and read it again later.</p>
+
+        <p>For example, a program can store student grades, user settings, or game progress in a file.</p>
+
+        <p>C++ provides the &lt;fstream&gt; header for working with files.</p>
+
+        <p>Three common file stream types are:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>ofstream</td>
+                <td>Writes data to a file</td>
+              </tr>
+              <tr>
+                <td>ifstream</td>
+                <td>Reads data from a file</td>
+              </tr>
+              <tr>
+                <td>fstream</td>
+                <td>Supports reading and writing</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+        <p><strong>Key Point:</strong> Files allow programs to keep information even after they stop running.</p>
+
+
+        <h3 class="lesson-subheading">File Paths: Relative and Absolute</h3>
+
+        <p>A relative path such as "notes.txt" is resolved from the program's current working directory, not necessarily from the folder containing main.cpp or the executable. An absolute path explicitly identifies a location, but its syntax depends on the operating system. You can inspect the current working directory with std::filesystem::current_path() (include &lt;filesystem&gt;, C++17 or newer). Always make sure the target directory exists and the program has permission to access it.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;filesystem&gt;
+
+int main() {
+    std::cout &lt;&lt; std::filesystem::current_path() &lt;&lt; "\n";
+}</code></pre>
+
+
+        <h3 class="lesson-subheading">Understanding Stream States</h3>
+
+        <p>A file stream tracks whether operations succeeded. is_open() tells you whether a file is open. The stream can be tested with if (file) to check whether it is currently in a good state; fail() detects a failed operation, bad() reports a serious I/O error, and eof() indicates an end-of-file condition has been reached. After reading with while (getline(file, line)), reaching the end normally causes the loop to stop; check bad() if you need to distinguish a serious read error from a normal end-of-file.</p>
+
+        <h3 class="practice-heading">Practice Exercise</h3>
+
+        <p>Explain which stream type you would use to write grades.txt, read grades.txt, and both read and write settings.txt.</p>
+
+
+
+        <h2>7. Writing to a File</h2>
+
+        <p>To write information into a file, we use ofstream.</p>
+
+        <p>Example:</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+int main() {
+    ofstream file("notes.txt");
+
+    if (file.is_open()) {
+        file &lt;&lt; "Hello, C++!" &lt;&lt; endl;
+        file &lt;&lt; "Learning file handling.";
+
+        file.close();
+        cout &lt;&lt; "File saved!";
+    } else {
+        cout &lt;&lt; "Cannot open file!";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Console Output:</p>
+
+        <pre class="output"><code>File saved!</code></pre>
+
+        <p class="output-label">File Content — notes.txt:</p>
+
+        <pre class="output"><code>Hello, C++!
+Learning file handling.</code></pre>
+
+
+        <h3 class="lesson-subheading">How Does It Work?</h3>
+
+        <ul class="plain-list">
+          <li>ofstream file("notes.txt") — opens a file for writing.</li>
+          <li>is_open() — checks whether the file was opened successfully.</li>
+          <li>file &lt;&lt; — writes information into the file.</li>
+          <li>close() — closes the file.</li>
+        </ul>
+
+        <p>By default, opening an existing file with ofstream in this way replaces its previous contents.</p>
+
+        <p><strong>Remember:</strong> Use ofstream to save information into files.</p>
+
+
+        <h3 class="lesson-subheading">Checking Write Success</h3>
+
+        <pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::ofstream file("notes.txt");
+    if (!file.is_open()) {
+        std::cerr &lt;&lt; "Cannot open file!\n";
+        return 1;
+    }
+
+    file &lt;&lt; "Hello, C++!\n";
+    file.close();
+
+    if (!file) {
+        std::cerr &lt;&lt; "Could not finish writing.\n";
+        return 1;
+    }
+
+    std::cout &lt;&lt; "File saved!\n";
+}</code></pre>
+
+        <p>Check not only that the file opened, but also that the writing and closing completed successfully. Closing a stream can reveal buffered write errors that were not visible earlier.</p>
+
+        <h3 class="practice-heading">Practice Exercise</h3>
+
+        <p>Write three separate lines into scores.txt. Check whether the file opened and whether the write succeeded.</p>
+
+
+
+        <h2>8. Reading from a File</h2>
+
+        <p>To read information from an existing file, we use ifstream.</p>
+
+        <p>Example:</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    ifstream file("notes.txt");
+    string line;
+
+    if (file.is_open()) {
+        while (getline(file, line)) {
+            cout &lt;&lt; line &lt;&lt; endl;
+        }
+
+        file.close();
+    } else {
+        cout &lt;&lt; "Cannot open file!";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p>If notes.txt contains the text from the previous example, the output will be:</p>
+
+        <pre class="output"><code>Hello, C++!
+Learning file handling.</code></pre>
+
+        <p>The getline() function reads one complete line at a time.</p>
+
+        <p>The while loop continues until there are no more lines to read.</p>
+
+        <p><strong>Key Point:</strong> Use ifstream to retrieve information stored in files.</p>
+
+        <p>The relative filename is interpreted using the current working directory. If the file isn't found, check that directory and the filename. After the reading loop, file.bad() can help identify serious input errors. A normal end-of-file is expected and does not necessarily indicate a problem.</p>
+
+        <h3 class="practice-heading">Practice Exercise</h3>
+
+        <p>Read scores.txt line by line using getline(). Display a clear error if opening the file fails.</p>
+
+
+
+        <h2>9. Appending Data to a File</h2>
+
+        <p>Sometimes we want to add new information without deleting what is already stored.</p>
+
+        <p>This is called appending.</p>
+
+        <p>To append data, use ios::app.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+int main() {
+    ofstream file("notes.txt", ios::app);
+
+    if (file.is_open()) {
+        file &lt;&lt; "\nNew information added.";
+        file.close();
+
+        cout &lt;&lt; "Text added!";
+    } else {
+        cout &lt;&lt; "Cannot open file!";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Text added!</code></pre>
+
+        <p>If the file already contains:</p>
+
+        <pre class="output"><code>Hello, C++!</code></pre>
+
+        <p>After running the program, its content becomes:</p>
+
+        <pre class="output"><code>Hello, C++!
+New information added.</code></pre>
+
+        <p><strong>Remember:</strong> Use ios::app when you want to add data to the end of a file without replacing its existing contents.</p>
+
+        <h3 class="practice-heading">Practice Exercise</h3>
+
+        <p>Append one new line to scores.txt with ios::app. Open the file again and confirm the previous lines are still there.</p>
+
+
+
+        <h2>10. Common File Handling Mistakes</h2>
+
+        <p>Working with files requires a few important precautions.</p>
+
+        <p><strong>1. Assuming a file always exists</strong></p>
+
+        <p>A file may not exist or may not be accessible. Always check whether opening it was successful.</p>
+
+        <p><strong>2. Using the wrong file path</strong></p>
+
+        <p>A relative path such as "notes.txt" is normally resolved relative to the program's current working directory, which may differ from the folder containing your source code.</p>
+
+        <p><strong>3. Accidentally overwriting data</strong></p>
+
+        <p>Opening a file with ofstream normally replaces its existing contents unless an appropriate mode, such as ios::app, is used.</p>
+
+        <p><strong>4. Ignoring write errors</strong></p>
+
+        <p>Successfully opening a file does not guarantee that every write operation succeeds. For important data, check the stream state after writing.</p>
+
+        <p><strong>5. Forgetting to close files</strong></p>
+
+        <p>File streams close automatically when their objects are destroyed, but calling close() explicitly can be useful when you need to finish working with a file before the program ends.</p>
+
+        <p><strong>Key Point:</strong> Always handle file operations carefully to avoid losing important information.</p>
+
+        <h3 class="practice-heading">Practice Exercise</h3>
+
+        <p>Run your file program from two different working directories. Determine which notes.txt path it uses; then check the stream state after a write.</p>
+
+      </article>
+
+    </main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function ()
     {
       scrollToMatch(matches, currentMatchIndex);
     } else {
-      alert("Nothing found for: " + query);
+      alert((document.documentElement.lang === "uk" ? "Нічого не знайдено за запитом: " : "Nothing found for: ") + query);
     }
   }
 

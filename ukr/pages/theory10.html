@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>10 Практика з кодом</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory5.css" rel="stylesheet">
+<link href="../../css/theory10.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+<script defer="" src="../../js/compiler_pract.js"></script>
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item" href="theory2.html">02 Типи даних</a>
+<a class="menu-item" href="theory3.html">03 Оператори</a>
+<a class="menu-item" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory6.html">06 Цикли</a>
+<a class="menu-item" href="theory7.html">07 Функції</a>
+<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item" href="theory9.html">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item active" href="theory10.html">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+<a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+<a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+<a class="menu-item" href="theory14.html">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item" href="theory15.html">15 Проєкт</a>
+</div>
+</aside>
+<main class="content-area">
+
+      <!-- SEARCH -->
+
+      <div class="search-bar">
+
+        <div class="search-input-wrap">
+          <input
+            type="text"
+            placeholder="Enter keyword"
+            class="search-input"
+          >
+
+          <svg
+            class="search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+
+        <button class="btn-search" type="button">
+          SEARCH
+        </button>
+
+      </div>
+
+
+      <!-- ARTICLE -->
+
+      <article class="lesson-article">
+
+        <h1>10 — Coding Practice</h1>
+
+        <p>
+          You've learned how to work with loops, functions,
+          arrays, strings, and pointers.
+          Now it's time to put those skills into action!
+        </p>
+
+        <p>
+          In this lesson, you'll complete 4 programming challenges,
+          starting with simple calculations and moving toward
+          more advanced tasks.
+        </p>
+
+        <p>
+          The goal isn't just to get the correct answer.
+          It's to understand your code and learn how to
+          solve problems independently.
+        </p>
+
+
+        <!-- TASK 01 -->
+
+        <h2>1. Task 01 — Number Analyzer</h2>
+
+        <p class="difficulty">Easy</p>
+
+        <p>
+          Let's start by creating a program that analyzes
+          five numbers entered by the user.
+        </p>
+
+        <p>
+          Your program should calculate their sum,
+          find the largest number, and determine the average.
+        </p>
+
+        <h3>Requirements</h3>
+
+        <ol>
+          <li>Create an array that stores 5 integers.</li>
+          <li>Use a for loop to read the numbers.</li>
+          <li>Calculate the sum of all elements.</li>
+          <li>Find the largest number.</li>
+          <li>Calculate the average using double.</li>
+        </ol>
+
+        <h3>Example Interaction</h3>
+
+        <pre class="output"><code>Enter 5 numbers:
+10
+25
+5
+40
+20
+
+Sum: 100
+Largest number: 40
+Average: 20</code></pre>
+
+        <h3>Hint</h3>
+
+        <p>
+          Use one variable to calculate the sum
+          and another to track the largest number.
+        </p>
+
+        <p>
+          Start by setting the largest number to the first
+          element of the array. This way, your program
+          will also work when all entered numbers are negative.
+        </p>
+
+        <p>
+          When calculating the average, remember to use
+          floating-point division so you don't lose
+          the fractional part.
+        </p>
+
+
+        <!-- COMPILER TASK 01 -->
+
+        <div class="compiler" data-task="1">
+
+          <div class="compiler-bar">
+
+            <span>main.cpp</span>
+
+            <select class="std-select" aria-label="C++ standard">
+              <option value="c++17">C++17</option>
+              <option value="c++20" selected>C++20</option>
+              <option value="c++14">C++14</option>
+              <option value="c++11">C++11</option>
+            </select>
+
+            <button class="btn-reset" type="button">
+              Reset
+            </button>
+
+            <button class="btn-run" type="button">
+              ▶ RUN
+            </button>
+
+          </div>
+
+          <textarea
+            class="code-editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            aria-label="C++ code editor for task 1"
+          ></textarea>
+
+          <div class="console">
+            <div class="console-title">OUTPUT</div>
+
+            <div class="console-output">
+              Press RUN (or Ctrl + Enter) to compile and run your code.
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- TASK 02 -->
+
+        <h2>2. Task 02 — Text Analyzer</h2>
+
+        <p class="difficulty">Easy</p>
+
+        <p>Now let's work with text!</p>
+
+        <p>
+          Create a program that reads a sentence and counts
+          its total number of characters and vowels.
+        </p>
+
+        <h3>Requirements</h3>
+
+        <ol>
+          <li>Use std::string to store the sentence.</li>
+          <li>Read the entire line using std::getline().</li>
+          <li>Use a loop to examine each character.</li>
+          <li>
+            Count the vowels a, e, i, o, and u,
+            including uppercase letters.
+          </li>
+          <li>Display both results.</li>
+        </ol>
+
+        <h3>Example Interaction</h3>
+
+        <pre class="output"><code>Enter a sentence: Hello World
+
+Total characters: 11
+Vowels: 3</code></pre>
+
+        <h3>Hint</h3>
+
+        <p>
+          Use .length() to get the string's length,
+          then check each character with an if statement.
+        </p>
+
+        <p>
+          Don't forget that spaces count toward the total length!
+        </p>
+
+        <p>
+          For this exercise, use English text.
+          With basic ASCII characters, the string's length
+          matches the number of characters.
+          Text containing some Unicode characters may
+          require a different approach.
+        </p>
+
+
+        <!-- COMPILER TASK 02 -->
+
+        <div class="compiler" data-task="2">
+
+          <div class="compiler-bar">
+
+            <span>main.cpp</span>
+
+            <select class="std-select" aria-label="C++ standard">
+              <option value="c++17">C++17</option>
+              <option value="c++20" selected>C++20</option>
+              <option value="c++14">C++14</option>
+              <option value="c++11">C++11</option>
+            </select>
+
+            <button class="btn-reset" type="button">
+              Reset
+            </button>
+
+            <button class="btn-run" type="button">
+              ▶ RUN
+            </button>
+
+          </div>
+
+          <textarea
+            class="code-editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            aria-label="C++ code editor for task 2"
+          ></textarea>
+
+          <div class="console">
+            <div class="console-title">OUTPUT</div>
+
+            <div class="console-output">
+              Press RUN (or Ctrl + Enter) to compile and run your code.
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- TASK 03 -->
+
+        <h2>3. Task 03 — Function Calculator</h2>
+
+        <p class="difficulty">Medium</p>
+
+        <p>Let's build a calculator!</p>
+
+        <p>
+          Instead of placing every calculation inside main(),
+          you'll organize the operations into separate functions.
+        </p>
+
+        <h3>Requirements</h3>
+
+        <ol>
+          <li>
+            Create four functions: add(), subtract(),
+            multiply(), and divide().
+          </li>
+          <li>
+            Each function must accept two double parameters
+            and return a double.
+          </li>
+          <li>
+            Display a menu with four mathematical operations.
+          </li>
+          <li>Use switch to select the operation.</li>
+          <li>
+            Prevent division by zero and handle
+            an invalid menu choice.
+          </li>
+        </ol>
+
+        <h3>Example Interaction</h3>
+
+        <pre class="output"><code>=== FUNCTION CALCULATOR ===
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+
+Choose an operation: 3
+Enter first number: 8
+Enter second number: 6
+
+Result: 48</code></pre>
+
+        <h3>Hint</h3>
+
+        <p>
+          Let main() handle user input and select
+          the correct function.
+        </p>
+
+        <p>
+          Each calculation function should do only one job:
+          calculate and return its result.
+        </p>
+
+        <p>
+          Before calling divide(), check whether
+          the second number equals zero.
+          If it does, display an error message
+          instead of performing the division.
+        </p>
+
+
+        <!-- COMPILER TASK 03 -->
+
+        <div class="compiler" data-task="3">
+
+          <div class="compiler-bar">
+
+            <span>main.cpp</span>
+
+            <select class="std-select" aria-label="C++ standard">
+              <option value="c++17">C++17</option>
+              <option value="c++20" selected>C++20</option>
+              <option value="c++14">C++14</option>
+              <option value="c++11">C++11</option>
+            </select>
+
+            <button class="btn-reset" type="button">
+              Reset
+            </button>
+
+            <button class="btn-run" type="button">
+              ▶ RUN
+            </button>
+
+          </div>
+
+          <textarea
+            class="code-editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            aria-label="C++ code editor for task 3"
+          ></textarea>
+
+          <div class="console">
+            <div class="console-title">OUTPUT</div>
+
+            <div class="console-output">
+              Press RUN (or Ctrl + Enter) to compile and run your code.
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- TASK 04 -->
+
+        <h2>4. Task 04 — Pointer Challenge</h2>
+
+        <p class="difficulty">Medium</p>
+
+        <p>Ready for a pointer challenge?</p>
+
+        <p>
+          Create a program that swaps the values of
+          two variables without returning either value
+          from the function.
+        </p>
+
+        <p>
+          You'll do this by working directly
+          with their memory addresses.
+        </p>
+
+        <h3>Requirements</h3>
+
+        <ol>
+          <li>Create two integer variables.</li>
+          <li>Ask the user to enter their values.</li>
+          <li>Create a function named swapNumbers().</li>
+          <li>Pass the addresses of both variables to the function.</li>
+          <li>Use pointers to exchange the values.</li>
+          <li>Display the values before and after swapping.</li>
+        </ol>
+
+        <h3>Example Interaction</h3>
+
+        <pre class="output"><code>Enter first number: 10
+Enter second number: 25
+
+Before swapping:
+First: 10
+Second: 25
+
+After swapping:
+First: 25
+Second: 10</code></pre>
+
+        <h3>Hint</h3>
+
+        <pre><code>void swapNumbers(int* a, int* b) {
+    // Swap the values here.
+}</code></pre>
+
+        <p>
+          You'll need a temporary variable to store
+          one of the original values.
+        </p>
+
+        <p>
+          Remember that *a and *b let you access
+          the actual integers through their pointers.
+        </p>
+
+
+        <!-- COMPILER TASK 04 -->
+
+        <div class="compiler" data-task="4">
+
+          <div class="compiler-bar">
+
+            <span>main.cpp</span>
+
+            <select class="std-select" aria-label="C++ standard">
+              <option value="c++17">C++17</option>
+              <option value="c++20" selected>C++20</option>
+              <option value="c++14">C++14</option>
+              <option value="c++11">C++11</option>
+            </select>
+
+            <button class="btn-reset" type="button">
+              Reset
+            </button>
+
+            <button class="btn-run" type="button">
+              ▶ RUN
+            </button>
+
+          </div>
+
+          <textarea
+            class="code-editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            aria-label="C++ code editor for task 4"
+          ></textarea>
+
+          <div class="console">
+            <div class="console-title">OUTPUT</div>
+
+            <div class="console-output">
+              Press RUN (or Ctrl + Enter) to compile and run your code.
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+
+    </main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

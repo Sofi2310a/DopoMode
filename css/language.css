@@ -39,7 +39,7 @@ a {
 }
 
 .logo {
-    font-family: "Jersey 10", sans-serif;    
+    font-family: "Jersey 10", "Montserrat", sans-serif;    
     letter-spacing: 3px;
     font-size: 40px;
     color: #ffffff;
@@ -102,7 +102,7 @@ a {
 }
 
 .page-title {
-    font-family: "Jersey 10", sans-serif;
+    font-family: "Jersey 10", "Montserrat", sans-serif;
     font-size: 76px;
     font-weight: 400;
     letter-spacing: 2px;
@@ -179,7 +179,7 @@ a {
 }
 
 .footer-brand {
-    font-family: "Silkscreen", monospace;
+    font-family: "Silkscreen", "Montserrat", sans-serif;
     font-size: 34px;
     font-weight: 700;
     margin-bottom: 8px;

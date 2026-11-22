@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>02 Типи даних</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+<script defer="" src="../../js/compiler.js"></script>
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item active" href="theory2.html">02 Типи даних</a>
+<a class="menu-item" href="theory3.html">03 Оператори</a>
+<a class="menu-item" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory6.html">06 Цикли</a>
+<a class="menu-item" href="theory7.html">07 Функції</a>
+<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item" href="theory9.html">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory10.html">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+<a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+<a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+<a class="menu-item" href="theory14.html">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item" href="theory15.html">15 Проєкт</a>
+</div>
+</aside>
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Введіть ключове слово" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">ПОШУК</button>
+</div>
+<article class="lesson-article">
+<h1>02 — Типи даних</h1>
+<p>Кожна програма працює з інформацією: числами, текстом, символами або простими відповідями «так/ні».</p>
+<p>У цьому уроці ти дізнаєшся, як C++ зберігає різні типи інформації, як створювати змінні та як використовувати їх у програмах.</p>
+<p>Наприкінці ти зможеш зберігати та змінювати значення, працювати з текстом і обирати правильний тип даних для різних завдань.</p>
+<h2>1. Що таке типи даних?</h2>
+<p>Уяви, що ти створюєш програму, яка зберігає інформацію про студента.</p>
+<p>Тобі можуть знадобитися його ім’я, вік, зріст і те, чи він зараз навчається.</p>
+<p>Ці значення різні, тому C++ використовує <strong>типи даних</strong>, щоб описати, яку саме інформацію містить кожна змінна.</p>
+<p>Ось найпоширеніші типи:</p>
+<div class="table-wrap">
+<table class="types-table">
+<thead><tr><th>Тип даних</th><th>Що зберігає</th><th>Приклад</th></tr></thead>
+<tbody>
+<tr><td><code>int</code></td><td>Цілі числа</td><td><code>25</code></td></tr>
+<tr><td><code>float</code></td><td>Десяткові числа</td><td><code>3.14f</code></td></tr>
+<tr><td><code>double</code></td><td>Точніші десяткові числа</td><td><code>3.14159</code></td></tr>
+<tr><td><code>char</code></td><td>Один символ</td><td><code>'A'</code></td></tr>
+<tr><td><code>bool</code></td><td>Істина або хибність</td><td><code>true</code></td></tr>
+<tr><td><code>std::string</code></td><td>Текст</td><td><code>"Hello"</code></td></tr>
+</tbody>
+</table>
+</div>
+<p>Кожен тип має своє призначення. Правильний вибір допомагає програмі коректно працювати з інформацією.</p>
+<p><em>Пам’ятай: тип даних повідомляє C++, з яким видом значення ти працюєш.</em></p>
+<h2>2. Змінні в C++</h2>
+<p><strong>Змінна</strong> — це іменоване місце, де програма зберігає значення.</p>
+<p>Уяви її як підписану коробку. Підпис — це ім’я змінної, а вміст — її значення.</p>
+<p>Створімо одну:</p>
+<pre><code>int age = 18;</code></pre>
+<p>Ось що означає кожна частина:</p>
+<ul>
+<li><code>int</code> — тип даних.</li>
+<li><code>age</code> — ім’я змінної.</li>
+<li><code>18</code> — збережене значення.</li>
+<li><code>;</code> — завершує інструкцію.</li>
+</ul>
+<p>Ми можемо створювати змінні для різних видів інформації.</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    int age = 18;
+    double height = 1.75;
+    std::string name = "Alex";
+
+    std::cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; "\n";
+    std::cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; "\n";
+    std::cout &lt;&lt; "Height: " &lt;&lt; height &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Name: Alex
+Age: 18
+Height: 1.75</code></pre>
+<h3>Зміна значень змінних</h3>
+<p>Одна з найкорисніших речей у змінних — те, що ми можемо оновлювати їхні значення.</p>
+<pre><code>int score = 10;
+score = 20;
+std::cout &lt;&lt; score;</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>20</code></pre>
+<p>Початкове значення <code>10</code> було замінене на <code>20</code>.</p>
+<p>Зверни увагу: ми пишемо <code>int</code> лише під час оголошення змінної, а не під час зміни її значення.</p>
+<h2>3. Цілі та десяткові числа</h2>
+<p>C++ надає кілька числових типів. Зосередьмося на трьох, які ти використовуватимеш найчастіше.</p>
+<h3>int — цілі числа</h3>
+<p>Використовуй <code>int</code>, коли потрібні числа без дробової частини.</p>
+<pre><code>int age = 20;
+int temperature = -5;
+int students = 30;</code></pre>
+<p><code>int</code> може зберігати додатні числа, від’ємні числа та нуль.</p>
+<p>Він корисний для віку, балів, лічильників та інших цілочисельних значень.</p>
+<h3>float — десяткові числа</h3>
+<p>Використовуй <code>float</code> для чисел, які можуть мати дробову частину.</p>
+<pre><code>float price = 19.99f;
+float weight = 65.5f;</code></pre>
+<p>Літера <code>f</code> повідомляє C++, що це літерал типу float.</p>
+<p><code>float</code> зазвичай займає 4 байти та забезпечує точність близько 6–7 значущих десяткових цифр.</p>
+<h3>double — точніші числа</h3>
+<p><code>double</code> також зберігає дробові значення, але зазвичай забезпечує більшу точність, ніж <code>float</code>.</p>
+<pre><code>double pi = 3.141592653589793;
+double distance = 125.75;</code></pre>
+<p><code>double</code> зазвичай займає 8 байтів і забезпечує точність близько 15–16 значущих десяткових цифр.</p>
+<p>Для більшості загальних обчислень із дробовими значеннями <code>double</code> — хороший вибір за замовчуванням.</p>
+<p>Одна важлива деталь: числа з плаваючою комою не можуть точно представити кожне десяткове значення, тому деякі обчислення можуть мати невеликі похибки округлення.</p>
+<p><em>Пам’ятай: використовуй int для цілих чисел і double для більшості обчислень із дробовими значеннями.</em></p>
+<h2>4. Символи та рядки</h2>
+<p>Програми працюють не лише з числами. Їм також потрібно зберігати літери, імена та повідомлення.</p>
+<h3>char — один символ</h3>
+<p>Тип <code>char</code> зберігає один символ.</p>
+<pre><code>char grade = 'A';
+char symbol = '#';
+char digit = '5';</code></pre>
+<p>Символи записують в одинарних лапках.</p>
+<p>Зверни увагу: <code>'5'</code> — це символ, а не ціле число <code>5</code>.</p>
+<h3>std::string — текст</h3>
+<p>Коли потрібно зберегти слово або речення, використовуй <code>std::string</code>.</p>
+<pre><code>std::string name = "Alex";
+std::string message = "Hello, C++!";</code></pre>
+<p>Рядки записують у подвійних лапках, і для них потрібен заголовок <code>&lt;string&gt;</code>.</p>
+<p>Поєднаймо обидва типи в одній програмі.</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main() {
+    char grade = 'A';
+    std::string name = "Alex";
+
+    std::cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; "\n";
+    std::cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>Name: Alex
+Grade: A</code></pre>
+<p><em>Пам’ятай: char зберігає один символ, а std::string — текст різної довжини.</em></p>
+<h2>5. Логічний тип даних</h2>
+<p>Іноді програмі потрібно лише відповісти на запитання «так» або «ні».</p>
+<p>Наприклад: студент онлайн? Гру завершено? Двері відчинені?</p>
+<p>Для таких ситуацій C++ використовує тип <code>bool</code>.</p>
+<p>Логічне значення може бути або <code>true</code>, або <code>false</code>.</p>
+<pre><code>bool isStudent = true;
+bool hasLicense = false;</code></pre>
+<p>Виведімо логічне значення.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    bool isOnline = true;
+
+    std::cout &lt;&lt; isOnline &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>1</code></pre>
+<p>За замовчуванням <code>std::cout</code> виводить <code>true</code> як <code>1</code>, а <code>false</code> як <code>0</code>.</p>
+<p>Щоб вивести самі слова, використовуй <code>std::boolalpha</code>:</p>
+<pre><code>std::cout &lt;&lt; std::boolalpha &lt;&lt; isOnline &lt;&lt; "\n";</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>true</code></pre>
+<p>Логічні значення стають особливо корисними, коли ми починаємо писати програми, які ухвалюють рішення.</p>
+<p><em>Пам’ятай: використовуй bool, коли інформація має два можливі стани: true або false.</em></p>
+<h2>6. Константи в C++</h2>
+<p>Не кожне значення має змінюватися.</p>
+<p>Наприклад, у тижні завжди сім днів.</p>
+<p>Ми можемо захистити значення від зміни за допомогою ключового слова <code>const</code>.</p>
+<pre><code>const int daysInWeek = 7;</code></pre>
+<p>Тепер, якщо ми спробуємо його змінити:</p>
+<pre><code>daysInWeek = 8;</code></pre>
+<p>Компілятор повідомить про помилку.</p>
+<p>Константи корисні для значень, які мають залишатися незмінними протягом певної частини програми.</p>
+<p>Вони також полегшують розуміння коду та зменшують ризик випадкових змін.</p>
+<p><em>Пам’ятай: використовуй const, коли значення не повинно змінюватися після ініціалізації.</em></p>
+<h2>7. Іменування змінних</h2>
+<p>Хороші імена змінних роблять програми легшими для читання.</p>
+<p>Порівняй ці два приклади:</p>
+<pre><code>int x = 18;
+int studentAge = 18;</code></pre>
+<p>Обидва правильні, але другий чітко показує, що саме означає змінна.</p>
+<h3>Основні правила іменування</h3>
+<p>Імена змінних у C++:</p>
+<ul>
+<li>Можуть містити літери, цифри та символи підкреслення.</li>
+<li>Не можуть починатися з цифри.</li>
+<li>Не можуть містити пробілів.</li>
+<li>Не можуть використовувати зарезервовані ключові слова, як-от <code>int</code> або <code>return</code>.</li>
+<li>Чутливі до регістру.</li>
+</ul>
+<p><span class="good">Правильні приклади:</span></p>
+<pre><code>int studentAge = 18;
+int total_score = 100;
+int number2 = 25;</code></pre>
+<p><span class="bad">Неправильні приклади:</span></p>
+<pre><code>int 2number = 10;
+int student age = 18;
+int return = 5;</code></pre>
+<p>У цьому курсі ми зазвичай використовуватимемо <strong>camelCase</strong>: перше слово починається з малої літери, а кожне наступне — з великої.</p>
+<p>Наприклад: <code>studentAge</code>, <code>totalScore</code>, <code>favoriteNumber</code></p>
+<p><em>Пам’ятай: обирай імена, які пояснюють, що означають твої змінні.</em></p>
+<h2>8. Перетворення типів</h2>
+<p>Іноді потрібно змінити значення з одного типу даних на інший. Це називається <strong>перетворенням типів</strong>.</p>
+<p>Є два поширені підходи.</p>
+<h3>Автоматичне перетворення</h3>
+<p>C++ може автоматично перетворювати деякі значення.</p>
+<pre><code>int number = 10;
+double result = number;
+
+std::cout &lt;&lt; result;</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>10</code></pre>
+<p>Ціле значення було перетворене на <code>double</code>. Вивід усе ще показує <code>10</code>, оскільки десяткова частина автоматично не відображається.</p>
+<h3>Явне перетворення</h3>
+<p>Ми також можемо самостійно запросити перетворення за допомогою <code>static_cast</code>.</p>
+<pre><code>double price = 19.99;
+int wholePrice = static_cast&lt;int&gt;(price);
+
+std::cout &lt;&lt; wholePrice;</code></pre>
+<p class="output-label">Вивід:</p>
+<pre class="output"><code>19</code></pre>
+<p>Дробову частину було відкинуто.</p>
+<p>Так відбувається, тому що під час перетворення скінченного <code>double</code> на <code>int</code> дробова частина відкидається в бік нуля, якщо отримане ціле число входить у діапазон підтримуваних значень типу. Будь обережним: деякі перетворення можуть призвести до втрати інформації.</p>
+<p><em>Пам’ятай: перетворення типів корисне, але зміна типів даних може вплинути на значення.</em></p>
+<h2>9. Підсумок уроку</h2>
+<ul>
+<li>Типи даних описують, який вид значення містить змінна.</li>
+<li>Змінні зберігають значення, і їх можна оновлювати.</li>
+<li>Використовуй <code>int</code> для цілих чисел і <code>double</code> для більшості дробових значень.</li>
+<li><code>char</code> зберігає один символ, <code>std::string</code> — текст.</li>
+<li><code>bool</code> зберігає <code>true</code> або <code>false</code>.</li>
+<li><code>const</code> захищає значення від змін.</li>
+<li>Використовуй зрозумілі імена в стилі camelCase та будь уважним із перетворенням типів.</li>
+</ul>
+<div class="example-title">Практичне завдання</div>
+<p>Застосуймо нові знання на практиці!</p>
+<p>Створи програму, яка зберігає таку інформацію про студента:</p>
+<ul>
+<li>Ім’я</li>
+<li>Вік</li>
+<li>Зріст</li>
+<li>Оцінка</li>
+<li>Чи навчається він зараз</li>
+</ul>
+<p>Обери правильний тип даних для кожного значення та виведи інформацію за допомогою <code>std::cout</code>.</p>
+<p>Твій вивід може виглядати так:</p>
+<pre class="output"><code>Student Profile
+Name: Alex
+Age: 18
+Height: 1.75
+Grade: A
+Enrolled: true</code></pre>
+<p>Спробуй написати програму самостійно в компіляторі нижче, перш ніж повертатися до прикладів.</p>
+<div class="example-title">Спробуй сам — компілятор C++</div>
+<div class="compiler">
+<div class="compiler-bar">
+<span>main.cpp</span>
+<select aria-label="Стандарт C++" id="std">
+<option value="c++17">C++17</option>
+<option selected="" value="c++20">C++20</option>
+<option value="c++14">C++14</option>
+<option value="c++11">C++11</option>
+</select>
+<button class="btn-reset" id="reset" type="button">Скинути</button>
+<button class="btn-run" id="run" type="button">▶ ЗАПУСТИТИ</button>
+</div>
+<textarea autocapitalize="off" autocomplete="off" id="code" spellcheck="false"></textarea>
+<div class="console">
+<div class="console-title">ВИВІД</div>
+<div id="output">Натисни ЗАПУСТИТИ (або Ctrl + Enter), щоб скомпілювати й запустити код.</div>
+</div>
+</div>
+<p class="hint">Код компілюється на віддаленому сервері (GCC), тому потрібне підключення до інтернету.</p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

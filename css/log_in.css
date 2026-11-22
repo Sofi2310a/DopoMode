@@ -34,7 +34,7 @@ a {
 }
 
 .logo {
-    font-family: "Jersey 10", sans-serif;    
+    font-family: "Jersey 10", "Montserrat", sans-serif;    
     letter-spacing: 3px;
     font-size: 40px;
     color: #ffffff;
@@ -91,7 +91,7 @@ a {
 }
 
 .title {
-    font-family: "Jersey 10", sans-serif;
+    font-family: "Jersey 10", "Montserrat", sans-serif;
     font-size: 90px;
     margin-bottom: 24px;
 }
@@ -152,7 +152,7 @@ a {
     border: none;
     border-radius: 14px;
     padding: 15px 64px;
-    font-family: "Jersey 10", sans-serif;
+    font-family: "Jersey 10", "Montserrat", sans-serif;
     letter-spacing: 3px;
     font-size: 40px;
     cursor: pointer;

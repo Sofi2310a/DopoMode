@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>05 Базова практика</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory5.css" rel="stylesheet">
+<link href="../../css/ukr-fonts.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+<script defer="" src="../../js/compiler_pract.js"></script>
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Головна</a>
+<a class="nav-link" href="about_1.html">Про нас</a>
+<a class="nav-link active" href="theory.html">Теорія</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Профіль" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">Курс C++</h2>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory.html">01 Основи C++</a>
+<a class="menu-item" href="theory2.html">02 Типи даних</a>
+<a class="menu-item" href="theory3.html">03 Оператори</a>
+<a class="menu-item" href="theory4.html">04 Умови</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item active" href="theory5.html">05 Базова практика</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory6.html">06 Цикли</a>
+<a class="menu-item" href="theory7.html">07 Функції</a>
+<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+<a class="menu-item" href="theory9.html">09 Вказівники</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ПРАКТИКА</span>
+<a class="menu-item" href="theory10.html">10 Практика з кодом</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ТЕОРІЯ</span>
+<a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+<a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+<a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+<a class="menu-item" href="theory14.html">14 STL і файли</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">ФІНАЛ</span>
+<a class="menu-item" href="theory15.html">15 Проєкт</a>
+</div>
+</aside>
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Введіть ключове слово" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">ПОШУК</button>
+</div>
+<article class="lesson-article">
+<h1>05 — Базова практика</h1>
+<h2>1. Починаємо кодити!</h2>
+<p>Настав час застосувати те, що ти вивчив!</p>
+<p>У попередніх уроках ти ознайомився зі <span class="accent">змінними</span>, <span class="accent">типами даних</span>, <span class="accent">операторами</span> та <span class="accent">умовами</span>. Використаймо ці знання, щоб створити прості програми на C++.</p>
+<p><span class="accent">Твоя мета:</span> виконати 4 завдання з програмування — від базових обчислень до невеликого інтерактивного застосунку.</p>
+<p>Спробуй розв’язати кожне завдання самостійно, перш ніж шукати допомогу.</p>
+<!-- TASK 01 -->
+<h2>2. Завдання 01 — Простий калькулятор</h2>
+<p class="difficulty">Складність: <span class="accent">Легка</span></p>
+<p>Створи програму, яка просить користувача ввести два числа та виконує базові математичні операції.</p>
+<p class="sub-label">Вимоги:</p>
+<ul>
+<li>Використай <span class="accent">double</span> для зберігання обох чисел.</li>
+<li>Обчисли додавання, віднімання, множення та ділення.</li>
+<li>Виведи результати за допомогою <span class="accent">cout</span>.</li>
+<li>Запобігай <span class="accent">діленню на нуль</span>.</li>
+</ul>
+<p class="sub-label">Приклад виводу:</p>
+<pre class="output"><code>Enter first number: 10
+Enter second number: 5
+
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2</code></pre>
+<p class="hint-line"><strong>Підказка:</strong> використай оператори <code>+</code>, <code>-</code>, <code>*</code> і <code>/</code>.</p>
+<div class="compiler" data-task="1">
+<div class="compiler-bar">
+<span>main.cpp</span>
+<select aria-label="Стандарт C++" class="std-select">
+<option value="c++17">C++17</option>
+<option selected="" value="c++20">C++20</option>
+<option value="c++14">C++14</option>
+<option value="c++11">C++11</option>
+</select>
+<button class="btn-reset" type="button">Скинути</button>
+<button class="btn-run" type="button">▶ ЗАПУСТИТИ</button>
+</div>
+<textarea autocapitalize="off" autocomplete="off" class="code-editor" spellcheck="false"></textarea>
+<div class="console">
+<div class="console-title">ВИВІД</div>
+<div class="console-output">Натисни ЗАПУСТИТИ (або Ctrl + Enter), щоб скомпілювати й запустити код.</div>
+</div>
+</div>
+<!-- TASK 02 -->
+<h2>3. Завдання 02 — Перевірка віку</h2>
+<p class="difficulty">Складність: <span class="accent">Легка</span></p>
+<p>Створи програму, яка визначає вікову категорію людини.</p>
+<p class="sub-label">Вимоги:</p>
+<ul>
+<li>До 13 → <span class="accent">Дитина</span></li>
+<li>13–17 → <span class="accent">Підліток</span></li>
+<li>18–64 → <span class="accent">Дорослий</span></li>
+<li>65 і старше → <span class="accent">Літня людина</span></li>
+</ul>
+<p>Використай інструкції <span class="accent">if</span>, <span class="accent">else if</span> та <span class="accent">else</span>. Вважай, що користувач вводить коректний вік.</p>
+<p class="sub-label">Приклад виводу:</p>
+<pre class="output"><code>Enter your age: 16
+Category: Teenager</code></pre>
+<p class="hint-line"><strong>Підказка:</strong> перевіряй умови віку в правильному порядку.</p>
+<div class="compiler" data-task="2">
+<div class="compiler-bar">
+<span>main.cpp</span>
+<select aria-label="Стандарт C++" class="std-select">
+<option value="c++17">C++17</option>
+<option selected="" value="c++20">C++20</option>
+<option value="c++14">C++14</option>
+<option value="c++11">C++11</option>
+</select>
+<button class="btn-reset" type="button">Скинути</button>
+<button class="btn-run" type="button">▶ ЗАПУСТИТИ</button>
+</div>
+<textarea autocapitalize="off" autocomplete="off" class="code-editor" spellcheck="false"></textarea>
+<div class="console">
+<div class="console-title">ВИВІД</div>
+<div class="console-output">Натисни ЗАПУСТИТИ (або Ctrl + Enter), щоб скомпілювати й запустити код.</div>
+</div>
+</div>
+<!-- TASK 03 -->
+<h2>4. Завдання 03 — Калькулятор оцінок</h2>
+<p class="difficulty">Складність: <span class="accent">Середня</span></p>
+<p>Створи програму, яка перетворює числовий бал на літерну оцінку.</p>
+<p class="sub-label">Вимоги:</p>
+<div class="table-wrap">
+<table class="types-table">
+<thead>
+<tr>
+<th>Бал</th>
+<th>Оцінка</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>90–100</td><td>A</td></tr>
+<tr><td>80–89</td><td>B</td></tr>
+<tr><td>70–79</td><td>C</td></tr>
+<tr><td>60–69</td><td>D</td></tr>
+<tr><td>0–59</td><td>F</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>Попроси користувача ввести бал.</li>
+<li>Використай інструкції <span class="accent">if-else if</span>.</li>
+<li>Виведи відповідну оцінку.</li>
+<li>Опрацюй бали поза діапазоном <span class="accent">0–100</span>.</li>
+</ul>
+<p class="sub-label">Приклад виводу:</p>
+<pre class="output"><code>Enter your score: 85
+Your grade: B</code></pre>
+<p class="hint-line"><strong>Підказка:</strong> почни з перевірки, чи бал коректний.</p>
+<div class="compiler" data-task="3">
+<div class="compiler-bar">
+<span>main.cpp</span>
+<select aria-label="Стандарт C++" class="std-select">
+<option value="c++17">C++17</option>
+<option selected="" value="c++20">C++20</option>
+<option value="c++14">C++14</option>
+<option value="c++11">C++11</option>
+</select>
+<button class="btn-reset" type="button">Скинути</button>
+<button class="btn-run" type="button">▶ ЗАПУСТИТИ</button>
+</div>
+<textarea autocapitalize="off" autocomplete="off" class="code-editor" spellcheck="false"></textarea>
+<div class="console">
+<div class="console-title">ВИВІД</div>
+<div class="console-output">Натисни ЗАПУСТИТИ (або Ctrl + Enter), щоб скомпілювати й запустити код.</div>
+</div>
+</div>
+<!-- TASK 04 -->
+<h2>5. Завдання 04 — Розумний калькулятор</h2>
+<p class="difficulty">Складність: <span class="accent">Середня</span></p>
+<p>Створи калькулятор, який дозволяє користувачу обрати операцію.</p>
+<p class="sub-label">Вимоги:</p>
+<ul>
+<li>Виведи меню з чотирма операціями.</li>
+<li>Використай <span class="accent">switch</span>, щоб обробити вибір користувача.</li>
+<li>Попроси ввести два числа.</li>
+<li>Виведи результат.</li>
+<li>Опрацюй <span class="accent">некоректний вибір</span> і <span class="accent">ділення на нуль</span>.</li>
+</ul>
+<p class="sub-label">Приклад виводу:</p>
+<pre class="output"><code>SMART CALCULATOR
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+
+Choose an operation: 3
+Enter first number: 8
+Enter second number: 5
+Result: 40</code></pre>
+<p class="hint-line"><strong>Підказка:</strong> використай <code>switch</code>, <code>case</code>, <code>break</code> і <code>default</code>.</p>
+<div class="compiler" data-task="4">
+<div class="compiler-bar">
+<span>main.cpp</span>
+<select aria-label="Стандарт C++" class="std-select">
+<option value="c++17">C++17</option>
+<option selected="" value="c++20">C++20</option>
+<option value="c++14">C++14</option>
+<option value="c++11">C++11</option>
+</select>
+<button class="btn-reset" type="button">Скинути</button>
+<button class="btn-run" type="button">▶ ЗАПУСТИТИ</button>
+</div>
+<textarea autocapitalize="off" autocomplete="off" class="code-editor" spellcheck="false"></textarea>
+<div class="console">
+<div class="console-title">ВИВІД</div>
+<div class="console-output">Натисни ЗАПУСТИТИ (або Ctrl + Enter), щоб скомпілювати й запустити код.</div>
+</div>
+</div>
+<!-- SUMMARY -->
+<h2>6. Підсумок практики</h2>
+<p>Виконавши ці чотири завдання, ти потренуєш:</p>
+<ul>
+<li>Роботу зі змінними та типами даних.</li>
+<li>Виконання математичних обчислень.</li>
+<li>Порівняння значень за допомогою операторів.</li>
+<li>Ухвалення рішень за допомогою <span class="accent">if-else</span>.</li>
+<li>Вибір операцій за допомогою <span class="accent">switch</span>.</li>
+<li>Опрацювання простих помилок користувацького вводу.</li>
+</ul>
+<p class="hint">Код компілюється на віддаленому сервері (GCC), тому потрібне підключення до інтернету.</p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
+<div class="footer-links">
+<a href="about_1.html">Про нас</a>
+<a href="theory.html">Теорія</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

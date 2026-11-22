@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>07 Functions</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Main</a>
+<a class="nav-link" href="about_1.html">About Us</a>
+<a class="nav-link active" href="theory.html">Theory</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Change language">EN</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Profile" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">C++ course</h2>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="theory.html">01 C++ Basics</a>
+<a class="menu-item" href="theory2.html">02 Data Types</a>
+<a class="menu-item" href="theory3.html">03 Operators</a>
+<a class="menu-item" href="theory4.html">04 Conditions</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">PRACTICE</span>
+<a class="menu-item" href="theory5.html">05 Basic Practice</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="theory6.html">06 Loops</a>
+<a class="menu-item active" href="theory7.html">07 Functions</a>
+<a class="menu-item" href="theory8.html">08 Arrays &amp; Strings</a>
+<a class="menu-item" href="theory9.html">09 Pointers</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">PRACTICE</span>
+<a class="menu-item" href="theory10.html">10 Coding Practice</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="theory11.html">11 Structs &amp; Enums</a>
+<a class="menu-item" href="theory12.html">12 Classes &amp; Objects</a>
+<a class="menu-item" href="theory13.html">13 Advanced OOP</a>
+<a class="menu-item" href="theory14.html">14 STL &amp; Files</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">FINAL</span>
+<a class="menu-item" href="theory15.html">15 Project</a>
+</div>
+</aside>
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Enter keyword" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">SEARCH</button>
+</div>
+<article class="lesson-article">
+<h1>07 — Functions</h1>
+<p>Imagine writing the same calculation or message logic in ten different places.</p>
+<p>Copying the same code repeatedly takes time and makes programs harder to update when something changes.</p>
+<p>In C++, <span class="text-pink">functions</span> let you group instructions into reusable blocks that can be called whenever you need them.</p>
+<p>In this lesson, you'll learn how to create functions, pass information into them, return values, and organize your code more cleanly.</p>
+<h2>1. What Are Functions?</h2>
+<p>A <span class="text-pink">function</span> is a reusable block of code designed to perform a specific task.</p>
+<p>For example, a function might display a greeting, calculate a total score, or check whether a player has enough points.</p>
+<p>Functions help you:</p>
+<ul>
+<li><span class="text-pink">Avoid repetition</span> — write code once and reuse it in multiple places.</li>
+<li><span class="text-pink">Stay organized</span> — divide large programs into smaller, easier-to-read parts.</li>
+<li><span class="text-pink">Find mistakes faster</span> — fix or update logic in one place instead of searching everywhere.</li>
+<li><span class="text-pink">Test and debug</span> — verify each part of your program independently.</li>
+</ul>
+<p><em>Remember: A function groups a specific action so you can reuse it whenever needed.</em></p>
+<h2>2. Creating a Function</h2>
+<p>Let's create a simple function that displays a greeting.</p>
+<pre><code>#include &lt;iostream&gt;
+
+void greet() {
+    std::cout &lt;&lt; "Hello, World!\n";
+}
+
+int main() {
+    greet();
+    greet();
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>Hello, World!
+Hello, World!</code></pre>
+<h3>How Does It Work?</h3>
+<ul>
+<li><code>void</code> means the function does not return a value.</li>
+<li><code>greet</code> is the function's name.</li>
+<li><code>()</code> holds parameters (empty here because no extra input is needed).</li>
+<li><code>{ ... }</code> contains the instructions that run when the function is called.</li>
+<li><code>greet();</code> inside <code>main()</code> is a <span class="text-pink">function call</span>.</li>
+</ul>
+<p>Every time we call <code>greet</code>, the program executes the instructions inside that function.</p>
+<p><em>Remember: Defining a function tells C++ what it does; calling a function actually runs it.</em></p>
+<h2>3. Parameters and Arguments</h2>
+<p>Functions become even more flexible when you pass information into them.</p>
+<p>For example, let's greet different people by name.</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+void greet(std::string name) {
+    std::cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "!\n";
+}
+
+int main() {
+    greet("Alex");
+    greet("Emma");
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>Hello, Alex!
+Hello, Emma!</code></pre>
+<h3>What's the Difference?</h3>
+<ul>
+<li>A <span class="text-pink">parameter</span> is a variable listed in the function definition, such as <code>std::string name</code> in <code>void greet(std::string name)</code>.</li>
+<li>An <span class="text-pink">argument</span> is the actual value passed when calling the function, such as <code>"Alex"</code> or <code>"Emma"</code>.</li>
+</ul>
+<h3>Multiple Parameters</h3>
+<p>A function can take more than one parameter, separated by commas.</p>
+<pre><code>void showSum(int a, int b) {
+    std::cout &lt;&lt; "Sum: " &lt;&lt; (a + b) &lt;&lt; "\n";
+}</code></pre>
+<p class="output-label">Calling the function:</p>
+<pre class="output"><code>showSum(5, 3);</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>Sum: 8</code></pre>
+<p>The arguments are matched to the parameters in order: <code>5</code> goes to <code>a</code>, and <code>3</code> goes to <code>b</code>.</p>
+<p><em>Remember: Parameters are placeholders in the definition; arguments are the real values passed on call.</em></p>
+<h2>4. Returning Values</h2>
+<p>Sometimes a function should calculate something and send the result back instead of only printing it.</p>
+<p>To do that, specify a return type and use the <span class="text-pink">return</span> keyword.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(4, 6);
+    std::cout &lt;&lt; "Result: " &lt;&lt; result &lt;&lt; "\n";
+    std::cout &lt;&lt; "Another sum: " &lt;&lt; add(10, 15) &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>Result: 10
+Another sum: 25</code></pre>
+<h3>What's the Difference Between void and int?</h3>
+<ul>
+<li>A <span class="text-pink">void</span> function performs an action without sending a value back.</li>
+<li>A function with a return type like <code>int</code>, <code>double</code>, or <code>std::string</code> sends a value of that type back to the caller using <code>return</code>.</li>
+<li><code>std::cout</code> displays information on screen, while <code>return</code> sends a value back to the calling code.</li>
+</ul>
+<p><em>Remember: Use <code>return</code> to send a result back from a function so it can be stored or used in expressions.</em></p>
+<h2>5. Function Overloading</h2>
+<p>In C++, you can create multiple functions with the <span class="text-pink">same name</span> as long as their parameter lists differ in type or number.</p>
+<p>This feature is called <span class="text-pink">function overloading</span>.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+double add(double a, double b) {
+    return a + b;
+}
+
+int add(int a, int b, int c) {
+    return a + b + c;
+}
+
+int main() {
+    std::cout &lt;&lt; add(2, 3) &lt;&lt; "\n";
+    std::cout &lt;&lt; add(2.5, 3.5) &lt;&lt; "\n";
+    std::cout &lt;&lt; add(1, 2, 3) &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>5
+6
+6</code></pre>
+<p>C++ automatically picks the matching version based on the arguments you pass.</p>
+<p>Note that changing only the return type is not enough for a valid overload.</p>
+<p><em>Remember: Overloaded functions share a name but differ in their parameters.</em></p>
+<h2>6. Local and Global Variables</h2>
+<p>Where you declare a variable determines where in the program you can access it. This is called <span class="text-pink">scope</span>.</p>
+<h3>Local Variables</h3>
+<p>A <span class="text-pink">local variable</span> is declared inside a function or another block of code and can only be used inside that block.</p>
+<pre><code>void showNumber() {
+    int number = 42;
+    std::cout &lt;&lt; number &lt;&lt; "\n";
+}</code></pre>
+<p><code>number</code> belongs to <code>showNumber()</code>. Trying to use <code>number</code> directly from <code>main()</code> causes a compiler error.</p>
+<p>Local variables help keep different parts of a program independent and safe from accidental changes.</p>
+<h3>Global Variables</h3>
+<p>A <span class="text-pink">global variable</span> is declared outside all functions and can be accessed throughout the file after its declaration.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int score = 0;
+
+void showScore() {
+    std::cout &lt;&lt; "Score: " &lt;&lt; score &lt;&lt; "\n";
+}
+
+int main() {
+    score = 10;
+    showScore();
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>Score: 10</code></pre>
+<p>While global variables are convenient in small examples, relying on them too much can make large programs harder to track because many parts of the code can modify shared data.</p>
+<p><em>Remember: Prefer local variables and pass values through parameters when possible.</em></p>
+<h2>7. Function Declarations</h2>
+<p>In C++, a function or variable must generally be declared before it is used in the code above it.</p>
+<p>If you want to place function definitions below <code>main()</code>, you can write a <span class="text-pink">function declaration</span> (also called a <span class="text-pink">function prototype</span>) at the top.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int multiply(int a, int b);
+
+int main() {
+    std::cout &lt;&lt; multiply(3, 4) &lt;&lt; "\n";
+    return 0;
+}
+
+int multiply(int a, int b) {
+    return a * b;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>12</code></pre>
+<p>The declaration tells the compiler the function's name, return type, and parameter types before <code>main()</code> runs, while the full body appears later.</p>
+<p>This is especially helpful when organizing larger files or keeping <code>main()</code> near the top.</p>
+<p><em>Remember: A function declaration introduces the signature before the full definition is provided.</em></p>
+<h2>8. Recursion</h2>
+<p><span class="text-pink">Recursion</span> happens when a function calls itself to solve a problem by breaking it into smaller pieces.</p>
+<pre><code>#include &lt;iostream&gt;
+
+void countdown(int number) {
+    if (number &lt;= 0) {
+        return;
+    }
+
+    std::cout &lt;&lt; number &lt;&lt; " ";
+    countdown(number - 1);
+}
+
+int main() {
+    countdown(5);
+    std::cout &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>5 4 3 2 1</code></pre>
+<h3>How Does It Work?</h3>
+<ul>
+<li>The <span class="text-pink">base case</span> (<code>if (number &lt;= 0) return;</code>) stops the recursion so it doesn't repeat forever.</li>
+<li>Each call runs with a smaller value (<code>number - 1</code>) until it reaches the stopping condition.</li>
+<li>Without a base case, a recursive function keeps calling itself until the program runs out of memory (a stack overflow).</li>
+</ul>
+<p><em>Remember: Every recursive function needs a clear stopping condition (base case).</em></p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Code smarter. Build harder. Master C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. All rights reserved.</p>
+<div class="footer-links">
+<a href="about_1.html">About Us</a>
+<a href="theory.html">Theory</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

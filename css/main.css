@@ -104,7 +104,7 @@ a {
 }
 
 .hero-title {
-  font-family: "Jersey 10", sans-serif;
+  font-family: "Jersey 10", "Montserrat", sans-serif;
   letter-spacing: 8px;
   font-size: 120px;
   font-weight: 700;
@@ -121,7 +121,7 @@ a {
 
 .btn-start {
   display: inline-block;
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
   background-color: #1f4eff;
@@ -145,6 +145,11 @@ a {
   object-fit: contain;
   pointer-events: none;
   z-index: 0;
+}
+
+
+[hidden] {
+    display: none !important;
 }
 
 .profile-link {
@@ -246,7 +251,7 @@ a {
 
 .btn-buy {
   display: inline-block;
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -328,7 +333,7 @@ a {
 }
 
 .footer-brand {
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 8px;

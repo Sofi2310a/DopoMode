@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>11 Structs &amp; Enums</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/theory11.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Main</a>
+<a class="nav-link" href="about_1.html">About Us</a>
+<a class="nav-link active" href="theory.html">Theory</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Change language">EN</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Profile" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">C++ course</h2>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="theory.html">01 C++ Basics</a>
+<a class="menu-item" href="theory2.html">02 Data Types</a>
+<a class="menu-item" href="theory3.html">03 Operators</a>
+<a class="menu-item" href="theory4.html">04 Conditions</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">PRACTICE</span>
+<a class="menu-item" href="theory5.html">05 Basic Practice</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="theory6.html">06 Loops</a>
+<a class="menu-item" href="theory7.html">07 Functions</a>
+<a class="menu-item" href="theory8.html">08 Arrays &amp; Strings</a>
+<a class="menu-item" href="theory9.html">09 Pointers</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">PRACTICE</span>
+<a class="menu-item" href="theory10.html">10 Coding Practice</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item active" href="theory11.html">11 Structs &amp; Enums</a>
+<a class="menu-item" href="theory12.html">12 Classes &amp; Objects</a>
+<a class="menu-item" href="theory13.html">13 Advanced OOP</a>
+<a class="menu-item" href="theory14.html">14 STL &amp; Files</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">FINAL</span>
+<a class="menu-item" href="theory15.html">15 Project</a>
+</div>
+</aside>
+<main class="content-area">
+
+      <div class="search-bar">
+
+        <div class="search-input-wrap">
+          <input type="text" placeholder="Enter keyword" class="search-input">
+
+          <svg class="search-icon" width="18" height="18"
+               viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+
+        <button class="btn-search" type="button">SEARCH</button>
+
+      </div>
+
+
+      <article class="lesson-article">
+
+        <h1>11 — Structs &amp; Enums</h1>
+
+        <p>Imagine you're building an application that stores information about students. Each student has a name, age, and grade.</p>
+
+        <p>Wouldn't it be easier to keep all this information together instead of managing separate variables?</p>
+
+        <p>That's exactly what structures (struct) allow us to do!</p>
+
+        <p>In this lesson, you'll learn how to organize related data using structures and represent fixed sets of values using enumerations (enum).</p>
+
+
+        <h2>1. What Are Structures?</h2>
+
+        <p>A structure is a custom data type that groups related information into one object.</p>
+
+        <p>For example, let's create a Student structure:</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct Student {
+    std::string name;
+    int age;
+    double grade;
+};
+
+int main() {
+    Student student1 = {"Alex", 18, 95.5};
+
+    std::cout &lt;&lt; student1.name &lt;&lt; "\n";
+    std::cout &lt;&lt; student1.age &lt;&lt; "\n";
+    std::cout &lt;&lt; student1.grade &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Alex
+18
+95.5</code></pre>
+
+        <p>Here, Student is a new type containing three data members:</p>
+
+        <ul class="structure-list">
+          <li>name — stores the student's name.</li>
+          <li>age — stores their age.</li>
+          <li>grade — stores their grade.</li>
+        </ul>
+
+        <p>The variable student1 is an object of type Student.</p>
+
+        <p><strong>Remember:</strong> Structures allow you to combine different types of related information into one object.</p>
+
+
+        <h2>2. Accessing Structure Members</h2>
+
+        <p>To access information stored inside a structure, we use the dot operator (.).</p>
+
+        <p>Let's create a structure representing a car.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct Car {
+    std::string brand;
+    int year;
+};
+
+int main() {
+    Car myCar = {"BMW", 2020};
+
+    std::cout &lt;&lt; myCar.brand &lt;&lt; "\n";
+    std::cout &lt;&lt; myCar.year &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>BMW
+2020</code></pre>
+
+        <h3 class="lesson-subheading">Changing Member Values</h3>
+
+        <p>We can update individual members just like ordinary variables.</p>
+
+        <pre><code>myCar.year = 2024;</code></pre>
+
+        <p>Now myCar.year contains 2024.</p>
+
+        <p>A structure can contain numbers, strings, Boolean values, arrays, and even other structures.</p>
+
+        <p><strong>Remember:</strong> Use the dot operator to read or modify the members of a structure object.</p>
+
+
+        <h2>3. Arrays of Structures</h2>
+
+        <p>What if your application needs to store information about several students?</p>
+
+        <p>Instead of creating individual variables for each student, we can create an array of structures.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct Student {
+    std::string name;
+    int age;
+};
+
+int main() {
+    Student students[3] = {
+        {"Alex", 18},
+        {"Emma", 19},
+        {"John", 20}
+    };
+
+    for (const Student&amp; student : students) {
+        std::cout &lt;&lt; student.name &lt;&lt; " - "
+                  &lt;&lt; student.age &lt;&lt; "\n";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Alex - 18
+Emma - 19
+John - 20</code></pre>
+
+        <p>Each array element is a separate Student object.</p>
+
+        <p>The range-based for loop visits every student, while the dot operator accesses their information.</p>
+
+        <p>We use const Student&amp; to read each student without creating an unnecessary copy.</p>
+
+        <p><strong>Remember:</strong> Arrays of structures are useful when managing collections of related objects.</p>
+
+
+        <h2>4. Structures and Functions</h2>
+
+        <p>Structures can also be passed to functions.</p>
+
+        <p>Imagine creating a function that displays information about any student.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct Student {
+    std::string name;
+    int age;
+};
+
+void showStudent(const Student&amp; student) {
+    std::cout &lt;&lt; "Name: " &lt;&lt; student.name &lt;&lt; "\n";
+    std::cout &lt;&lt; "Age: " &lt;&lt; student.age &lt;&lt; "\n";
+}
+
+int main() {
+    Student student1 = {"Alex", 18};
+
+    showStudent(student1);
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Name: Alex
+Age: 18</code></pre>
+
+        <h3 class="lesson-subheading">Why Use const Student&amp;?</h3>
+
+        <p>The function receives the object through a constant reference.</p>
+
+        <ul class="structure-list">
+          <li>Student&amp; — allows the function to access the existing object without copying it.</li>
+          <li>const — prevents the function from modifying that object through the reference.</li>
+        </ul>
+
+        <p>This approach is useful when a function only needs to read information.</p>
+
+        <p><strong>Remember:</strong> Passing structures to functions helps you organize operations and reuse code.</p>
+
+
+        <h2>5. What Are Enumerations?</h2>
+
+        <p>Sometimes a program needs to represent a limited number of possible options.</p>
+
+        <p>For example, an order might be pending, approved, or rejected.</p>
+
+        <p>Instead of using unexplained numbers, we can give these states meaningful names.</p>
+
+        <p>An enumeration (enum) is a type that defines a set of named values.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday
+};
+
+int main() {
+    Day today = Wednesday;
+
+    std::cout &lt;&lt; today &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>2</code></pre>
+
+        <p>By default, enum values start at 0 and increase by one:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Using names such as Wednesday makes code easier to understand than using unexplained numbers like 2.</p>
+
+        <p><strong>Remember:</strong> Enumerations help represent a set of related, named values.</p>
+
+
+        <h2>6. enum class</h2>
+
+        <p>Modern C++ provides a safer way to create enumerations using enum class.</p>
+
+        <p>It gives enumeration values their own scope and provides stronger type checking.</p>
+
+        <p>Let's create an enumeration for order statuses.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+enum class Status {
+    Pending,
+    Approved,
+    Rejected
+};
+
+int main() {
+    Status order = Status::Approved;
+
+    if (order == Status::Approved) {
+        std::cout &lt;&lt; "Order approved!\n";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Order approved!</code></pre>
+
+        <p>Notice that we write:</p>
+
+        <pre><code>Status::Approved</code></pre>
+
+        <p>The :: operator tells C++ that Approved belongs to the Status enumeration.</p>
+
+        <h3 class="lesson-subheading">enum vs enum class</h3>
+
+        <div class="table-wrap">
+          <table class="data-table comparison-table">
+            <thead>
+              <tr>
+                <th>enum</th>
+                <th>enum class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Enumerators are accessible in their enclosing scope</td>
+                <td>Enumerators are accessed through the enum's name</td>
+              </tr>
+              <tr>
+                <td>Can implicitly convert to integers</td>
+                <td>Does not implicitly convert to integers</td>
+              </tr>
+              <tr>
+                <td>More prone to naming conflicts</td>
+                <td>Better protection against naming conflicts</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Remember:</strong> Prefer enum class in modern C++ when you need a set of clearly defined states or options.</p>
+
+
+        <h2>7. Using Enums with switch</h2>
+
+        <p>Enumerations work especially well with switch statements.</p>
+
+        <p>Imagine an online store that displays different messages depending on an order's status.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+enum class Status {
+    Pending,
+    Approved,
+    Rejected
+};
+
+int main() {
+    Status order = Status::Pending;
+
+    switch (order) {
+        case Status::Pending:
+            std::cout &lt;&lt; "Waiting for approval\n";
+            break;
+
+        case Status::Approved:
+            std::cout &lt;&lt; "Order approved\n";
+            break;
+
+        case Status::Rejected:
+            std::cout &lt;&lt; "Order rejected\n";
+            break;
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>Waiting for approval</code></pre>
+
+        <p>The switch statement checks the value of order and executes the matching case.</p>
+
+        <p>This approach is useful in games, applications, and systems that manage different states.</p>
+
+        <p><strong>Remember:</strong> Combining enum class with switch makes state-based decisions easier to read and maintain.</p>
+
+
+        <h2>8. Type Aliases with using</h2>
+
+        <p>Sometimes a data type has a long name, or we want to make its purpose clearer.</p>
+
+        <p>C++ allows us to create an alternative name using using.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+using Score = double;
+
+int main() {
+    Score grade = 95.5;
+
+    std::cout &lt;&lt; grade &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Output:</p>
+
+        <pre class="output"><code>95.5</code></pre>
+
+        <p>Here, Score is simply another name for double.</p>
+
+        <p>It doesn't create a completely new type, but it can make our code more descriptive.</p>
+
+        <p>For example:</p>
+
+        <pre><code>using StudentID = int;
+
+StudentID studentNumber = 1025;</code></pre>
+
+        <p>Now the variable's purpose is easier to recognize.</p>
+
+        <p><strong>Remember:</strong> Type aliases provide alternative names for existing types, making code easier to understand.</p>
+
+      </article>
+
+    </main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Code smarter. Build harder. Master C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. All rights reserved.</p>
+<div class="footer-links">
+<a href="about_1.html">About Us</a>
+<a href="theory.html">Theory</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>09 Pointers</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
+<link href="../../css/lang-btn.css" rel="stylesheet">
+<link href="../../css/theory4.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/responsive.css" rel="stylesheet">
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header-container">
+<div class="header-left">
+<a class="header-logo" href="main.html">DopoMode</a>
+<nav class="nav">
+<a class="nav-link" href="main.html">Main</a>
+<a class="nav-link" href="about_1.html">About Us</a>
+<a class="nav-link active" href="theory.html">Theory</a>
+</nav>
+</div>
+<div class="header-user">
+<a class="lang-btn" href="language.html" title="Change language">EN</a>
+<a class="profile-link" href="profile.html">
+<span class="user-name">User67</span>
+<div class="user-avatar">
+<img alt="Profile" src="../../images/icon.png">
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="page-container">
+<aside class="sidebar">
+<h2 class="sidebar-title">C++ course</h2>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="theory.html">01 C++ Basics</a>
+<a class="menu-item" href="theory2.html">02 Data Types</a>
+<a class="menu-item" href="theory3.html">03 Operators</a>
+<a class="menu-item" href="theory4.html">04 Conditions</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">PRACTICE</span>
+<a class="menu-item" href="theory5.html">05 Basic Practice</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="theory6.html">06 Loops</a>
+<a class="menu-item" href="theory7.html">07 Functions</a>
+<a class="menu-item" href="theory8.html">08 Arrays &amp; Strings</a>
+<a class="menu-item active" href="theory9.html">09 Pointers</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">PRACTICE</span>
+<a class="menu-item" href="theory10.html">10 Coding Practice</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">THEORY</span>
+<a class="menu-item" href="theory11.html">11 Structs &amp; Enums</a>
+<a class="menu-item" href="theory12.html">12 Classes &amp; Objects</a>
+<a class="menu-item" href="theory13.html">13 Advanced OOP</a>
+<a class="menu-item" href="theory14.html">14 STL &amp; Files</a>
+</div>
+<div class="menu-section">
+<span class="menu-label">FINAL</span>
+<a class="menu-item" href="theory15.html">15 Project</a>
+</div>
+</aside>
+<main class="content-area">
+<div class="search-bar">
+<div class="search-input-wrap">
+<input class="search-input" placeholder="Enter keyword" type="text">
+<svg class="search-icon" fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+<button class="btn-search" type="button">SEARCH</button>
+</div>
+<article class="lesson-article">
+<h1>09 — Pointers</h1>
+<p>Every variable in a program has a place in memory. But what if you could access that location directly?</p>
+<p>In C++, <span class="text-pink">pointers</span> are variables that store memory addresses instead of regular values.</p>
+<p>They are one of the most important concepts in C++ and help explain how memory, arrays, functions, and dynamic allocation work behind the scenes.</p>
+<p>Let's break them down step by step!</p>
+<h2>1. What Are Pointers?</h2>
+<p>A <span class="text-pink">pointer</span> is a variable that stores the <span class="text-pink">memory address</span> of another variable or object.</p>
+<p>Instead of holding a number like <code>42</code> directly, a pointer holds the address where <code>42</code> is stored in memory.</p>
+<p>Why are pointers useful?</p>
+<ul>
+<li>Working with memory — accessing objects through their addresses.</li>
+<li>Modifying variables inside functions — letting a function update an existing variable directly.</li>
+<li>Dynamic data structures — building linked lists, trees, and graphs.</li>
+<li>Performance — accessing large objects without unnecessarily copying them.</li>
+</ul>
+<p><em>Remember: A regular variable stores a value, while a pointer stores a memory address.</em></p>
+<h2>2. Memory Addresses</h2>
+<p>When you create a variable, C++ stores it somewhere in the computer's memory.</p>
+<p>You can find a variable's memory address using the <span class="text-pink">address-of operator</span> (<code>&amp;</code>).</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int number = 42;
+
+    std::cout &lt;&lt; "Value: " &lt;&lt; number &lt;&lt; "\n";
+    std::cout &lt;&lt; "Address: " &lt;&lt; &amp;number &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Example Output:</p>
+<pre class="output"><code>Value: 42
+Address: 0x7ffee4b2c8ac</code></pre>
+<p>The exact address looks like a hexadecimal number and may change every time you run the program.</p>
+<p><em>Remember: <code>&amp;variable</code> gives you the memory address where that variable is stored.</em></p>
+<h2>3. Creating a Pointer</h2>
+<p>To create a pointer, write the data type of the object it points to, followed by an asterisk (<code>*</code>).</p>
+<pre><code>int number = 42;
+int* ptr = &amp;number;</code></pre>
+<p>Here:</p>
+<ul>
+<li><code>int*</code> means "pointer to an <code>int</code>".</li>
+<li><code>ptr</code> is the pointer's name.</li>
+<li><code>&amp;number</code> gets the address of <code>number</code> and stores it in <code>ptr</code>.</li>
+</ul>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int number = 42;
+    int* ptr = &amp;number;
+
+    std::cout &lt;&lt; "Address of number: " &lt;&lt; &amp;number &lt;&lt; "\n";
+    std::cout &lt;&lt; "Value stored in ptr: " &lt;&lt; ptr &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Example Output:</p>
+<pre class="output"><code>Address of number: 0x7ffee4b2c8ac
+Value stored in ptr: 0x7ffee4b2c8ac</code></pre>
+<p>Both lines print the same address because <code>ptr</code> points to <code>number</code>.</p>
+<p><em>Remember: <code>*</code> is used to declare a pointer, and <code>&amp;</code> gets the address of an object.</em></p>
+<h2>4. Dereferencing Pointers</h2>
+<p>Once a pointer stores an address, you can access the value at that address using the <span class="text-pink">dereference operator</span> (<code>*</code>).</p>
+<p>Dereferencing a pointer means accessing the object it points to.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int number = 42;
+    int* ptr = &amp;number;
+
+    std::cout &lt;&lt; "Address: " &lt;&lt; ptr &lt;&lt; "\n";
+    std::cout &lt;&lt; "Value: " &lt;&lt; *ptr &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>Address: 0x7ffee4b2c8ac
+Value: 42</code></pre>
+<h3>Changing a Value Through a Pointer</h3>
+<p>You can also modify the original variable through the pointer.</p>
+<pre><code>int number = 42;
+int* ptr = &amp;number;
+
+*ptr = 100;
+
+std::cout &lt;&lt; "Updated number: " &lt;&lt; number &lt;&lt; "\n";</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>Updated number: 100</code></pre>
+<p>Changing <code>*ptr</code> updates <code>number</code> directly because both refer to the same memory location.</p>
+<p><em>Remember: <code>ptr</code> gives the address, while <code>*ptr</code> accesses the value at that address.</em></p>
+<h2>5. Null Pointers</h2>
+<p>Sometimes a pointer shouldn't point to anything yet.</p>
+<p>In modern C++, we initialize an empty pointer with <span class="text-pink">nullptr</span>.</p>
+<pre><code>int* ptr = nullptr;</code></pre>
+<p>A null pointer doesn't point to a valid object. You should always check it before attempting to access anything through it.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int* ptr = nullptr;
+
+    if (ptr != nullptr) {
+        std::cout &lt;&lt; *ptr &lt;&lt; "\n";
+    } else {
+        std::cout &lt;&lt; "Pointer is null!\n";
+    }
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>Pointer is null!</code></pre>
+<p>Never dereference a null pointer — doing so causes undefined behavior and usually crashes the program.</p>
+<p><em>Remember: Initialize unused pointers to <code>nullptr</code> and check before dereferencing.</em></p>
+<h2>6. Pointers and Functions</h2>
+<p>By default, C++ passes arguments by value, which means a function receives a copy of the variable.</p>
+<p>With pointers, a function can receive a variable's address and modify the original variable.</p>
+<pre><code>#include &lt;iostream&gt;
+
+void doubleValue(int* value) {
+    *value = (*value) * 2;
+}
+
+int main() {
+    int number = 10;
+    doubleValue(&amp;number);
+
+    std::cout &lt;&lt; "Number: " &lt;&lt; number &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>Number: 20</code></pre>
+<h3>How Does It Work?</h3>
+<ul>
+<li><code>&amp;number</code> passes the address of <code>number</code> into the function.</li>
+<li><code>int* value</code> receives that address.</li>
+<li><code>*value</code> modifies the original variable in <code>main()</code>.</li>
+</ul>
+<p><em>Remember: Passing a pointer allows a function to modify the original object through its address.</em></p>
+<h2>7. Pointers and Arrays</h2>
+<p>In many expressions, an array's name decays to a pointer to its first element.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int numbers[3] = {10, 20, 30};
+    int* ptr = numbers;
+
+    std::cout &lt;&lt; *ptr &lt;&lt; "\n";
+    std::cout &lt;&lt; *(ptr + 1) &lt;&lt; "\n";
+    std::cout &lt;&lt; *(ptr + 2) &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>10
+20
+30</code></pre>
+<h3>What's Happening Here?</h3>
+<ul>
+<li><code>ptr</code> points to <code>numbers[0]</code>.</li>
+<li><code>ptr + 1</code> moves to the next <code>int</code> in memory (<code>numbers[1]</code>).</li>
+<li><code>ptr + 2</code> moves to <code>numbers[2]</code>.</li>
+</ul>
+<p>Note that arrays and pointers are not identical — for example, <code>sizeof(numbers)</code> gives the size of the whole array, while <code>sizeof(ptr)</code> gives the size of the pointer itself — even though they are closely connected!</p>
+<p><em>Remember: Pointer arithmetic can move through elements of the same array, but dereferencing outside the array is invalid.</em></p>
+<h2>8. Dynamic Memory</h2>
+<p>Usually, variables are created automatically and destroyed when their scope ends.</p>
+<p>C++ also allows us to allocate memory dynamically during program execution using <span class="text-pink">new</span> and release it with <span class="text-pink">delete</span>.</p>
+<pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int* ptr = new int;
+    *ptr = 25;
+
+    std::cout &lt;&lt; "Dynamic value: " &lt;&lt; *ptr &lt;&lt; "\n";
+
+    delete ptr;
+    ptr = nullptr;
+
+    return 0;
+}</code></pre>
+<p class="output-label">Output:</p>
+<pre class="output"><code>Dynamic value: 25</code></pre>
+<h3>How Does It Work?</h3>
+<ul>
+<li><code>new int</code> allocates memory on the heap for one <code>int</code> and returns its address.</li>
+<li><code>*ptr = 25</code> stores a value in that memory.</li>
+<li><code>delete ptr</code> destroys the object and frees the memory when you're done.</li>
+<li><code>ptr = nullptr</code> avoids leaving a dangling pointer behind.</li>
+</ul>
+<h3>What Is a Memory Leak?</h3>
+<p>If dynamically allocated memory is never freed with <code>delete</code>, it stays reserved until the program exits. This is called a <span class="text-pink">memory leak</span>.</p>
+<p>In modern C++, smart pointers like <code>std::unique_ptr</code> are often preferred because they clean up memory automatically.</p>
+<p><em>Remember: Every raw <code>new</code> should be paired with a matching <code>delete</code> (and <code>new[]</code> with <code>delete[]</code>).</em></p>
+<h2>9. Common Pointer Mistakes</h2>
+<p>Pointers are powerful, so small mistakes can cause serious bugs.</p>
+<h3>Uninitialized Pointers</h3>
+<p>Never use a pointer before assigning it a valid address or <code>nullptr</code>.</p>
+<pre><code>int* ptr; // Uninitialized!
+// *ptr = 10; // Undefined behavior!</code></pre>
+<p>This local pointer has an indeterminate value. Dereferencing it before initialization can cause undefined behavior.</p>
+<h3>Dangling Pointers</h3>
+<p>A <span class="text-pink">dangling pointer</span> refers to an object that no longer exists, such as memory that has already been freed.</p>
+<pre><code>int* ptr = new int(5);
+delete ptr;
+// *ptr = 10; // Do not dereference after delete!
+ptr = nullptr;</code></pre>
+<p>After calling <code>delete</code>, do not use the old address again; you can reset the pointer to <code>nullptr</code>.</p>
+<h3>Accessing Invalid Memory</h3>
+<p>Trying to access memory outside valid objects or arrays can crash your program or corrupt data.</p>
+<p>For example:</p>
+<pre><code>int numbers[3] = {10, 20, 30};
+int* ptr = numbers;
+// *(ptr + 5) = 99; // Out of bounds!</code></pre>
+<p><em>Remember: Initialize pointers properly, avoid dangling pointers, and never dereference invalid addresses.</em></p>
+</article>
+</main>
+</div>
+<footer class="footer">
+<img alt="" class="footer-pattern" src="../../images/rect.svg">
+<img alt="" class="footer-clouds" src="../../images/cloud.svg">
+<div class="footer-container">
+<div class="footer-top">
+<div class="footer-brand">DopoMode</div>
+<p class="footer-tagline">Code smarter. Build harder. Master C++.</p>
+</div>
+<div class="footer-middle">
+<div class="footer-contacts">
+<p>support@dopemode.dev</p>
+<p>@dopemode_support.com</p>
+</div>
+<div class="footer-socials">
+<a class="social-item" href="#">
+<img alt="" src="../../images/instagram 1.svg">
+<span>Instagram</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/twitter-alt-circle 1.svg">
+<span>Twitter</span>
+</a>
+<a class="social-item" href="#">
+<img alt="" src="../../images/facebook (4) 1.svg">
+<span>Facebook</span>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright">© 2026 DopeMode. All rights reserved.</p>
+<div class="footer-links">
+<a href="about_1.html">About Us</a>
+<a href="theory.html">Theory</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

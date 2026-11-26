@@ -40,7 +40,7 @@ a {
 }
 
 .header-logo {
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Jersey 10', 'Montserrat', sans-serif;
   font-size: clamp(22px, 3vw, 28px);
   font-weight: 700;
   color: #ffffff;
@@ -97,11 +97,11 @@ a {
 }
 
 .sidebar-title {
-  font-family: "Jersey 10", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: #0b0a10;
-  margin-bottom: 8px;
+    font-family: 'Silkscreen', 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b0a10;
+    margin-bottom: 8px;
 }
 
 .menu-section {
@@ -146,7 +146,7 @@ a {
 }
 
 .hero-title {
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Jersey 10', 'Montserrat', sans-serif;
   font-size: 64px;
   font-weight: 700;
   line-height: 1;
@@ -163,7 +163,7 @@ a {
 
 .btn-start {
   display: inline-block;
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Jersey 10', 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
   background-color: #1f4eff;
@@ -267,7 +267,7 @@ a {
 
 .btn-buy {
   display: inline-block;
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Jersey 10', 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -348,7 +348,7 @@ a {
 }
 
 .footer-brand {
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Jersey 10', 'Montserrat', sans-serif;
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 8px;
@@ -459,7 +459,7 @@ a {
 
 .lesson-article h1,
 .lesson-article h2 {
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   color: #1f4eff;
   font-weight: 700;
 }
@@ -650,7 +650,7 @@ a {
 }
 
 .compiler {
-  margin: 30px 0 28px;
+  margin: 30px 0 10px;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid #3c3c3c;
@@ -668,7 +668,7 @@ a {
 }
 
 .compiler-bar span {
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   font-size: 16px;
   margin-right: auto;
 }
@@ -687,7 +687,7 @@ a {
   border: none;
   border-radius: 8px;
   padding: 9px 26px;
-  font-family: 'Silkscreen', monospace;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
@@ -788,4 +788,11 @@ a {
 .hint-line {
   margin-top: 10px;
   margin-bottom: 16px;
+}
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
 }

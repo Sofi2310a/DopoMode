@@ -1,0 +1,65 @@
+/* Chapter 13: only the chapter-specific rules from the varvara sheet.
+   Base typography, colours and layout come from theory4.css. */
+
+.lesson-article h3.lesson-subheading {
+  font-family: "Jersey 10", sans-serif;
+  color: #1f4eff;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.lesson-article ul.plain-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0 20px;
+}
+
+.lesson-article ul.plain-list li {
+  padding-left: 0;
+}
+
+.lesson-article ul.plain-list li::before {
+  content: "· ";
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: #0b0a10;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.data-table th {
+  background-color: #e5e5e5;
+  font-weight: 700;
+}
+
+.data-table td {
+  background-color: #f4f5f7;
+  font-weight: 500;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table {
+  table-layout: fixed;
+}
+
+.comparison-table th,
+.comparison-table td {
+  width: 50%;
+}

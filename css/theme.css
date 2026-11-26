@@ -1,0 +1,119 @@
+/* ===== Theme button, logged-in chip, sidebar toggle (all themes) ===== */
+.theme-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 34px; padding: 0;
+  background: transparent; color: #ffffff;
+  border: 1px solid #ffffff; border-radius: 8px;
+  font-size: 17px; line-height: 1; cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+.theme-btn:hover { background: rgba(255, 255, 255, 0.15); }
+
+.user-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: #ffffff; font-family: 'Montserrat', sans-serif;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+}
+.user-chip img { width: 28px; height: 28px; object-fit: contain; }
+
+.sidebar-toggle {
+  display: none; width: 100%;
+  background: #0b0a10; color: #ffffff; border: none; border-radius: 12px;
+  padding: 14px 18px; text-align: left; cursor: pointer;
+  font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700;
+}
+
+/* ===== Dark theme ===== */
+html[data-theme="dark"] { color-scheme: dark; }
+html[data-theme="dark"] body { background-color: #14141b; color: #e8e8ee; }
+
+/* page text that is hard-coded dark */
+html[data-theme="dark"] .theory-text,
+html[data-theme="dark"] .master-text,
+html[data-theme="dark"] .story-title,
+html[data-theme="dark"] .story-text,
+html[data-theme="dark"] .form-title,
+html[data-theme="dark"] .title,
+html[data-theme="dark"] .page-title,
+html[data-theme="dark"] .sidebar-title,
+html[data-theme="dark"] .profile-name,
+html[data-theme="dark"] .card-title,
+html[data-theme="dark"] .card-text,
+html[data-theme="dark"] .card-heading-center,
+html[data-theme="dark"] .lessons-count,
+html[data-theme="dark"] .contact-title,
+html[data-theme="dark"] .contact-labels,
+html[data-theme="dark"] .contact-values,
+html[data-theme="dark"] .goal-item,
+html[data-theme="dark"] .social-btn,
+html[data-theme="dark"] .social-box,
+html[data-theme="dark"] .forgot-link:hover { color: #e8e8ee; }
+
+html[data-theme="dark"] .subtitle,
+html[data-theme="dark"] .form-subtitle,
+html[data-theme="dark"] .forgot,
+html[data-theme="dark"] .forgot-link,
+html[data-theme="dark"] .profile-email { color: #b6b6c2; }
+
+html[data-theme="dark"] .text-blue,
+html[data-theme="dark"] .lesson-article h1,
+html[data-theme="dark"] .lesson-article h2,
+html[data-theme="dark"] .lesson-article em { color: #7b97ff; }
+
+/* forms */
+html[data-theme="dark"] .input,
+html[data-theme="dark"] .form-input,
+html[data-theme="dark"] .search-input {
+  background-color: #1d1d27; color: #ffffff; border-color: #55555f;
+}
+html[data-theme="dark"] .input::placeholder,
+html[data-theme="dark"] .form-input::placeholder,
+html[data-theme="dark"] .search-input::placeholder { color: #8a8a96; }
+html[data-theme="dark"] .social-box,
+html[data-theme="dark"] .social-btn { border-color: #55555f; background: transparent; }
+html[data-theme="dark"] .social-btn:hover { background-color: #24242f; }
+
+/* course sidebar */
+html[data-theme="dark"] .sidebar { background-color: #1c1c26; }
+html[data-theme="dark"] .menu-label { color: #9a9aa8; }
+html[data-theme="dark"] .menu-item { background-color: #25252f; color: #d4d4dc; border-color: #34343f; }
+html[data-theme="dark"] .menu-item:hover,
+html[data-theme="dark"] .menu-item.active { background-color: #1f4eff; color: #ffffff; border-color: #1f4eff; }
+html[data-theme="dark"] .sidebar-toggle { background: #1f4eff; }
+
+/* lessons */
+html[data-theme="dark"] .lesson-article code { background-color: #2a2a36; color: #f0f0f5; }
+html[data-theme="dark"] .lesson-article pre code { background: none; }
+html[data-theme="dark"] .lesson-article pre.output { background: #1c1c26; border-color: #34343f; }
+html[data-theme="dark"] .lesson-article pre.output code { color: #e8e8ee; background: none; }
+html[data-theme="dark"] .types-table td { border-bottom-color: #34343f; }
+html[data-theme="dark"] .types-table tr:nth-child(even) td { background: #1c1c26; }
+html[data-theme="dark"] .step-card,
+html[data-theme="dark"] .step-card h4,
+html[data-theme="dark"] .step-card p { color: #0b0a10; }
+html[data-theme="dark"] .hint { color: #9a9aa8; }
+
+/* profile */
+html[data-theme="dark"] .profile-page { background-color: transparent; }
+html[data-theme="dark"] .profile-banner { background-color: #22222d; }
+html[data-theme="dark"] .profile-avatar-wrap { background-color: #34343f; }
+html[data-theme="dark"] .card-completed,
+html[data-theme="dark"] .card-contact,
+html[data-theme="dark"] .card-about,
+html[data-theme="dark"] .card-goals { background-color: #22222d; }
+html[data-theme="dark"] .contact-header { border-bottom-color: #44444f; }
+html[data-theme="dark"] .btn-edit { background-color: #34343f; color: #ffffff; }
+html[data-theme="dark"] .btn-edit:hover { background-color: #44444f; }
+
+/* dark blocks that sit directly on the page need a visible edge */
+html[data-theme="dark"] .pro-card,
+html[data-theme="dark"] .compiler { box-shadow: 0 0 0 1px #2c2c38; }
+
+/* log-out link on the profile page */
+a.btn-edit { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; cursor: pointer; }
+
+/* Guest controls on pages originally designed for signed-in users. */
+.header .guest-auth { display: inline-block; padding: 10px 22px; border: 1px solid #fff; border-radius: 8px; color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.header .guest-auth.btn-signin { background: #1652f0; border-color: #1652f0; }
+.header .guest-auth.btn-login:hover { background: #fff; color: #0b0a10; }
+.header .guest-auth.btn-signin:hover { background: #0d3dcc; }

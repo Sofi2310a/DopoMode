@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -39,11 +43,73 @@ a {
   gap: clamp(24px, 5vw, 64px);
 }
 
-.header-logo {
-  font-family: "Jersey 10", sans-serif;
-  font-size: clamp(22px, 3vw, 28px);
-  font-weight: 700;
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-login {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-signin {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #1652f0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #ffffff;
+    color: #0b0a10;
+}
+
+.btn-signin:hover {
+    background-color: #0d3dcc;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.username {
+  font-size: 15px;
+  font-weight: 600;
   color: #ffffff;
+}
+
+.header-logo {
+    font-family: 'Silkscreen', 'Montserrat', sans-serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 700;
+    color: #ffffff;
 }
 
 .nav {
@@ -195,7 +261,7 @@ a {
 }
 
 .footer-brand {
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   font-size: clamp(26px, 4vw, 34px);
   font-weight: 700;
   margin-bottom: 8px;

@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>10 Практика з кодом</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+
+  <link href="../../css/lang-btn.css" rel="stylesheet">
+  <link href="../../css/theory5.css" rel="stylesheet">
+  <link href="../../css/theory10.css" rel="stylesheet">
+  <link href="../../css/ukr-fonts.css" rel="stylesheet">
+  <link href="../../css/theme.css" rel="stylesheet">
+  <link href="../../css/responsive.css" rel="stylesheet">
+
+  <script src="../../js/compiler_pract.js" defer></script>
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+
+<body>
+
+
+  <header class="header">
+    <div class="header-container">
+
+      <div class="header-left">
+
+        <a class="header-logo" href="main.html">DopoMode</a>
+
+        <nav class="nav">
+          <a class="nav-link" href="main.html">Головна</a>
+          <a class="nav-link" href="about_1.html">Про нас</a>
+          <a class="nav-link active" href="theory.html">Теорія</a>
+        </nav>
+
+      </div>
+
+      <div class="header-user">
+
+        <a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+
+        <a class="profile-link" href="profile.html">
+          <span class="user-name">User67</span>
+
+          <div class="user-avatar">
+            <img src="../../images/icon.png" alt="Профіль">
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <div class="page-container">
+
+
+    <aside class="sidebar">
+
+      <h2 class="sidebar-title">Курс C++</h2>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory.html">01 Основи C++</a>
+        <a class="menu-item" href="theory2.html">02 Типи даних</a>
+        <a class="menu-item" href="theory3.html">03 Оператори</a>
+        <a class="menu-item" href="theory4.html">04 Умови</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+
+        <a class="menu-item" href="theory5.html">05 Базова практика</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory6.html">06 Цикли</a>
+        <a class="menu-item" href="theory7.html">07 Функції</a>
+        <a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+        <a class="menu-item" href="theory9.html">09 Вказівники</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+
+        <a class="menu-item active" href="theory10.html" aria-current="page">
+          10 Практика з кодом
+        </a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+        <a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+        <a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+        <a class="menu-item" href="theory14.html">14 STL і файли</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ФІНАЛ</span>
+
+        <a class="menu-item" href="theory15.html">15 Проєкт</a>
+      </div>
+
+    </aside>
+
+
+
+    <main class="content-area">
+
+
+      <div class="search-bar">
+
+        <div class="search-input-wrap">
+
+          <input
+            type="text"
+            placeholder="Введіть ключове слово"
+            class="search-input"
+          >
+
+          <svg
+            class="search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+
+        </div>
+
+        <button class="btn-search" type="button">
+          ПОШУК
+        </button>
+
+      </div>
+
+
+
+      <article class="lesson-article">
+
+        <h1>10 — Практика з кодом</h1>
+
+        <p>
+          Ти вже навчився працювати з циклами, функціями,
+          масивами, рядками та вказівниками.
+          Настав час застосувати ці знання на практиці!
+        </p>
+
+        <p>
+          У цьому уроці ти виконаєш чотири завдання з програмування:
+          від простих обчислень до складніших задач.
+        </p>
+
+        <p>
+          Мета — не просто отримати правильну відповідь.
+          Важливо зрозуміти, як працює твій код,
+          і навчитися самостійно розв’язувати задачі.
+        </p>
+
+
+
+        <h2>1. Завдання 01 — Аналізатор чисел</h2>
+
+        <p class="difficulty">Легкий рівень</p>
+
+        <p>
+          Почнімо зі створення програми, яка аналізує
+          п’ять чисел, введених користувачем.
+        </p>
+
+        <p>
+          Програма повинна обчислити їхню суму,
+          знайти найбільше число та визначити середнє арифметичне.
+        </p>
+
+        <h3>Вимоги</h3>
+
+        <ol>
+          <li>Створи масив для зберігання п’яти цілих чисел.</li>
+          <li>Використай цикл for для зчитування чисел.</li>
+          <li>Обчисли суму всіх елементів масиву.</li>
+          <li>Знайди найбільше число.</li>
+          <li>Обчисли середнє арифметичне, використовуючи тип double.</li>
+        </ol>
+
+        <h3>Приклад роботи програми</h3>
+
+        <pre class="output"><code>Введіть 5 чисел:
+10
+25
+5
+40
+20
+
+Сума: 100
+Найбільше число: 40
+Середнє арифметичне: 20</code></pre>
+
+        <h3>Підказка</h3>
+
+        <p>
+          Використай одну змінну для обчислення суми,
+          а іншу — для зберігання найбільшого числа.
+        </p>
+
+        <p>
+          Спочатку присвой змінній найбільшого числа
+          значення першого елемента масиву.
+          Завдяки цьому програма правильно працюватиме,
+          навіть якщо всі введені числа від’ємні.
+        </p>
+
+        <p>
+          Обчислюючи середнє арифметичне,
+          використовуй ділення з рухомою комою,
+          щоб не втратити дробову частину результату.
+        </p>
+
+
+
+        <div class="compiler" data-task="1">
+
+          <div class="compiler-bar">
+
+            <span>main.cpp</span>
+
+            <select class="std-select" aria-label="Стандарт C++">
+              <option value="c++17">C++17</option>
+              <option value="c++20" selected>C++20</option>
+              <option value="c++14">C++14</option>
+              <option value="c++11">C++11</option>
+            </select>
+
+            <button class="btn-reset" type="button">
+              Скинути
+            </button>
+
+            <button class="btn-run" type="button">
+              ▶ ЗАПУСТИТИ
+            </button>
+
+          </div>
+
+          <textarea
+            class="code-editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            aria-label="Редактор коду C++ для завдання 1"
+          ></textarea>
+
+          <div class="console">
+            <div class="console-title">ВИВІД</div>
+
+            <div class="console-output">
+              Натисни «ЗАПУСТИТИ» (або Ctrl + Enter), щоб скомпілювати та виконати код.
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <h2>2. Завдання 02 — Аналізатор тексту</h2>
+
+        <p class="difficulty">Легкий рівень</p>
+
+        <p>Тепер попрацюймо з текстом!</p>
+
+        <p>
+          Створи програму, яка зчитує речення
+          та підраховує загальну кількість символів
+          і голосних літер у ньому.
+        </p>
+
+        <h3>Вимоги</h3>
+
+        <ol>
+          <li>Використай std::string для зберігання речення.</li>
+          <li>Зчитай увесь рядок за допомогою std::getline().</li>
+          <li>Використай цикл для перевірки кожного символу.</li>
+          <li>
+            Підрахуй голосні літери a, e, i, o, u,
+            враховуючи також великі літери.
+          </li>
+          <li>Виведи обидва результати.</li>
+        </ol>
+
+        <h3>Приклад роботи програми</h3>
+
+        <pre class="output"><code>Введіть речення: Hello World
+
+Усього символів: 11
+Голосних літер: 3</code></pre>
+
+        <h3>Підказка</h3>
+
+        <p>
+          Використай метод .length(), щоб отримати довжину рядка,
+          а потім перевір кожен символ за допомогою умови if.
+        </p>
+
+        <p>
+          Не забувай, що пробіли також враховуються
+          під час підрахунку загальної довжини рядка!
+        </p>
+
+        <p>
+          Для цієї вправи використовуй текст англійською мовою.
+          Для базових символів ASCII довжина рядка
+          відповідає кількості символів.
+          Якщо текст містить символи Unicode,
+          зокрема українські літери в UTF-8,
+          для правильного підрахунку може знадобитися інший підхід.
+        </p>
+
+
+
+        <div class="compiler" data-task="2">
+
+          <div class="compiler-bar">
+
+            <span>main.cpp</span>
+
+            <select class="std-select" aria-label="Стандарт C++">
+              <option value="c++17">C++17</option>
+              <option value="c++20" selected>C++20</option>
+              <option value="c++14">C++14</option>
+              <option value="c++11">C++11</option>
+            </select>
+
+            <button class="btn-reset" type="button">
+              Скинути
+            </button>
+
+            <button class="btn-run" type="button">
+              ▶ ЗАПУСТИТИ
+            </button>
+
+          </div>
+
+          <textarea
+            class="code-editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            aria-label="Редактор коду C++ для завдання 2"
+          ></textarea>
+
+          <div class="console">
+            <div class="console-title">ВИВІД</div>
+
+            <div class="console-output">
+              Натисни «ЗАПУСТИТИ» (або Ctrl + Enter), щоб скомпілювати та виконати код.
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <h2>3. Завдання 03 — Калькулятор із функціями</h2>
+
+        <p class="difficulty">Середній рівень</p>
+
+        <p>Створімо калькулятор!</p>
+
+        <p>
+          Замість того щоб розміщувати всі обчислення
+          всередині main(), ти організуєш математичні
+          операції в окремих функціях.
+        </p>
+
+        <h3>Вимоги</h3>
+
+        <ol>
+          <li>
+            Створи чотири функції: add(), subtract(),
+            multiply() та divide().
+          </li>
+          <li>
+            Кожна функція повинна приймати два параметри
+            типу double та повертати значення типу double.
+          </li>
+          <li>
+            Створи меню з чотирма математичними операціями.
+          </li>
+          <li>Використай switch для вибору операції.</li>
+          <li>
+            Передбач перевірку ділення на нуль
+            та обробку неправильного вибору пункту меню.
+          </li>
+        </ol>
+
+        <h3>Приклад роботи програми</h3>
+
+        <pre class="output"><code>=== КАЛЬКУЛЯТОР ІЗ ФУНКЦІЯМИ ===
+
+1. Додавання
+2. Віднімання
+3. Множення
+4. Ділення
+
+Виберіть операцію: 3
+Введіть перше число: 8
+Введіть друге число: 6
+
+Результат: 48</code></pre>
+
+        <h3>Підказка</h3>
+
+        <p>
+          Нехай main() відповідає за введення даних
+          користувачем і вибір потрібної функції.
+        </p>
+
+        <p>
+          Кожна математична функція повинна виконувати
+          лише одне завдання: обчислювати та повертати результат.
+        </p>
+
+        <p>
+          Перед викликом divide() перевір,
+          чи не дорівнює друге число нулю.
+          Якщо дорівнює — виведи повідомлення про помилку
+          замість виконання ділення.
+        </p>
+
+
+
+        <div class="compiler" data-task="3">
+
+          <div class="compiler-bar">
+
+            <span>main.cpp</span>
+
+            <select class="std-select" aria-label="Стандарт C++">
+              <option value="c++17">C++17</option>
+              <option value="c++20" selected>C++20</option>
+              <option value="c++14">C++14</option>
+              <option value="c++11">C++11</option>
+            </select>
+
+            <button class="btn-reset" type="button">
+              Скинути
+            </button>
+
+            <button class="btn-run" type="button">
+              ▶ ЗАПУСТИТИ
+            </button>
+
+          </div>
+
+          <textarea
+            class="code-editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            aria-label="Редактор коду C++ для завдання 3"
+          ></textarea>
+
+          <div class="console">
+            <div class="console-title">ВИВІД</div>
+
+            <div class="console-output">
+              Натисни «ЗАПУСТИТИ» (або Ctrl + Enter), щоб скомпілювати та виконати код.
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <h2>4. Завдання 04 — Випробування з вказівниками</h2>
+
+        <p class="difficulty">Середній рівень</p>
+
+        <p>Готовий до випробування з вказівниками?</p>
+
+        <p>
+          Створи програму, яка міняє місцями значення
+          двох змінних, не повертаючи жодного
+          з цих значень із функції.
+        </p>
+
+        <p>
+          Для цього ти працюватимеш безпосередньо
+          з адресами змінних у пам’яті.
+        </p>
+
+        <h3>Вимоги</h3>
+
+        <ol>
+          <li>Створи дві змінні цілочисельного типу.</li>
+          <li>Попроси користувача ввести їхні значення.</li>
+          <li>Створи функцію з назвою swapNumbers().</li>
+          <li>Передай адреси обох змінних у функцію.</li>
+          <li>Використай вказівники, щоб поміняти значення місцями.</li>
+          <li>Виведи значення змінних до та після обміну.</li>
+        </ol>
+
+        <h3>Приклад роботи програми</h3>
+
+        <pre class="output"><code>Введіть перше число: 10
+Введіть друге число: 25
+
+До обміну:
+Перше число: 10
+Друге число: 25
+
+Після обміну:
+Перше число: 25
+Друге число: 10</code></pre>
+
+        <h3>Підказка</h3>
+
+        <pre><code>void swapNumbers(int* a, int* b) {
+    // Поміняй значення місцями тут.
+}</code></pre>
+
+        <p>
+          Тобі знадобиться тимчасова змінна,
+          щоб зберегти одне з початкових значень.
+        </p>
+
+        <p>
+          Пам’ятай, що *a та *b дозволяють звертатися
+          до фактичних значень цілих чисел через вказівники.
+        </p>
+
+
+
+        <div class="compiler" data-task="4">
+
+          <div class="compiler-bar">
+
+            <span>main.cpp</span>
+
+            <select class="std-select" aria-label="Стандарт C++">
+              <option value="c++17">C++17</option>
+              <option value="c++20" selected>C++20</option>
+              <option value="c++14">C++14</option>
+              <option value="c++11">C++11</option>
+            </select>
+
+            <button class="btn-reset" type="button">
+              Скинути
+            </button>
+
+            <button class="btn-run" type="button">
+              ▶ ЗАПУСТИТИ
+            </button>
+
+          </div>
+
+          <textarea
+            class="code-editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            aria-label="Редактор коду C++ для завдання 4"
+          ></textarea>
+
+          <div class="console">
+            <div class="console-title">ВИВІД</div>
+
+            <div class="console-output">
+              Натисни «ЗАПУСТИТИ» (або Ctrl + Enter), щоб скомпілювати та виконати код.
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+
+    </main>
+  </div>
+
+
+
+  <footer class="footer">
+
+    <img
+      src="../../images/rect.svg"
+      alt=""
+      class="footer-pattern"
+    >
+
+    <img
+      src="../../images/cloud.svg"
+      alt=""
+      class="footer-clouds"
+    >
+
+    <div class="footer-container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">DopoMode</div>
+
+        <p class="footer-tagline">
+          Програмуй розумніше. Створюй більше. Опануй C++.
+        </p>
+
+      </div>
+
+      <div class="footer-middle">
+
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+
+          <a href="#" class="social-item">
+            <img src="../../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+
+          <a href="#" class="social-item">
+            <img src="../../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+
+          <a href="#" class="social-item">
+            <img src="../../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          © 2026 DopeMode. Усі права захищено.
+        </p>
+
+        <div class="footer-links">
+          <a href="about_1.html">Про нас</a>
+          <a href="theory.html">Теорія</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

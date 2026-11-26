@@ -1,0 +1,916 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>15 Фінальний проєкт</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+
+  <link href="../../css/lang-btn.css" rel="stylesheet">
+  <link href="../../css/theory4.css" rel="stylesheet">
+  <link href="../../css/theory15.css" rel="stylesheet">
+  <link href="../../css/ukr-fonts.css" rel="stylesheet">
+  <link href="../../css/theme.css" rel="stylesheet">
+  <link href="../../css/responsive.css" rel="stylesheet">
+
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-container">
+
+      <div class="header-left">
+        <a class="header-logo" href="main.html">DopoMode</a>
+
+        <nav class="nav">
+          <a class="nav-link" href="main.html">Головна</a>
+          <a class="nav-link" href="about_1.html">Про нас</a>
+          <a class="nav-link active" href="theory.html">Теорія</a>
+        </nav>
+      </div>
+
+      <div class="header-user">
+        <a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+
+        <a class="profile-link" href="profile.html">
+          <span class="user-name">User67</span>
+
+          <div class="user-avatar">
+            <img src="../../images/icon.png" alt="Профіль">
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <div class="page-container">
+
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Курс C++</h2>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory.html">01 Основи C++</a>
+        <a class="menu-item" href="theory2.html">02 Типи даних</a>
+        <a class="menu-item" href="theory3.html">03 Оператори</a>
+        <a class="menu-item" href="theory4.html">04 Умови</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+        <a class="menu-item" href="theory5.html">05 Базова практика</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory6.html">06 Цикли</a>
+        <a class="menu-item" href="theory7.html">07 Функції</a>
+        <a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+        <a class="menu-item" href="theory9.html">09 Вказівники</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+        <a class="menu-item" href="theory10.html">10 Практика з кодом</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+        <a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+        <a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+        <a class="menu-item" href="theory14.html">14 STL і файли</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ФІНАЛ</span>
+        <a
+          class="menu-item active"
+          href="theory15.html"
+          aria-current="page"
+        >15 Проєкт</a>
+      </div>
+    </aside>
+
+
+    <main class="content-area">
+
+
+      <div class="search-bar">
+        <div class="search-input-wrap">
+
+          <input
+            type="text"
+            placeholder="Введіть ключове слово"
+            class="search-input"
+            aria-label="Пошук за уроками"
+          >
+
+          <svg
+            class="search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+
+        <button class="btn-search" type="button">ПОШУК</button>
+      </div>
+
+
+
+      <article class="lesson-article">
+
+        <h1>15 — Фінальний проєкт</h1>
+
+        <p>Вітаємо! Ти дійшов до фінального проєкту курсу C++!</p>
+
+        <p>Ти вже навчився працювати зі змінними, умовами, циклами, функціями, масивами, вказівниками, класами, контейнерами та файлами.</p>
+
+        <p>Тепер настав час об’єднати всі ці знання та створити справжній застосунок.</p>
+
+        <p>Твоє завдання — розробити <span class="text-pink">систему керування студентами (Student Management System)</span>. Це консольний застосунок, який дозволяє додавати, переглядати, шукати, оновлювати та видаляти записи про студентів.</p>
+
+        <p>Цей проєкт допоможе тобі зрозуміти, як різні можливості C++ працюють разом у повноцінній програмі.</p>
+
+
+        <h2>1. Огляд проєкту</h2>
+
+        <p class="project-level">Середній рівень</p>
+        <p class="project-type">Фінальний проєкт</p>
+
+        <p>Назва проєкту: <span class="text-pink">Система керування студентами</span>.</p>
+
+        <p>Твій застосунок керуватиме інформацією про студентів через просте текстове меню.</p>
+
+        <p>Кожен студент повинен мати чотири характеристики:</p>
+
+        <ul class="plain-list">
+          <li>ID — унікальний номер, який ідентифікує студента.</li>
+          <li>Ім’я — повне ім’я студента.</li>
+          <li>Вік — вік студента.</li>
+          <li>Оцінка — середній бал студента.</li>
+        </ul>
+
+        <p>Застосунок також повинен зберігати записи про студентів у файл, щоб вони залишалися доступними після завершення роботи програми.</p>
+
+        <h3 class="lesson-subheading">Приклад меню</h3>
+
+        <pre class="output"><code>===== КЕРУВАННЯ СТУДЕНТАМИ =====
+
+1. Додати студента
+2. Переглянути студентів
+3. Знайти студента
+4. Оновити дані студента
+5. Видалити студента
+6. Зберегти студентів
+0. Вихід
+
+Виберіть пункт меню:</code></pre>
+
+        <p>Меню повинно з’являтися знову після кожної операції, доки користувач не вибере <code>0</code> для виходу.</p>
+
+        <p>Замість того щоб писати всю програму одразу, ми створюватимемо її крок за кроком.</p>
+
+
+        <h2>2. Крок 01 — Створення класу Student</h2>
+
+        <p>Почнімо з визначення того, як студент буде представлений у нашій програмі.</p>
+
+        <p>Ми використаємо клас, щоб об’єднати пов’язані дані та поведінку.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;fstream&gt;
+#include &lt;limits&gt;
+
+class Student {
+public:
+    int id;
+    std::string name;
+    int age;
+    double grade;
+
+    Student(int i, std::string n, int a, double g)
+        : id(i), name(n), age(a), grade(g) {
+    }
+
+    void display() const {
+        std::cout &lt;&lt; "ID: " &lt;&lt; id &lt;&lt; "\n";
+        std::cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; "\n";
+        std::cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; "\n";
+        std::cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; "\n";
+    }
+};</code></pre>
+
+        <h3 class="lesson-subheading">Як це працює?</h3>
+
+        <p>Клас <code>Student</code> містить чотири поля та функцію-член <code>display()</code>.</p>
+
+        <p>Конструктор ініціалізує об’єкт студента інформацією, яку ми передаємо під час його створення.</p>
+
+        <p>Наприклад:</p>
+
+        <pre><code>Student student1(1, "Alex", 18, 95.5);
+
+student1.display();</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>ID: 1
+Name: Alex
+Age: 18
+Grade: 95.5</code></pre>
+
+        <p>Для простоти в цьому прикладі використано публічні поля. У більших застосунках приватні поля та контрольований доступ до них допомагають краще захищати дані.</p>
+
+        <p><em>Пам’ятай: класи дозволяють об’єднувати пов’язані дані та поведінку в об’єкти, які можна повторно використовувати.</em></p>
+
+
+        <h2>3. Крок 02 — Зберігання студентів у векторі</h2>
+
+        <p>У закладі освіти може навчатися багато студентів, і ми не знаємо заздалегідь, скільки записів знадобиться нашому застосунку.</p>
+
+        <p>Саме тому використаємо <code>std::vector</code>.</p>
+
+        <p>На відміну від звичайних масивів фіксованого розміру, вектори можуть збільшуватися під час додавання нових елементів.</p>
+
+        <pre><code>std::vector&lt;Student&gt; students;</code></pre>
+
+        <p>Щоб додати студента:</p>
+
+        <pre><code>students.emplace_back(1, "Alex", 18, 95.5);</code></pre>
+
+        <p>Тепер створімо функцію, яка відображатиме всіх студентів.</p>
+
+        <pre><code>void viewStudents(const std::vector&lt;Student&gt;&amp; students) {
+    if (students.empty()) {
+        std::cout &lt;&lt; "No students found.\n";
+        return;
+    }
+
+    for (const Student&amp; student : students) {
+        student.display();
+        std::cout &lt;&lt; "----------\n";
+    }
+}</code></pre>
+
+        <p>Цикл <code>for</code> на основі діапазону перебирає всіх студентів у векторі.</p>
+
+        <p>Ми використовуємо <code>const Student&amp;</code>, щоб отримувати доступ до об’єктів без створення зайвих копій.</p>
+
+        <h3 class="lesson-subheading">Твоє завдання</h3>
+
+        <p>Створи функцію <code>addStudent()</code>, яка:</p>
+
+        <ol>
+          <li>Запитує у користувача ID, ім’я, вік та оцінку студента.</li>
+          <li>Перевіряє, чи не використовується вже введений ID.</li>
+          <li>Перевіряє правильність введених даних.</li>
+          <li>Додає нового студента до вектора.</li>
+        </ol>
+
+        <p><strong>Важливо:</strong> кожен студент повинен мати унікальний ID.</p>
+
+
+        <h2>4. Крок 03 — Пошук студентів</h2>
+
+        <p>Тепер додаймо можливість пошуку.</p>
+
+        <p>Уяви, що в системі зберігаються дані про 100 студентів. Шукати одного з них вручну було б незручно.</p>
+
+        <p>Натомість ми створимо функцію, яка шукатиме студента за його ID.</p>
+
+        <pre><code>Student* findStudent(std::vector&lt;Student&gt;&amp; students, int id) {
+    for (Student&amp; student : students) {
+        if (student.id == id) {
+            return &amp;student;
+        }
+    }
+
+    return nullptr;
+}</code></pre>
+
+        <h3 class="lesson-subheading">Як це працює?</h3>
+
+        <p>Функція послідовно перевіряє студентів, доки не знайде запис із відповідним ID.</p>
+
+        <p>Якщо збіг знайдено, вона повертає вказівник на цього студента.</p>
+
+        <p>Якщо студента не знайдено, функція повертає <code>nullptr</code>.</p>
+
+        <p>Ось як її використовувати:</p>
+
+        <pre><code>Student* result = findStudent(students, 1);
+
+if (result != nullptr) {
+    result-&gt;display();
+} else {
+    std::cout &lt;&lt; "Student not found.\n";
+}</code></pre>
+
+        <p><strong>Важливо:</strong> вказівники на елементи вектора можуть стати недійсними після зміни вектора. Використовуй отриманий результат одразу й не зберігай його після операцій, які можуть зробити вказівник недійсним.</p>
+
+        <h3 class="lesson-subheading">Твоє завдання</h3>
+
+        <p>Додай пункт меню, який запитуватиме ID студента та відображатиме його інформацію, якщо відповідний запис знайдено.</p>
+
+
+        <h2>5. Крок 04 — Оновлення та видалення студентів</h2>
+
+        <p>Наш застосунок уже може зберігати інформацію про студентів і знаходити потрібні записи.</p>
+
+        <p>Тепер дозволимо користувачам редагувати та видаляти дані.</p>
+
+        <h3 class="lesson-subheading">Оновлення даних студента</h3>
+
+        <p>Створи функцію <code>updateStudent()</code>, яка:</p>
+
+        <ol>
+          <li>Запитує ID студента.</li>
+          <li>Знаходить відповідного студента.</li>
+          <li>Виводить повідомлення, якщо студента не знайдено.</li>
+          <li>Запитує нове ім’я, вік та оцінку.</li>
+          <li>Перевіряє нові дані та оновлює наявний запис.</li>
+        </ol>
+
+        <p>Для пошуку потрібного студента можна повторно використати функцію <code>findStudent()</code>.</p>
+
+
+        <h3 class="lesson-subheading">Видалення студента</h3>
+
+        <p>Щоб видалити студента, скористаємося функцією <code>erase()</code> контейнера <code>vector</code>.</p>
+
+        <pre><code>void deleteStudent(std::vector&lt;Student&gt;&amp; students, int id) {
+    for (auto it = students.begin();
+         it != students.end(); ++it) {
+
+        if (it-&gt;id == id) {
+            students.erase(it);
+            std::cout &lt;&lt; "Student deleted!\n";
+            return;
+        }
+    }
+
+    std::cout &lt;&lt; "Student not found.\n";
+}</code></pre>
+
+        <p>Функція шукає запис із відповідним ID та видаляє його з вектора.</p>
+
+        <p>Після виклику <code>erase()</code> раніше збережені ітератори та вказівники на видалений і наступні за ним елементи стають недійсними.</p>
+
+        <h3 class="lesson-subheading">Що таке CRUD?</h3>
+
+        <p>Ці чотири операції мають спільну назву в розробці програмного забезпечення:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Операція</th>
+                <th>Значення</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Create — створення</td>
+                <td>Додавання нового запису</td>
+              </tr>
+              <tr>
+                <td>Read — читання</td>
+                <td>Перегляд або пошук запису</td>
+              </tr>
+              <tr>
+                <td>Update — оновлення</td>
+                <td>Зміна наявного запису</td>
+              </tr>
+              <tr>
+                <td>Delete — видалення</td>
+                <td>Видалення запису</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Разом ці операції називаються <span class="text-pink">CRUD</span>.</p>
+
+        <p>Ти зустрінеш їх під час роботи з базами даних, вебсайтами та багатьма реальними застосунками.</p>
+
+
+        <h2>6. Крок 05 — Збереження студентів у файл</h2>
+
+        <p>Поки що наш застосунок має одну важливу проблему.</p>
+
+        <p>Коли програма завершує роботу, записи про студентів, які зберігалися в оперативній пам’яті, зникають.</p>
+
+        <p>Щоб зберегти їх, нам знадобиться робота з файлами.</p>
+
+        <p>Збережімо дані студентів у текстовий файл.</p>
+
+        <pre><code>void saveStudents(const std::vector&lt;Student&gt;&amp; students) {
+    std::ofstream file("students.txt");
+
+    if (!file.is_open()) {
+        std::cout &lt;&lt; "Cannot open file!\n";
+        return;
+    }
+
+    for (const Student&amp; student : students) {
+        file &lt;&lt; student.id &lt;&lt; "\n";
+        file &lt;&lt; student.name &lt;&lt; "\n";
+        file &lt;&lt; student.age &lt;&lt; "\n";
+        file &lt;&lt; student.grade &lt;&lt; "\n";
+    }
+
+    file.close();
+
+    if (file) {
+        std::cout &lt;&lt; "Students saved!\n";
+    } else {
+        std::cout &lt;&lt; "Error saving students!\n";
+    }
+}</code></pre>
+
+        <h3 class="lesson-subheading">Приклад вмісту файлу</h3>
+
+        <pre class="output"><code>1
+Alex
+18
+95.5
+2
+Emma
+19
+92</code></pre>
+
+        <p>Інформація про кожного студента займає чотири рядки у файлі.</p>
+
+        <p>Перший рядок містить ID, наступні — ім’я, вік та оцінку.</p>
+
+        <p>Відкриття наявного файлу через <code>std::ofstream</code> у такий спосіб зазвичай замінює його попередній вміст. Тому застосунок повинен чітко повідомляти про помилки збереження.</p>
+
+        <h3 class="lesson-subheading">Твоє завдання</h3>
+
+        <p>Створи функцію <code>loadStudents()</code>, яка:</p>
+
+        <ol>
+          <li>Відкриває файл <code>students.txt</code> під час запуску програми.</li>
+          <li>Зчитує чотири поля для кожного студента.</li>
+          <li>Створює об’єкт <code>Student</code> для кожного коректного запису.</li>
+          <li>Додає студента до вектора.</li>
+          <li>Обробляє відсутні файли, неповні записи, некоректні значення та повторювані ID.</li>
+        </ol>
+
+        <p>У межах цього проєкту зберігай ім’я студента в одному рядку без символів переходу на новий рядок. Для запису та читання оцінок використовуй узгоджений числовий формат і локаль.</p>
+
+        <p><em>Пам’ятай: збереження даних дозволяє застосунку зберігати інформацію між запусками.</em></p>
+
+
+        <h2>7. Крок 06 — Створення головного меню</h2>
+
+        <p>Тепер настав час об’єднати всі частини в один застосунок.</p>
+
+        <p>Ми використаємо цикл <code>do-while</code>, щоб меню продовжувало працювати, а оператор <code>switch</code> — для обробки вибору користувача.</p>
+
+        <p>Наступний приклад — це початковий шаблон. Він передбачає, що клас <code>Student</code> і наведені раніше функції вже визначені.</p>
+
+        <pre><code>int main() {
+    std::vector&lt;Student&gt; students;
+    int choice = -1;
+
+    do {
+        std::cout &lt;&lt; "\n===== STUDENT MANAGEMENT =====\n";
+        std::cout &lt;&lt; "1. Add Student\n";
+        std::cout &lt;&lt; "2. View Students\n";
+        std::cout &lt;&lt; "3. Search Student\n";
+        std::cout &lt;&lt; "4. Update Student\n";
+        std::cout &lt;&lt; "5. Delete Student\n";
+        std::cout &lt;&lt; "6. Save Students\n";
+        std::cout &lt;&lt; "0. Exit\n";
+        std::cout &lt;&lt; "Choose an option: ";
+
+        if (!(std::cin &gt;&gt; choice)) {
+            if (std::cin.eof()) {
+                std::cout &lt;&lt; "\nInput ended.\n";
+                break;
+            }
+
+            std::cout &lt;&lt; "Invalid input!\n";
+            std::cin.clear();
+            std::cin.ignore(
+                std::numeric_limits&lt;std::streamsize&gt;::max(),
+                '\n'
+            );
+            continue;
+        }
+
+        std::cin.ignore(
+            std::numeric_limits&lt;std::streamsize&gt;::max(),
+            '\n'
+        );
+
+        switch (choice) {
+            case 1:
+                std::cout &lt;&lt; "Add Student selected\n";
+                break;
+
+            case 2:
+                viewStudents(students);
+                break;
+
+            case 3:
+                std::cout &lt;&lt; "Search Student selected\n";
+                break;
+
+            case 4:
+                std::cout &lt;&lt; "Update Student selected\n";
+                break;
+
+            case 5:
+                std::cout &lt;&lt; "Delete Student selected\n";
+                break;
+
+            case 6:
+                saveStudents(students);
+                break;
+
+            case 0:
+                std::cout &lt;&lt; "Goodbye!\n";
+                break;
+
+            default:
+                std::cout &lt;&lt; "Invalid option!\n";
+        }
+
+    } while (choice != 0);
+
+    return 0;
+}</code></pre>
+
+        <h3 class="lesson-subheading">Твоє завдання</h3>
+
+        <p>Заміни тимчасові повідомлення викликами створених тобою функцій.</p>
+
+        <p>Також переконайся, що програма:</p>
+
+        <ul class="plain-list">
+          <li>Завантажує збережені записи під час запуску.</li>
+          <li>Коректно обробляє неправильне введення та не зависає.</li>
+          <li>Повторно відображає меню після кожної операції.</li>
+          <li>Зберігає записи, коли користувач вибирає пункт 6.</li>
+        </ul>
+
+        <p><strong>Додаткове завдання:</strong> реалізуй автоматичне збереження змін перед завершенням програми.</p>
+
+
+        <h2>8. Контрольний список фінального проєкту</h2>
+
+        <p>Перш ніж здавати свій застосунок, переконайся, що виконав усі вимоги.</p>
+
+        <p class="checklist-label"><strong>Прогрес виконання проєкту</strong></p>
+
+        <p class="progress-count" id="progress-count" aria-live="polite">
+          Виконано 0 із 11
+        </p>
+
+        <div class="project-checklist" id="project-checklist">
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Створити клас Student із полями ID, ім’я, вік та оцінка</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Використати std::vector для зберігання об’єктів студентів</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Створити інтерактивне меню за допомогою циклу</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Реалізувати додавання студентів з унікальними ID</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Реалізувати перегляд усіх записів про студентів</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Реалізувати пошук студентів за ID</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Реалізувати оновлення наявних записів про студентів</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Реалізувати видалення записів про студентів</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Реалізувати збереження записів у текстовий файл</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Завантажувати збережені записи під час запуску програми</span>
+          </label>
+
+          <label class="checklist-item">
+            <input type="checkbox">
+            <span>Обробляти некоректне введення та відсутні записи</span>
+          </label>
+
+        </div>
+
+
+        <h3 class="lesson-subheading">Додаткові завдання</h3>
+
+        <p>Усе готово? Спробуй удосконалити свій застосунок!</p>
+
+        <ul class="plain-list">
+          <li>Відсортуй студентів за їхніми оцінками.</li>
+          <li>Знайди студента з найвищою оцінкою.</li>
+          <li>Обчисли середній бал усіх студентів.</li>
+          <li>Автоматично зберігай записи перед виходом із програми.</li>
+        </ul>
+
+        <p>Ці можливості допоможуть тобі краще попрактикуватися в роботі з алгоритмами, векторами та файлами.</p>
+
+
+        <h2>9. Тестування застосунку</h2>
+
+        <p>Якщо програма успішно компілюється, це ще не означає, що в ній немає помилок.</p>
+
+        <p>Перш ніж вважати проєкт завершеним, перевір різні сценарії роботи.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+
+            <thead>
+              <tr>
+                <th>Тест</th>
+                <th>Очікуваний результат</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Додати студента</td>
+                <td>Студент з’являється у списку</td>
+              </tr>
+              <tr>
+                <td>Додати студента з повторюваним ID</td>
+                <td>Запис відхиляється</td>
+              </tr>
+              <tr>
+                <td>Знайти наявний ID</td>
+                <td>Відображається інформація про студента</td>
+              </tr>
+              <tr>
+                <td>Знайти невідомий ID</td>
+                <td>З’являється зрозуміле повідомлення</td>
+              </tr>
+              <tr>
+                <td>Оновити дані студента</td>
+                <td>Відображається оновлена інформація</td>
+              </tr>
+              <tr>
+                <td>Видалити студента</td>
+                <td>Запис зникає зі списку</td>
+              </tr>
+              <tr>
+                <td>Зберегти дані та перезапустити програму</td>
+                <td>Раніше збережені записи відновлюються</td>
+              </tr>
+              <tr>
+                <td>Ввести некоректні дані</td>
+                <td>Програма безпечно обробляє помилку</td>
+              </tr>
+              <tr>
+                <td>Завантажити пошкоджений файл</td>
+                <td>Некоректні записи обробляються без аварійного завершення програми</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+        <p>Особливу увагу приділи неочікуваним даним: літерам замість чисел, від’ємному віку, некоректним оцінкам і неповним файлам.</p>
+
+        <p><em>Пам’ятай: тестування — це частина програмування, а не лише останній крок після написання коду.</em></p>
+
+
+        <h2>10. Підсумки фінального проєкту</h2>
+
+        <p>Завершивши систему керування студентами, ти об’єднаєш багато навичок, які опанував протягом курсу.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+
+            <thead>
+              <tr>
+                <th>Концепція</th>
+                <th>Як ти її використаєш</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Змінні</td>
+                <td>Для зберігання даних студентів і вибору пунктів меню</td>
+              </tr>
+              <tr>
+                <td>Умови</td>
+                <td>Для перевірки інформації та прийняття рішень</td>
+              </tr>
+              <tr>
+                <td>Цикли</td>
+                <td>Для відображення меню й обробки записів</td>
+              </tr>
+              <tr>
+                <td>Функції</td>
+                <td>Для організації окремих операцій</td>
+              </tr>
+              <tr>
+                <td>Класи</td>
+                <td>Для представлення записів про студентів</td>
+              </tr>
+              <tr>
+                <td>Вказівники</td>
+                <td>Для доступу до наявних об’єктів</td>
+              </tr>
+              <tr>
+                <td>Вектори</td>
+                <td>Для зберігання наборів студентів</td>
+              </tr>
+              <tr>
+                <td>STL</td>
+                <td>Для керування даними та їх обробки</td>
+              </tr>
+              <tr>
+                <td>Робота з файлами</td>
+                <td>Для збереження та завантаження записів</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+
+
+        <h2 class="final-thoughts-title">На завершення</h2>
+
+        <p><strong>Вітаємо із завершенням курсу C++!</strong></p>
+
+        <p>Ти пройшов великий шлях — від своєї першої програми <code>Hello, World!</code> до розробки застосунку, який керує реальною інформацією.</p>
+
+        <p>Система керування студентами об’єднує багато важливих концепцій програмування в одному практичному проєкті.</p>
+
+        <p>Малоймовірно, що все вийде ідеально з першої спроби, і це цілком нормально. Зосередься на тому, щоб кожна функція працювала правильно, ретельно тестуй програму та поступово покращуй свій код.</p>
+
+
+        <h3 class="lesson-subheading">Що далі?</h3>
+
+        <p>Твоя подорож у світ C++ на цьому не закінчується.</p>
+
+        <p>Продовжуй створювати проєкти, вивчай нові можливості сучасного C++ і пробуй розв’язувати дедалі складніші задачі.</p>
+
+        <p>Ти можеш перетворити систему керування студентами на більший застосунок із додатковою інформацією, вдосконаленим пошуком або графічним інтерфейсом.</p>
+
+        <p>Найважливіша навичка, яку ти здобув, — не запам’ятовування синтаксису. Це вміння розбивати складні проблеми на менші завдання та перетворювати власні ідеї на програмне забезпечення, яке працює.</p>
+
+        <p><strong>Ти заклав міцний фундамент. Тепер настав час створити щось власне!</strong></p>
+
+      </article>
+
+    </main>
+
+  </div>
+
+
+
+  <footer class="footer">
+
+    <img
+      class="footer-pattern"
+      src="../../images/rect.svg"
+      alt=""
+    >
+
+    <img
+      class="footer-clouds"
+      src="../../images/cloud.svg"
+      alt=""
+    >
+
+    <div class="footer-container">
+
+      <div class="footer-top">
+        <div class="footer-brand">DopoMode</div>
+
+        <p class="footer-tagline">
+          Програмуй розумніше. Створюй більше. Опануй C++.
+        </p>
+      </div>
+
+      <div class="footer-middle">
+
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+
+          <a class="social-item" href="#">
+            <img src="../../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+
+          <a class="social-item" href="#">
+            <img src="../../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+
+          <a class="social-item" href="#">
+            <img src="../../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          © 2026 DopeMode. Усі права захищено.
+        </p>
+
+        <div class="footer-links">
+          <a href="about_1.html">Про нас</a>
+          <a href="theory.html">Теорія</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const checklist = document.getElementById("project-checklist");
+      const counter = document.getElementById("progress-count");
+
+      if (!checklist || !counter) return;
+
+      const checkboxes = Array.from(
+        checklist.querySelectorAll('input[type="checkbox"]')
+      );
+
+      function updateProgress() {
+        const completed = checkboxes.filter(box => box.checked).length;
+        counter.textContent = `Виконано ${completed} із ${checkboxes.length}`;
+      }
+
+      checklist.addEventListener("change", updateProgress);
+      updateProgress();
+    });
+  </script>
+
+</body>
+</html>

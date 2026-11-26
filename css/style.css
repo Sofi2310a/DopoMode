@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -101,12 +104,12 @@ a {
 }
 
 .hero-title {
-  font-family: "Jersey 10", sans-serif;
-  font-size: 64px;
-  font-weight: 400;
+  font-family: "Jersey 10", "Montserrat", sans-serif;
+  letter-spacing: 8px;
+  font-size: 120px;
+  font-weight: 700;
   line-height: 1;
   margin-bottom: 14px;
-  letter-spacing: -2px;
 }
 
 .hero-subtitle {
@@ -118,7 +121,7 @@ a {
 
 .btn-start {
   display: inline-block;
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
   background-color: #1f4eff;
@@ -144,6 +147,30 @@ a {
   z-index: 0;
 }
 
+
+[hidden] {
+    display: none !important;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.profile-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.username {
+    color: #ffffff;
+}
 
 .theory {
   padding: 130px 0 110px;
@@ -224,7 +251,7 @@ a {
 
 .btn-buy {
   display: inline-block;
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -306,7 +333,7 @@ a {
 }
 
 .footer-brand {
-  font-family: "Jersey 10", sans-serif;
+  font-family: 'Silkscreen', 'Montserrat', sans-serif;
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 8px;

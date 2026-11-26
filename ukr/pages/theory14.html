@@ -1,0 +1,847 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>14 STL і файли</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+
+  <link href="../../css/lang-btn.css" rel="stylesheet">
+  <link href="../../css/theory4.css" rel="stylesheet">
+  <link href="../../css/theory14.css" rel="stylesheet">
+  <link href="../../css/ukr-fonts.css" rel="stylesheet">
+  <link href="../../css/theme.css" rel="stylesheet">
+  <link href="../../css/responsive.css" rel="stylesheet">
+
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-container">
+
+      <div class="header-left">
+        <a class="header-logo" href="main.html">DopoMode</a>
+
+        <nav class="nav">
+          <a class="nav-link" href="main.html">Головна</a>
+          <a class="nav-link" href="about_1.html">Про нас</a>
+          <a class="nav-link active" href="theory.html">Теорія</a>
+        </nav>
+      </div>
+
+      <div class="header-user">
+        <a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+
+        <a class="profile-link" href="profile.html">
+          <span class="user-name">User67</span>
+
+          <div class="user-avatar">
+            <img src="../../images/icon.png" alt="Профіль">
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <div class="page-container">
+
+    <aside class="sidebar">
+
+      <h2 class="sidebar-title">Курс C++</h2>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory.html">01 Основи C++</a>
+        <a class="menu-item" href="theory2.html">02 Типи даних</a>
+        <a class="menu-item" href="theory3.html">03 Оператори</a>
+        <a class="menu-item" href="theory4.html">04 Умови</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+
+        <a class="menu-item" href="theory5.html">05 Базова практика</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory6.html">06 Цикли</a>
+        <a class="menu-item" href="theory7.html">07 Функції</a>
+        <a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+        <a class="menu-item" href="theory9.html">09 Вказівники</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+
+        <a class="menu-item" href="theory10.html">10 Практика з кодом</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+        <a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+        <a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+
+        <a
+          class="menu-item active"
+          href="theory14.html"
+          aria-current="page"
+        >14 STL і файли</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ФІНАЛ</span>
+
+        <a class="menu-item" href="theory15.html">15 Проєкт</a>
+      </div>
+
+    </aside>
+
+
+    <main class="content-area">
+
+      <div class="search-bar">
+        <div class="search-input-wrap">
+
+          <input
+            type="text"
+            placeholder="Введіть ключове слово"
+            class="search-input"
+          >
+
+          <svg
+            class="search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+
+        </div>
+
+        <button class="btn-search" type="button">ПОШУК</button>
+      </div>
+
+
+      <article class="lesson-article">
+
+        <h1>14 — STL і файли</h1>
+
+
+        <h2>1. Що таке STL?</h2>
+
+        <p><span class="text-pink">Стандартна бібліотека шаблонів (STL)</span> — це набір готових інструментів для зберігання, організації та обробки даних у C++.</p>
+
+        <p>Замість того щоб самостійно створювати кожну структуру даних або алгоритм, ти можеш використовувати вже наявні компоненти стандартної бібліотеки C++.</p>
+
+        <p>STL містить три важливі складові:</p>
+
+        <ul class="plain-list">
+          <li>Контейнери — зберігають набори даних.</li>
+          <li>Алгоритми — виконують такі операції, як сортування та пошук.</li>
+          <li>Ітератори — надають спосіб доступу до елементів контейнерів.</li>
+        </ul>
+
+        <p>Використання STL дозволяє писати коротший код, спрощує його підтримку та допомагає ефективніше працювати з даними.</p>
+
+        <p><em>Головне: STL надає готові інструменти для повторного використання, завдяки яким програмістам не потрібно щоразу створювати все з нуля.</em></p>
+
+        <h3 class="practice-heading">Практичне завдання</h3>
+
+        <p>Наведи по одному прикладу з реального життя, у якому були б корисними контейнер, алгоритм та ітератор. Поясни, яку роль виконував би кожен із них.</p>
+
+
+        <h2>2. Вектори</h2>
+
+        <p><span class="text-pink">Вектор (vector)</span> — це динамічний масив, який може автоматично збільшувати або зменшувати кількість елементів під час їх додавання чи видалення.</p>
+
+        <p>На відміну від звичайних масивів фіксованого розміру, для вектора не потрібно заздалегідь визначати кількість елементів.</p>
+
+        <p>Щоб використовувати вектори, підключи заголовковий файл <code>&lt;vector&gt;</code>.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; numbers = {10, 20, 30};
+
+    numbers.push_back(40);
+
+    for (int number : numbers) {
+        cout &lt;&lt; number &lt;&lt; " ";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>10 20 30 40</code></pre>
+
+        <h3 class="lesson-subheading">Основні операції з векторами</h3>
+
+        <div class="table-wrap">
+          <table class="data-table">
+
+            <thead>
+              <tr>
+                <th>Операція</th>
+                <th>Опис</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><code>push_back()</code></td>
+                <td>Додає елемент у кінець вектора</td>
+              </tr>
+              <tr>
+                <td><code>pop_back()</code></td>
+                <td>Видаляє останній елемент</td>
+              </tr>
+              <tr>
+                <td><code>size()</code></td>
+                <td>Повертає кількість елементів</td>
+              </tr>
+              <tr>
+                <td><code>empty()</code></td>
+                <td>Перевіряє, чи вектор порожній</td>
+              </tr>
+              <tr>
+                <td><code>at()</code></td>
+                <td>Надає доступ до елемента з перевіркою меж</td>
+              </tr>
+              <tr>
+                <td><code>clear()</code></td>
+                <td>Видаляє всі елементи</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+        <p>Наприклад:</p>
+
+        <pre><code>vector&lt;int&gt; scores = {80, 90, 100};
+
+cout &lt;&lt; scores.at(0) &lt;&lt; endl;
+cout &lt;&lt; scores.size();</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>80
+3</code></pre>
+
+        <p><em>Пам’ятай: використовуй <code>vector</code>, коли потрібен набір елементів, розмір якого може змінюватися.</em></p>
+
+        <h3 class="practice-heading">Практичне завдання</h3>
+
+        <p>Створи вектор із трьома оцінками. Додай ще одну за допомогою <code>push_back()</code>, видали останній елемент за допомогою <code>pop_back()</code>, а потім виведи решту значень і розмір вектора.</p>
+
+
+        <h2>3. Інші контейнери STL</h2>
+
+        <p>C++ пропонує різні контейнери для різних завдань.</p>
+
+        <h3 class="lesson-subheading">array — колекція фіксованого розміру</h3>
+
+        <p>Контейнер <code>std::array</code> зберігає фіксовану кількість елементів.</p>
+
+        <pre><code>#include &lt;array&gt;
+
+array&lt;int, 3&gt; numbers = {10, 20, 30};</code></pre>
+
+        <p>На відміну від традиційного масиву в стилі C, <code>std::array</code> надає корисні функції, наприклад <code>.size()</code> і <code>.at()</code>.</p>
+
+
+        <h3 class="lesson-subheading">map — пари «ключ — значення»</h3>
+
+        <p><span class="text-pink">Мапа (map)</span> зберігає інформацію у вигляді пар ключів і відповідних їм значень.</p>
+
+        <p>Наприклад, можна зберігати імена студентів та їхні оцінки.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    map&lt;string, int&gt; scores;
+
+    scores["Alex"] = 90;
+    scores["Emma"] = 95;
+
+    cout &lt;&lt; scores["Emma"];
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>95</code></pre>
+
+        <p>Кожен ключ у <code>map</code> є унікальним, а елементи впорядковуються за ключами.</p>
+
+
+        <h3 class="lesson-subheading">set — унікальні значення</h3>
+
+        <p><span class="text-pink">Множина (set)</span> зберігає унікальні значення у відсортованому порядку.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;set&gt;
+using namespace std;
+
+int main() {
+    set&lt;int&gt; numbers = {5, 2, 5, 1};
+
+    for (int number : numbers) {
+        cout &lt;&lt; number &lt;&lt; " ";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>1 2 5</code></pre>
+
+        <p>Значення <code>5</code> повторюється у вихідному наборі, але множина зберігає його лише один раз.</p>
+
+        <p><em>Головне: обирай контейнер залежно від того, як саме потрібно організовувати дані та отримувати до них доступ.</em></p>
+
+        <h3 class="practice-heading">Практичне завдання</h3>
+
+        <p>Створи <code>map</code>, який зберігатиме оцінки двох студентів, і <code>set</code> зі значеннями <code>{4, 2, 4, 1}</code>. Виведи оцінку одного студента та всі унікальні елементи множини.</p>
+
+
+        <h2>4. Алгоритми STL</h2>
+
+        <p><span class="text-pink">Алгоритми</span> — це готові функції, які виконують типові операції над наборами даних.</p>
+
+        <p>Заголовковий файл <code>&lt;algorithm&gt;</code> містить багато корисних функцій.</p>
+
+        <p>Ось найпоширеніші з них:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+
+            <thead>
+              <tr>
+                <th>Алгоритм</th>
+                <th>Опис</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><code>sort()</code></td>
+                <td>Сортує елементи</td>
+              </tr>
+              <tr>
+                <td><code>find()</code></td>
+                <td>Шукає задане значення</td>
+              </tr>
+              <tr>
+                <td><code>reverse()</code></td>
+                <td>Змінює порядок елементів на зворотний</td>
+              </tr>
+              <tr>
+                <td><code>count()</code></td>
+                <td>Підраховує кількість входжень значення</td>
+              </tr>
+              <tr>
+                <td><code>max_element()</code></td>
+                <td>Знаходить найбільший елемент</td>
+              </tr>
+              <tr>
+                <td><code>min_element()</code></td>
+                <td>Знаходить найменший елемент</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+
+        <h3 class="lesson-subheading">Сортування вектора</h3>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; numbers = {5, 2, 8, 1, 3};
+
+    sort(numbers.begin(), numbers.end());
+
+    for (int number : numbers) {
+        cout &lt;&lt; number &lt;&lt; " ";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>1 2 3 5 8</code></pre>
+
+        <p>Функція <code>sort()</code> впорядковує числа за зростанням.</p>
+
+
+        <h3 class="lesson-subheading">Пошук елемента</h3>
+
+        <pre><code>vector&lt;int&gt; numbers = {10, 20, 30};
+
+auto result = find(numbers.begin(), numbers.end(), 20);
+
+if (result != numbers.end()) {
+    cout &lt;&lt; "Number found!";
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>Number found!</code></pre>
+
+        <p>Функція <code>find()</code> повертає ітератор на знайдений елемент. Якщо значення не знайдено, вона повертає ітератор кінця діапазону.</p>
+
+        <p><em>Пам’ятай: алгоритми STL дозволяють виконувати типові операції без необхідності самостійно писати складні цикли.</em></p>
+
+        <h3 class="practice-heading">Практичне завдання</h3>
+
+        <p>Створи вектор зі значеннями <code>{9, 3, 7, 3, 1}</code>. Відсортуй його, а потім використай <code>count()</code>, щоб визначити, скільки разів зустрічається число <code>3</code>.</p>
+
+
+
+        <h2>5. Ітератори</h2>
+
+        <p><span class="text-pink">Ітератор</span> — це об’єкт, який використовується для доступу до елементів контейнера.</p>
+
+        <p>Ітератори працюють подібно до вказівників і дозволяють послідовно переміщуватися елементами колекції.</p>
+
+        <p>Наприклад:</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;int&gt; numbers = {10, 20, 30};
+
+    for (auto it = numbers.begin(); it != numbers.end(); ++it) {
+        cout &lt;&lt; *it &lt;&lt; " ";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>10 20 30</code></pre>
+
+        <p>У цьому прикладі:</p>
+
+        <ul class="plain-list">
+          <li><code>begin()</code> — повертає ітератор на перший елемент.</li>
+          <li><code>end()</code> — повертає ітератор, що позначає позицію після останнього елемента.</li>
+          <li><code>++it</code> — переміщує ітератор до наступного елемента.</li>
+          <li><code>*it</code> — надає доступ до поточного елемента.</li>
+        </ul>
+
+        <p><strong>Важливо:</strong> Ітератор, який повертає <code>end()</code>, не можна розіменовувати.</p>
+
+        <p>Ітератори особливо корисні під час роботи з алгоритмами STL.</p>
+
+        <p><em>Головне: ітератори надають спільний спосіб доступу до елементів різних контейнерів.</em></p>
+
+        <h3 class="practice-heading">Практичне завдання</h3>
+
+        <p>Виведи кожен елемент вектора за допомогою <code>begin()</code>, <code>end()</code>, <code>++it</code> і <code>*it</code>. Не розіменовуй ітератор <code>end()</code>.</p>
+
+
+
+        <h2>6. Що таке робота з файлами?</h2>
+
+        <p>Зазвичай інформація, яка зберігається у змінних, зникає після завершення програми.</p>
+
+        <p><span class="text-pink">Робота з файлами</span> дозволяє програмам зберігати інформацію та зчитувати її під час наступних запусків.</p>
+
+        <p>Наприклад, програма може зберігати у файлі оцінки студентів, налаштування користувача або прогрес у грі.</p>
+
+        <p>Для роботи з файлами C++ надає заголовковий файл <code>&lt;fstream&gt;</code>.</p>
+
+        <p>Існують три поширені типи файлових потоків:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+
+            <thead>
+              <tr>
+                <th>Тип</th>
+                <th>Призначення</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><code>ofstream</code></td>
+                <td>Записує дані у файл</td>
+              </tr>
+              <tr>
+                <td><code>ifstream</code></td>
+                <td>Зчитує дані з файлу</td>
+              </tr>
+              <tr>
+                <td><code>fstream</code></td>
+                <td>Підтримує читання та запис</td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+
+        <p><em>Головне: файли дозволяють програмам зберігати інформацію навіть після завершення роботи.</em></p>
+
+
+        <h3 class="lesson-subheading">Шляхи до файлів: відносні та абсолютні</h3>
+
+        <p>Відносний шлях, наприклад <code>"notes.txt"</code>, визначається відносно поточного робочого каталогу програми, а не обов’язково папки, у якій розташований <code>main.cpp</code> або виконуваний файл.</p>
+
+        <p>Абсолютний шлях явно вказує розташування файлу, але його синтаксис залежить від операційної системи.</p>
+
+        <p>Перевірити поточний робочий каталог можна за допомогою <code>std::filesystem::current_path()</code>. Для цього потрібно підключити <code>&lt;filesystem&gt;</code> і використовувати C++17 або новіший стандарт.</p>
+
+        <p>Завжди переконуйся, що потрібний каталог існує, а програма має дозвіл на доступ до нього.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;filesystem&gt;
+
+int main() {
+    std::cout &lt;&lt; std::filesystem::current_path() &lt;&lt; "\n";
+}</code></pre>
+
+
+        <h3 class="lesson-subheading">Перевірка стану файлових потоків</h3>
+
+        <p>Файловий потік зберігає інформацію про те, чи успішно виконуються операції.</p>
+
+        <p>Функція <code>is_open()</code> показує, чи відкритий файл. Перевірка <code>if (file)</code> дозволяє визначити, чи перебуває потік у стані, придатному для подальших операцій.</p>
+
+        <p>Функція <code>fail()</code> виявляє помилку операції, <code>bad()</code> повідомляє про серйозну помилку введення-виведення, а <code>eof()</code> показує, що було досягнуто кінця файлу.</p>
+
+        <p>Під час читання за допомогою <code>while (getline(file, line))</code> цикл зазвичай завершується, коли досягнуто кінця файлу. Якщо потрібно відрізнити нормальне завершення читання від серйозної помилки, перевір <code>bad()</code>.</p>
+
+        <h3 class="practice-heading">Практичне завдання</h3>
+
+        <p>Поясни, який тип файлового потоку ти використаєш для запису у <code>grades.txt</code>, читання з <code>grades.txt</code>, а також для одночасної підтримки читання та запису у <code>settings.txt</code>.</p>
+
+
+
+        <h2>7. Запис даних у файл</h2>
+
+        <p>Щоб записати інформацію у файл, використовують <code>ofstream</code>.</p>
+
+        <p>Наприклад:</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+int main() {
+    ofstream file("notes.txt");
+
+    if (file.is_open()) {
+        file &lt;&lt; "Hello, C++!" &lt;&lt; endl;
+        file &lt;&lt; "Learning file handling.";
+
+        file.close();
+        cout &lt;&lt; "File saved!";
+    } else {
+        cout &lt;&lt; "Cannot open file!";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід у консоль:</p>
+
+        <pre class="output"><code>File saved!</code></pre>
+
+        <p class="output-label">Вміст файлу notes.txt:</p>
+
+        <pre class="output"><code>Hello, C++!
+Learning file handling.</code></pre>
+
+
+        <h3 class="lesson-subheading">Як це працює?</h3>
+
+        <ul class="plain-list">
+          <li><code>ofstream file("notes.txt")</code> — відкриває файл для запису.</li>
+          <li><code>is_open()</code> — перевіряє, чи вдалося відкрити файл.</li>
+          <li><code>file &lt;&lt;</code> — записує інформацію у файл.</li>
+          <li><code>close()</code> — закриває файл.</li>
+        </ul>
+
+        <p>За замовчуванням відкриття наявного файлу через <code>ofstream</code> у такий спосіб замінює його попередній вміст.</p>
+
+        <p><em>Пам’ятай: використовуй <code>ofstream</code>, щоб зберігати інформацію у файлах.</em></p>
+
+
+        <h3 class="lesson-subheading">Перевірка успішності запису</h3>
+
+        <pre><code>#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+
+int main() {
+    std::ofstream file("notes.txt");
+    if (!file.is_open()) {
+        std::cerr &lt;&lt; "Cannot open file!\n";
+        return 1;
+    }
+
+    file &lt;&lt; "Hello, C++!\n";
+    file.close();
+
+    if (!file) {
+        std::cerr &lt;&lt; "Could not finish writing.\n";
+        return 1;
+    }
+
+    std::cout &lt;&lt; "File saved!\n";
+}</code></pre>
+
+        <p>Перевіряй не лише те, чи вдалося відкрити файл, а й чи успішно завершилися запис і закриття.</p>
+
+        <p>Під час закриття потоку можуть виявитися помилки буферизованого запису, які не були помітні раніше.</p>
+
+        <h3 class="practice-heading">Практичне завдання</h3>
+
+        <p>Запиши три окремі рядки у файл <code>scores.txt</code>. Перевір, чи відкрився файл і чи успішно завершився запис.</p>
+
+
+        <h2>8. Читання даних із файлу</h2>
+
+        <p>Щоб зчитати інформацію з наявного файлу, використовують <code>ifstream</code>.</p>
+
+        <p>Наприклад:</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    ifstream file("notes.txt");
+    string line;
+
+    if (file.is_open()) {
+        while (getline(file, line)) {
+            cout &lt;&lt; line &lt;&lt; endl;
+        }
+
+        file.close();
+    } else {
+        cout &lt;&lt; "Cannot open file!";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p>Якщо <code>notes.txt</code> містить текст із попереднього прикладу, результат буде таким:</p>
+
+        <pre class="output"><code>Hello, C++!
+Learning file handling.</code></pre>
+
+        <p>Функція <code>getline()</code> зчитує один повний рядок за раз.</p>
+
+        <p>Цикл <code>while</code> продовжується, доки є рядки для читання.</p>
+
+        <p><em>Головне: використовуй <code>ifstream</code>, щоб отримувати інформацію, збережену у файлах.</em></p>
+
+        <p>Відносна назва файлу визначається з урахуванням поточного робочого каталогу. Якщо файл не знайдено, перевір цей каталог і правильність назви файлу.</p>
+
+        <p>Після завершення циклу читання <code>file.bad()</code> може допомогти виявити серйозні помилки введення. Звичайне досягнення кінця файлу є очікуваним і не обов’язково означає проблему.</p>
+
+        <h3 class="practice-heading">Практичне завдання</h3>
+
+        <p>Прочитай файл <code>scores.txt</code> рядок за рядком за допомогою <code>getline()</code>. Якщо файл не вдається відкрити, виведи зрозуміле повідомлення про помилку.</p>
+
+
+        <h2>9. Додавання даних у кінець файлу</h2>
+
+        <p>Іноді потрібно додати нову інформацію, не видаляючи те, що вже зберігається у файлі.</p>
+
+        <p>Це називається <span class="text-pink">дописуванням у файл</span>.</p>
+
+        <p>Щоб додати дані в кінець файлу, використовуй <code>ios::app</code>.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+int main() {
+    ofstream file("notes.txt", ios::app);
+
+    if (file.is_open()) {
+        file &lt;&lt; "\nNew information added.";
+        file.close();
+
+        cout &lt;&lt; "Text added!";
+    } else {
+        cout &lt;&lt; "Cannot open file!";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>Text added!</code></pre>
+
+        <p>Якщо файл уже містить:</p>
+
+        <pre class="output"><code>Hello, C++!</code></pre>
+
+        <p>Після виконання програми його вміст стане таким:</p>
+
+        <pre class="output"><code>Hello, C++!
+New information added.</code></pre>
+
+        <p><em>Пам’ятай: використовуй <code>ios::app</code>, коли потрібно додати дані в кінець файлу, не замінюючи його попередній вміст.</em></p>
+
+        <h3 class="practice-heading">Практичне завдання</h3>
+
+        <p>Додай один новий рядок у файл <code>scores.txt</code> за допомогою <code>ios::app</code>. Потім відкрий файл ще раз і переконайся, що попередні рядки залишилися на місці.</p>
+
+
+        <h2>10. Типові помилки під час роботи з файлами</h2>
+
+        <p>Під час роботи з файлами важливо дотримуватися кількох правил.</p>
+
+        <p><strong>1. Припущення, що файл завжди існує</strong></p>
+
+        <p>Файл може бути відсутнім або недоступним. Завжди перевіряй, чи вдалося його відкрити.</p>
+
+        <p><strong>2. Використання неправильного шляху до файлу</strong></p>
+
+        <p>Відносний шлях, наприклад <code>"notes.txt"</code>, зазвичай визначається відносно поточного робочого каталогу програми, який може відрізнятися від папки з вихідним кодом.</p>
+
+        <p><strong>3. Випадкове перезаписування даних</strong></p>
+
+        <p>Відкриття файлу через <code>ofstream</code> зазвичай замінює його попередній вміст, якщо не використано відповідний режим, наприклад <code>ios::app</code>.</p>
+
+        <p><strong>4. Ігнорування помилок запису</strong></p>
+
+        <p>Успішне відкриття файлу не гарантує, що кожна операція запису завершиться успішно. Для важливих даних перевіряй стан потоку після запису.</p>
+
+        <p><strong>5. Незакриття файлів</strong></p>
+
+        <p>Файлові потоки автоматично закриваються під час знищення їхніх об’єктів. Проте явний виклик <code>close()</code> може бути корисним, коли потрібно завершити роботу з файлом до закінчення програми.</p>
+
+        <p><em>Головне: завжди уважно виконуй файлові операції, щоб уникнути втрати важливої інформації.</em></p>
+
+        <h3 class="practice-heading">Практичне завдання</h3>
+
+        <p>Запусти свою програму для роботи з файлами з двох різних робочих каталогів. Визнач, який шлях до <code>notes.txt</code> використовується в кожному випадку, а потім перевір стан потоку після запису.</p>
+
+      </article>
+
+    </main>
+
+  </div>
+
+
+
+  <footer class="footer">
+
+    <img
+      class="footer-pattern"
+      src="../../images/rect.svg"
+      alt=""
+    >
+
+    <img
+      class="footer-clouds"
+      src="../../images/cloud.svg"
+      alt=""
+    >
+
+    <div class="footer-container">
+
+      <div class="footer-top">
+        <div class="footer-brand">DopoMode</div>
+
+        <p class="footer-tagline">
+          Програмуй розумніше. Створюй більше. Опануй C++.
+        </p>
+      </div>
+
+      <div class="footer-middle">
+
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+
+          <a class="social-item" href="#">
+            <img src="../../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+
+          <a class="social-item" href="#">
+            <img src="../../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+
+          <a class="social-item" href="#">
+            <img src="../../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          © 2026 DopeMode. Усі права захищено.
+        </p>
+
+        <div class="footer-links">
+          <a href="about_1.html">Про нас</a>
+          <a href="theory.html">Теорія</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

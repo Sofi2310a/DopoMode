@@ -1,0 +1,647 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>11 Структури та перелічення</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+
+  <link href="../../css/lang-btn.css" rel="stylesheet">
+  <link href="../../css/theory4.css" rel="stylesheet">
+  <link href="../../css/theory11.css" rel="stylesheet">
+  <link href="../../css/ukr-fonts.css" rel="stylesheet">
+  <link href="../../css/theme.css" rel="stylesheet">
+  <link href="../../css/responsive.css" rel="stylesheet">
+
+  <script src="../../js/lang.js"></script>
+  <script src="../../js/search.js" defer></script>
+</head>
+
+<body>
+
+
+  <header class="header">
+    <div class="header-container">
+
+      <div class="header-left">
+        <a class="header-logo" href="main.html">DopoMode</a>
+
+        <nav class="nav">
+          <a class="nav-link" href="main.html">Головна</a>
+          <a class="nav-link" href="about_1.html">Про нас</a>
+          <a class="nav-link active" href="theory.html">Теорія</a>
+        </nav>
+      </div>
+
+      <div class="header-user">
+        <a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+
+        <a class="profile-link" href="profile.html">
+          <span class="user-name">User67</span>
+
+          <div class="user-avatar">
+            <img src="../../images/icon.png" alt="Профіль">
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <div class="page-container">
+
+
+    <aside class="sidebar">
+
+      <h2 class="sidebar-title">Курс C++</h2>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory.html">01 Основи C++</a>
+        <a class="menu-item" href="theory2.html">02 Типи даних</a>
+        <a class="menu-item" href="theory3.html">03 Оператори</a>
+        <a class="menu-item" href="theory4.html">04 Умови</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+
+        <a class="menu-item" href="theory5.html">05 Базова практика</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory6.html">06 Цикли</a>
+        <a class="menu-item" href="theory7.html">07 Функції</a>
+        <a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+        <a class="menu-item" href="theory9.html">09 Вказівники</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+
+        <a class="menu-item" href="theory10.html">10 Практика з кодом</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a
+          class="menu-item active"
+          href="theory11.html"
+          aria-current="page"
+        >11 Структури та перелічення</a>
+
+        <a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+        <a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+        <a class="menu-item" href="theory14.html">14 STL і файли</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ФІНАЛ</span>
+
+        <a class="menu-item" href="theory15.html">15 Проєкт</a>
+      </div>
+
+    </aside>
+
+
+
+    <main class="content-area">
+
+
+      <div class="search-bar">
+
+        <div class="search-input-wrap">
+          <input
+            type="text"
+            placeholder="Введіть ключове слово"
+            class="search-input"
+          >
+
+          <svg
+            class="search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </div>
+
+        <button class="btn-search" type="button">ПОШУК</button>
+
+      </div>
+
+
+
+      <article class="lesson-article">
+
+        <h1>11 — Структури та перелічення</h1>
+
+        <p>Уяви, що ти створюєш застосунок для зберігання інформації про студентів. Кожен студент має ім’я, вік та оцінку.</p>
+
+        <p>Чи не було б зручніше зберігати всю цю інформацію разом, замість того щоб працювати з окремими змінними?</p>
+
+        <p>Саме для цього у C++ існують <span class="text-pink">структури (struct)</span>!</p>
+
+        <p>У цьому уроці ти навчишся впорядковувати пов’язані дані за допомогою структур і представляти фіксовані набори значень за допомогою <span class="text-pink">перелічень (enum)</span>.</p>
+
+
+
+        <h2>1. Що таке структури?</h2>
+
+        <p><span class="text-pink">Структура</span> — це власний тип даних, який об’єднує пов’язану інформацію в один об’єкт.</p>
+
+        <p>Наприклад, створімо структуру <code>Student</code>:</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct Student {
+    std::string name;
+    int age;
+    double grade;
+};
+
+int main() {
+    Student student1 = {"Alex", 18, 95.5};
+
+    std::cout &lt;&lt; student1.name &lt;&lt; "\n";
+    std::cout &lt;&lt; student1.age &lt;&lt; "\n";
+    std::cout &lt;&lt; student1.grade &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>Alex
+18
+95.5</code></pre>
+
+        <p>Тут <code>Student</code> — це новий тип даних, який містить три поля:</p>
+
+        <ul class="structure-list">
+          <li><code>name</code> — зберігає ім’я студента.</li>
+          <li><code>age</code> — зберігає його вік.</li>
+          <li><code>grade</code> — зберігає його оцінку.</li>
+        </ul>
+
+        <p>Змінна <code>student1</code> — це об’єкт типу <code>Student</code>.</p>
+
+        <p><em>Пам’ятай: структури дозволяють об’єднувати різні типи пов’язаних даних в один об’єкт.</em></p>
+
+
+
+        <h2>2. Доступ до полів структури</h2>
+
+        <p>Щоб отримати доступ до інформації, яка зберігається всередині структури, використовують <span class="text-pink">оператор крапки (.)</span>.</p>
+
+        <p>Створімо структуру, яка представляє автомобіль.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct Car {
+    std::string brand;
+    int year;
+};
+
+int main() {
+    Car myCar = {"BMW", 2020};
+
+    std::cout &lt;&lt; myCar.brand &lt;&lt; "\n";
+    std::cout &lt;&lt; myCar.year &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>BMW
+2020</code></pre>
+
+        <h3 class="lesson-subheading">Зміна значень полів</h3>
+
+        <p>Ми можемо змінювати значення окремих полів структури так само, як і значення звичайних змінних.</p>
+
+        <pre><code>myCar.year = 2024;</code></pre>
+
+        <p>Тепер поле <code>myCar.year</code> містить значення <code>2024</code>.</p>
+
+        <p>Структура може містити числа, рядки, логічні значення, масиви та навіть інші структури.</p>
+
+        <p><em>Пам’ятай: використовуй оператор крапки, щоб читати або змінювати поля об’єкта структури.</em></p>
+
+
+
+        <h2>3. Масиви структур</h2>
+
+        <p>А що, якщо твоєму застосунку потрібно зберігати інформацію про кількох студентів?</p>
+
+        <p>Замість створення окремих змінних для кожного студента можна використати <span class="text-pink">масив структур</span>.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct Student {
+    std::string name;
+    int age;
+};
+
+int main() {
+    Student students[3] = {
+        {"Alex", 18},
+        {"Emma", 19},
+        {"John", 20}
+    };
+
+    for (const Student&amp; student : students) {
+        std::cout &lt;&lt; student.name &lt;&lt; " - "
+                  &lt;&lt; student.age &lt;&lt; "\n";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>Alex - 18
+Emma - 19
+John - 20</code></pre>
+
+        <p>Кожен елемент масиву — це окремий об’єкт типу <code>Student</code>.</p>
+
+        <p>Цикл <code>for</code> на основі діапазону послідовно перебирає всіх студентів, а оператор крапки дозволяє звертатися до їхніх даних.</p>
+
+        <p>Ми використовуємо <code>const Student&amp;</code>, щоб читати інформацію про кожного студента без створення зайвої копії об’єкта.</p>
+
+        <p><em>Пам’ятай: масиви структур корисні для роботи з наборами пов’язаних об’єктів.</em></p>
+
+
+
+        <h2>4. Структури та функції</h2>
+
+        <p>Структури також можна передавати у функції.</p>
+
+        <p>Уяви, що ти хочеш створити функцію, яка відображатиме інформацію про будь-якого студента.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+struct Student {
+    std::string name;
+    int age;
+};
+
+void showStudent(const Student&amp; student) {
+    std::cout &lt;&lt; "Name: " &lt;&lt; student.name &lt;&lt; "\n";
+    std::cout &lt;&lt; "Age: " &lt;&lt; student.age &lt;&lt; "\n";
+}
+
+int main() {
+    Student student1 = {"Alex", 18};
+
+    showStudent(student1);
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>Name: Alex
+Age: 18</code></pre>
+
+        <h3 class="lesson-subheading">Навіщо використовувати const Student&amp;?</h3>
+
+        <p>Функція отримує об’єкт через <span class="text-pink">константне посилання</span>.</p>
+
+        <ul class="structure-list">
+          <li><code>Student&amp;</code> — дозволяє функції звертатися до наявного об’єкта без його копіювання.</li>
+          <li><code>const</code> — забороняє функції змінювати цей об’єкт через посилання.</li>
+        </ul>
+
+        <p>Такий підхід корисний, коли функції потрібно лише прочитати інформацію.</p>
+
+        <p><em>Пам’ятай: передача структур у функції допомагає впорядковувати операції та повторно використовувати код.</em></p>
+
+
+
+        <h2>5. Що таке перелічення?</h2>
+
+        <p>Іноді програмі потрібно представити обмежений набір можливих варіантів.</p>
+
+        <p>Наприклад, замовлення може очікувати на підтвердження, бути схваленим або відхиленим.</p>
+
+        <p>Замість використання незрозумілих чисел ми можемо надати цим станам змістовні назви.</p>
+
+        <p><span class="text-pink">Перелічення (enum)</span> — це тип даних, який визначає набір іменованих значень.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday
+};
+
+int main() {
+    Day today = Wednesday;
+
+    std::cout &lt;&lt; today &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>2</code></pre>
+
+        <p>За замовчуванням значення елементів <code>enum</code> починаються з <code>0</code> і збільшуються на одиницю:</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Назва</th>
+                <th>Значення</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Використання назв на кшталт <code>Wednesday</code> робить код зрозумілішим, ніж використання чисел без пояснення їхнього значення, наприклад <code>2</code>.</p>
+
+        <p><em>Пам’ятай: перелічення допомагають представляти набори пов’язаних іменованих значень.</em></p>
+
+
+
+        <h2>6. enum class</h2>
+
+        <p>Сучасний C++ пропонує безпечніший спосіб створення перелічень — <span class="text-pink">enum class</span>.</p>
+
+        <p>Таке перелічення має власну область імен і забезпечує суворішу перевірку типів.</p>
+
+        <p>Створімо перелічення для статусів замовлення.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+enum class Status {
+    Pending,
+    Approved,
+    Rejected
+};
+
+int main() {
+    Status order = Status::Approved;
+
+    if (order == Status::Approved) {
+        std::cout &lt;&lt; "Order approved!\n";
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>Order approved!</code></pre>
+
+        <p>Зверни увагу, що ми записуємо:</p>
+
+        <pre><code>Status::Approved</code></pre>
+
+        <p>Оператор <code>::</code> вказує, що значення <code>Approved</code> належить переліченню <code>Status</code>.</p>
+
+        <h3 class="lesson-subheading">Порівняння enum та enum class</h3>
+
+        <div class="table-wrap">
+          <table class="data-table comparison-table">
+            <thead>
+              <tr>
+                <th>enum</th>
+                <th>enum class</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Елементи перелічення доступні в області видимості, що його містить</td>
+                <td>До елементів звертаються через назву перелічення</td>
+              </tr>
+              <tr>
+                <td>Може неявно перетворюватися на цілі числа</td>
+                <td>Не перетворюється неявно на цілі числа</td>
+              </tr>
+              <tr>
+                <td>Більший ризик конфліктів імен</td>
+                <td>Кращий захист від конфліктів імен</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><em>Пам’ятай: у сучасному C++ варто надавати перевагу <code>enum class</code>, коли потрібно визначити набір чітко встановлених станів або варіантів.</em></p>
+
+
+
+        <h2>7. Використання перелічень зі switch</h2>
+
+        <p>Перелічення особливо зручно використовувати разом з оператором <code>switch</code>.</p>
+
+        <p>Уяви інтернет-магазин, який показує різні повідомлення залежно від статусу замовлення.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+enum class Status {
+    Pending,
+    Approved,
+    Rejected
+};
+
+int main() {
+    Status order = Status::Pending;
+
+    switch (order) {
+        case Status::Pending:
+            std::cout &lt;&lt; "Waiting for approval\n";
+            break;
+
+        case Status::Approved:
+            std::cout &lt;&lt; "Order approved\n";
+            break;
+
+        case Status::Rejected:
+            std::cout &lt;&lt; "Order rejected\n";
+            break;
+    }
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>Waiting for approval</code></pre>
+
+        <p>Оператор <code>switch</code> перевіряє значення змінної <code>order</code> і виконує відповідний блок <code>case</code>.</p>
+
+        <p>Такий підхід корисний в іграх, застосунках і системах, які керують різними станами.</p>
+
+        <p><em>Пам’ятай: поєднання <code>enum class</code> і <code>switch</code> робить рішення, що залежать від стану, зрозумілішими та полегшує підтримку коду.</em></p>
+
+
+
+        <h2>8. Псевдоніми типів за допомогою using</h2>
+
+        <p>Іноді тип даних має довгу назву або ми хочемо чіткіше показати його призначення.</p>
+
+        <p>C++ дозволяє створювати альтернативні назви для типів за допомогою ключового слова <span class="text-pink">using</span>.</p>
+
+        <pre><code>#include &lt;iostream&gt;
+
+using Score = double;
+
+int main() {
+    Score grade = 95.5;
+
+    std::cout &lt;&lt; grade &lt;&lt; "\n";
+
+    return 0;
+}</code></pre>
+
+        <p class="output-label">Вивід:</p>
+
+        <pre class="output"><code>95.5</code></pre>
+
+        <p>Тут <code>Score</code> — це просто інша назва для типу <code>double</code>.</p>
+
+        <p>Вона не створює абсолютно нового типу даних, але може зробити код зрозумілішим.</p>
+
+        <p>Наприклад:</p>
+
+        <pre><code>using StudentID = int;
+
+StudentID studentNumber = 1025;</code></pre>
+
+        <p>Тепер призначення змінної значно легше зрозуміти.</p>
+
+        <p><em>Пам’ятай: псевдоніми типів надають альтернативні назви наявним типам даних, роблячи код зрозумілішим.</em></p>
+
+      </article>
+
+    </main>
+
+  </div>
+
+
+
+  <footer class="footer">
+
+    <img
+      class="footer-pattern"
+      src="../../images/rect.svg"
+      alt=""
+    >
+
+    <img
+      class="footer-clouds"
+      src="../../images/cloud.svg"
+      alt=""
+    >
+
+    <div class="footer-container">
+
+      <div class="footer-top">
+        <div class="footer-brand">DopoMode</div>
+
+        <p class="footer-tagline">
+          Програмуй розумніше. Створюй більше. Опануй C++.
+        </p>
+      </div>
+
+      <div class="footer-middle">
+
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+
+          <a class="social-item" href="#">
+            <img src="../../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+
+          <a class="social-item" href="#">
+            <img src="../../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+
+          <a class="social-item" href="#">
+            <img src="../../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          © 2026 DopeMode. Усі права захищено.
+        </p>
+
+        <div class="footer-links">
+          <a href="about_1.html">Про нас</a>
+          <a href="theory.html">Теорія</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

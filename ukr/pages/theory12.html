@@ -1,140 +1,187 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>12 Класи та об’єкти</title>
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
-<link href="../../css/lang-btn.css" rel="stylesheet">
-<link href="../../css/theory4.css" rel="stylesheet">
-<link href="../../css/theory12.css" rel="stylesheet">
-<link href="../../css/ukr-fonts.css" rel="stylesheet">
-<link href="../../css/theme.css" rel="stylesheet">
-<link href="../../css/responsive.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>12 Класи та об’єкти</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+
+  <link href="../../css/lang-btn.css" rel="stylesheet">
+  <link href="../../css/theory4.css" rel="stylesheet">
+  <link href="../../css/theory12.css" rel="stylesheet">
+  <link href="../../css/ukr-fonts.css" rel="stylesheet">
+  <link href="../../css/theme.css" rel="stylesheet">
+  <link href="../../css/responsive.css" rel="stylesheet">
+
   <script src="../../js/lang.js"></script>
   <script src="../../js/search.js" defer></script>
 </head>
+
 <body>
-<header class="header">
-<div class="header-container">
-<div class="header-left">
-<a class="header-logo" href="main.html">DopoMode</a>
-<nav class="nav">
-<a class="nav-link" href="main.html">Головна</a>
-<a class="nav-link" href="about_1.html">Про нас</a>
-<a class="nav-link active" href="theory.html">Теорія</a>
-</nav>
-</div>
-<div class="header-user">
-<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
-<a class="profile-link" href="profile.html">
-<span class="user-name">User67</span>
-<div class="user-avatar">
-<img alt="Профіль" src="../../images/icon.png">
-</div>
-</a>
-</div>
-</div>
-</header>
-<div class="page-container">
-<aside class="sidebar">
-<h2 class="sidebar-title">Курс C++</h2>
-<div class="menu-section">
-<span class="menu-label">ТЕОРІЯ</span>
-<a class="menu-item" href="theory.html">01 Основи C++</a>
-<a class="menu-item" href="theory2.html">02 Типи даних</a>
-<a class="menu-item" href="theory3.html">03 Оператори</a>
-<a class="menu-item" href="theory4.html">04 Умови</a>
-</div>
-<div class="menu-section">
-<span class="menu-label">ПРАКТИКА</span>
-<a class="menu-item" href="theory5.html">05 Базова практика</a>
-</div>
-<div class="menu-section">
-<span class="menu-label">ТЕОРІЯ</span>
-<a class="menu-item" href="theory6.html">06 Цикли</a>
-<a class="menu-item" href="theory7.html">07 Функції</a>
-<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
-<a class="menu-item" href="theory9.html">09 Вказівники</a>
-</div>
-<div class="menu-section">
-<span class="menu-label">ПРАКТИКА</span>
-<a class="menu-item" href="theory10.html">10 Практика з кодом</a>
-</div>
-<div class="menu-section">
-<span class="menu-label">ТЕОРІЯ</span>
-<a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
-<a class="menu-item active" href="theory12.html">12 Класи та об’єкти</a>
-<a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
-<a class="menu-item" href="theory14.html">14 STL і файли</a>
-</div>
-<div class="menu-section">
-<span class="menu-label">ФІНАЛ</span>
-<a class="menu-item" href="theory15.html">15 Проєкт</a>
-</div>
-</aside>
-<main class="content-area">
+
+
+  <header class="header">
+    <div class="header-container">
+
+      <div class="header-left">
+        <a class="header-logo" href="main.html">DopoMode</a>
+
+        <nav class="nav">
+          <a class="nav-link" href="main.html">Головна</a>
+          <a class="nav-link" href="about_1.html">Про нас</a>
+          <a class="nav-link active" href="theory.html">Теорія</a>
+        </nav>
+      </div>
+
+      <div class="header-user">
+        <a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+
+        <a class="profile-link" href="profile.html">
+          <span class="user-name">User67</span>
+
+          <div class="user-avatar">
+            <img src="../../images/icon.png" alt="Профіль">
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <div class="page-container">
+
+    <aside class="sidebar">
+
+      <h2 class="sidebar-title">Курс C++</h2>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory.html">01 Основи C++</a>
+        <a class="menu-item" href="theory2.html">02 Типи даних</a>
+        <a class="menu-item" href="theory3.html">03 Оператори</a>
+        <a class="menu-item" href="theory4.html">04 Умови</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+
+        <a class="menu-item" href="theory5.html">05 Базова практика</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory6.html">06 Цикли</a>
+        <a class="menu-item" href="theory7.html">07 Функції</a>
+        <a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+        <a class="menu-item" href="theory9.html">09 Вказівники</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+
+        <a class="menu-item" href="theory10.html">10 Практика з кодом</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+
+        <a
+          class="menu-item active"
+          href="theory12.html"
+          aria-current="page"
+        >12 Класи та об’єкти</a>
+
+        <a class="menu-item" href="theory13.html">13 Просунуте ООП</a>
+        <a class="menu-item" href="theory14.html">14 STL і файли</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ФІНАЛ</span>
+
+        <a class="menu-item" href="theory15.html">15 Проєкт</a>
+      </div>
+
+    </aside>
+
+
+    <main class="content-area">
 
       <div class="search-bar">
-        <div class="search-input-wrap">
-          <input type="text" placeholder="Enter keyword" class="search-input">
 
-          <svg class="search-icon" width="18" height="18"
-               viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="m21 21-4.35-4.35"/>
+        <div class="search-input-wrap">
+          <input
+            type="text"
+            placeholder="Введіть ключове слово"
+            class="search-input"
+          >
+
+          <svg
+            class="search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
           </svg>
         </div>
 
-        <button class="btn-search" type="button">SEARCH</button>
+        <button class="btn-search" type="button">ПОШУК</button>
+
       </div>
 
 
-      <!-- LESSON ARTICLE -->
-
       <article class="lesson-article">
 
-        <h1>12 — Classes &amp; Objects</h1>
+        <h1>12 — Класи та об’єкти</h1>
 
-        <p>Imagine creating a game with dozens of characters. Each character has a name, health points, and special abilities.</p>
+        <p>Уяви, що ти створюєш гру з десятками персонажів. Кожен персонаж має ім’я, очки здоров’я та особливі здібності.</p>
 
-        <p>Instead of managing all this information separately, wouldn't it be easier to keep everything together?</p>
+        <p>Чи не було б зручніше зберігати всю цю інформацію разом, замість того щоб керувати нею окремо?</p>
 
-        <p>That's exactly what classes and objects allow us to do!</p>
+        <p>Саме це дозволяють робити <span class="text-pink">класи та об’єкти</span>!</p>
 
-        <p>In this lesson, you'll discover the basics of Object-Oriented Programming (OOP) and learn how to create your own classes in C++.</p>
+        <p>У цьому уроці ти познайомишся з основами об’єктно-орієнтованого програмування (ООП) та навчишся створювати власні класи в C++.</p>
 
 
-        <!-- SECTION 1 -->
 
-        <h2>1. What Is Object-Oriented Programming?</h2>
+        <h2>1. Що таке об’єктно-орієнтоване програмування?</h2>
 
-        <p>Object-Oriented Programming (OOP) is an approach to programming that organizes code around objects.</p>
+        <p><span class="text-pink">Об’єктно-орієнтоване програмування (ООП)</span> — це підхід до програмування, за якого код організовується навколо об’єктів.</p>
 
-        <p>An object can combine two important things:</p>
+        <p>Об’єкт може поєднувати дві важливі складові:</p>
 
         <ul class="plain-list">
-          <li>Data — information such as a player's name or health.</li>
-          <li>Behavior — actions such as attacking, healing, or displaying information.</li>
+          <li>Дані — інформацію, наприклад ім’я гравця або кількість його здоров’я.</li>
+          <li>Поведінку — дії, наприклад атаку, лікування або відображення інформації.</li>
         </ul>
 
-        <p>OOP helps developers organize large programs, reuse code, and control access to important data.</p>
+        <p>ООП допомагає розробникам упорядковувати великі програми, повторно використовувати код і контролювати доступ до важливих даних.</p>
 
-        <p>Think of a class as a blueprint for creating objects. Let's see how that works!</p>
+        <p>Уяви клас як креслення, за яким можна створювати об’єкти. Подивімося, як це працює!</p>
 
 
-        <!-- SECTION 2 -->
 
-        <h2>2. What Are Classes?</h2>
+        <h2>2. Що таке класи?</h2>
 
-        <p>A class is a custom data type that defines what information an object contains and what actions it can perform.</p>
+        <p><span class="text-pink">Клас</span> — це власний тип даних, який визначає, яку інформацію міститиме об’єкт і які дії він зможе виконувати.</p>
 
-        <p>Let's create a simple Student class.</p>
+        <p>Створімо простий клас <code>Student</code>.</p>
 
         <pre><code>#include &lt;iostream&gt;
 #include &lt;string&gt;
@@ -149,27 +196,26 @@ public:
     }
 };</code></pre>
 
-        <h3 class="lesson-subheading">How Does It Work?</h3>
+        <h3 class="lesson-subheading">Як це працює?</h3>
 
         <ul class="plain-list">
-          <li>class Student — defines a class named Student.</li>
-          <li>name and age — are data members that store information.</li>
-          <li>introduce() — is a member function that performs an action.</li>
-          <li>public: — allows these members to be accessed from outside the class.</li>
+          <li><code>class Student</code> — визначає клас із назвою <code>Student</code>.</li>
+          <li><code>name</code> та <code>age</code> — поля класу, які зберігають інформацію.</li>
+          <li><code>introduce()</code> — функція-член класу, яка виконує певну дію.</li>
+          <li><code>public:</code> — дозволяє звертатися до цих членів класу ззовні.</li>
         </ul>
 
-        <p>A function that belongs to a class is called a member function, often referred to as a method.</p>
+        <p>Функцію, яка належить класу, називають <span class="text-pink">функцією-членом</span>. Її також часто називають методом.</p>
 
-        <p>Notice the semicolon after the closing brace. C++ requires it at the end of a class definition.</p>
+        <p>Зверни увагу на крапку з комою після закривальної фігурної дужки. У C++ вона обов’язкова в кінці визначення класу.</p>
 
 
-        <!-- SECTION 3 -->
 
-        <h2>3. Creating Objects</h2>
+        <h2>3. Створення об’єктів</h2>
 
-        <p>An object is an instance of a class.</p>
+        <p><span class="text-pink">Об’єкт</span> — це екземпляр класу.</p>
 
-        <p>Once we've defined a class, we can create as many objects as we need.</p>
+        <p>Після визначення класу ми можемо створити стільки об’єктів, скільки потрібно.</p>
 
         <pre><code>#include &lt;iostream&gt;
 #include &lt;string&gt;
@@ -200,53 +246,56 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>Hi, I'm Alex!
 Hi, I'm Emma!</code></pre>
 
-        <p>Both objects come from the same class, but each stores its own information.</p>
+        <p>Обидва об’єкти створені на основі одного класу, але кожен із них зберігає власну інформацію.</p>
 
-        <p>We use the dot operator (.) to access public data members and call member functions.</p>
+        <p>Ми використовуємо <span class="text-pink">оператор крапки (.)</span>, щоб отримувати доступ до публічних полів і викликати функції-члени об’єкта.</p>
 
-        <p><strong>Remember:</strong> One class can create many objects, each with its own data.</p>
+        <p><em>Пам’ятай: один клас може створювати багато об’єктів, і кожен із них матиме власні дані.</em></p>
 
 
-        <!-- SECTION 4 -->
 
-        <h2>4. Access Modifiers</h2>
+        <h2>4. Модифікатори доступу</h2>
 
-        <p>Not every part of an object should be accessible from anywhere in a program.</p>
+        <p>Не всі частини об’єкта повинні бути доступними з будь-якого місця програми.</p>
 
-        <p>C++ provides access specifiers to control which members can be accessed.</p>
+        <p>C++ надає <span class="text-pink">специфікатори доступу</span>, які визначають, звідки можна звертатися до членів класу.</p>
 
         <div class="table-wrap">
           <table class="data-table">
+
             <thead>
               <tr>
-                <th>Access Specifier</th>
-                <th>Meaning</th>
+                <th>Специфікатор доступу</th>
+                <th>Значення</th>
               </tr>
             </thead>
 
             <tbody>
               <tr>
-                <td>public</td>
-                <td>Accessible from outside the class</td>
+                <td><code>public</code></td>
+                <td>Доступний ззовні класу</td>
               </tr>
+
               <tr>
-                <td>private</td>
-                <td>Accessible within the class and by its friends</td>
+                <td><code>private</code></td>
+                <td>Доступний усередині класу та його дружнім функціям і класам</td>
               </tr>
+
               <tr>
-                <td>protected</td>
-                <td>Accessible within the class, by its friends, and in derived classes</td>
+                <td><code>protected</code></td>
+                <td>Доступний усередині класу, його друзям і похідним класам</td>
               </tr>
             </tbody>
+
           </table>
         </div>
 
-        <p>Let's look at an example:</p>
+        <p>Розгляньмо приклад:</p>
 
         <pre><code>#include &lt;iostream&gt;
 
@@ -268,30 +317,29 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>1000</code></pre>
 
-        <p>The balance member is private, so we cannot access it directly from main().</p>
+        <p>Поле <code>balance</code> є приватним, тому ми не можемо звернутися до нього безпосередньо з функції <code>main()</code>.</p>
 
-        <p>However, the public function showBalance() can read it.</p>
+        <p>Однак публічна функція <code>showBalance()</code> може читати його значення.</p>
 
-        <p>The const after the function's parentheses indicates that this member function won't modify the object's non-mutable data members.</p>
+        <p>Ключове слово <code>const</code> після дужок функції означає, що ця функція-член не може змінювати звичайні (не позначені <code>mutable</code>) поля об’єкта.</p>
 
-        <p><strong>Remember:</strong> Members of a class are private by default. Use public to expose the operations other parts of your program need.</p>
+        <p><em>Пам’ятай: члени класу за замовчуванням є приватними. Використовуй <code>public</code>, щоб зробити необхідні операції доступними іншим частинам програми.</em></p>
 
 
-        <!-- SECTION 5 -->
 
-        <h2>5. Encapsulation</h2>
+        <h2>5. Інкапсуляція</h2>
 
-        <p>Imagine a banking application where anyone could directly change an account balance to any number.</p>
+        <p>Уяви банківський застосунок, у якому будь-хто може безпосередньо змінити баланс рахунку на довільне число.</p>
 
-        <p>That wouldn't be a good design!</p>
+        <p>Це був би невдалий підхід до проєктування!</p>
 
-        <p>Encapsulation means keeping related data and behavior together while controlling how the data can be accessed or modified.</p>
+        <p><span class="text-pink">Інкапсуляція</span> — це принцип, за якого пов’язані дані та поведінка об’єднуються в одному класі, а доступ до даних і їх зміна контролюються.</p>
 
-        <p>Let's improve our bank account example.</p>
+        <p>Удоскональмо наш приклад банківського рахунку.</p>
 
         <pre><code>#include &lt;iostream&gt;
 
@@ -321,32 +369,31 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>500</code></pre>
 
-        <p>The balance is private, so outside code cannot modify it directly.</p>
+        <p>Поле <code>balance</code> є приватним, тому зовнішній код не може змінити його безпосередньо.</p>
 
-        <p>Instead, the deposit() function checks whether the amount is positive before updating the balance.</p>
+        <p>Натомість функція <code>deposit()</code> перевіряє, чи є сума додатною, перш ніж збільшити баланс.</p>
 
-        <p>This is a simple example of protecting an object's internal state.</p>
+        <p>Це простий приклад захисту внутрішнього стану об’єкта.</p>
 
-        <p>In real financial software, monetary values also require careful representation and validation. A basic double is not generally suitable for exact financial accounting.</p>
+        <p>У реальному фінансовому програмному забезпеченні грошові значення потребують точного представлення та ретельної перевірки. Звичайний тип <code>double</code> зазвичай не підходить для точних фінансових розрахунків.</p>
 
-        <p><strong>Remember:</strong> Encapsulation helps protect data by providing controlled ways to access and modify it.</p>
+        <p><em>Пам’ятай: інкапсуляція допомагає захищати дані, надаючи контрольовані способи доступу до них та їх зміни.</em></p>
 
 
-        <!-- SECTION 6 -->
 
-        <h2>6. Constructors</h2>
+        <h2>6. Конструктори</h2>
 
-        <p>What if we want every new student object to receive a name and age immediately?</p>
+        <p>А що, якщо ми хочемо, щоб кожен новий об’єкт студента відразу отримував ім’я та вік?</p>
 
-        <p>We can use a constructor!</p>
+        <p>Для цього можна використати <span class="text-pink">конструктор</span>!</p>
 
-        <p>A constructor is a special member function used to initialize an object when it is created.</p>
+        <p>Конструктор — це спеціальна функція-член класу, яка використовується для ініціалізації об’єкта під час його створення.</p>
 
-        <p>It has the same name as the class and no return type.</p>
+        <p>Він має таку саму назву, як і клас, та не має типу значення, що повертається.</p>
 
         <pre><code>#include &lt;iostream&gt;
 #include &lt;string&gt;
@@ -375,28 +422,28 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>Alex is 18 years old.</code></pre>
 
-        <h3 class="lesson-subheading">How Does It Work?</h3>
+        <h3 class="lesson-subheading">Як це працює?</h3>
 
-        <p>When we create the object:</p>
+        <p>Коли ми створюємо об’єкт:</p>
 
         <pre><code>Student student("Alex", 18);</code></pre>
 
-        <p>C++ calls the constructor with the provided arguments.</p>
+        <p>C++ викликає конструктор із переданими аргументами.</p>
 
-        <p>This part:</p>
+        <p>Ось ця частина:</p>
 
         <pre><code>: name(studentName), age(studentAge)</code></pre>
 
-        <p>is called a member initializer list. It initializes the object's members before the constructor body runs.</p>
+        <p>називається <span class="text-pink">списком ініціалізації членів класу</span>. Він ініціалізує поля об’єкта ще до виконання тіла конструктора.</p>
 
 
-        <h3 class="lesson-subheading">Default Constructors</h3>
+        <h3 class="lesson-subheading">Конструктори за замовчуванням</h3>
 
-        <p>A default constructor can be called without arguments.</p>
+        <p>Конструктор за замовчуванням можна викликати без аргументів.</p>
 
         <pre><code>class Player {
 public:
@@ -406,26 +453,25 @@ public:
     }
 };</code></pre>
 
-        <p>Now creating an object with:</p>
+        <p>Тепер створення об’єкта за допомогою:</p>
 
         <pre><code>Player player;</code></pre>
 
-        <p>initializes its health to 100.</p>
+        <p>ініціалізує його поле <code>health</code> значенням <code>100</code>.</p>
 
-        <p><strong>Remember:</strong> Constructors help ensure that objects begin with the values they need.</p>
+        <p><em>Пам’ятай: конструктори допомагають забезпечити правильні початкові значення об’єктів.</em></p>
 
 
-        <!-- SECTION 7 -->
 
-        <h2>7. Destructors</h2>
+        <h2>7. Деструктори</h2>
 
-        <p>If constructors prepare objects for use, what happens when objects are no longer needed?</p>
+        <p>Якщо конструктори готують об’єкти до використання, то що відбувається, коли ці об’єкти більше не потрібні?</p>
 
-        <p>That's where destructors come in.</p>
+        <p>Тут у пригоді стають <span class="text-pink">деструктори</span>.</p>
 
-        <p>A destructor is a special member function that runs when an object's lifetime ends.</p>
+        <p>Деструктор — це спеціальна функція-член класу, яка викликається, коли завершується час існування об’єкта.</p>
 
-        <p>Its name starts with ~, followed by the class name.</p>
+        <p>Його назва починається із символу <code>~</code>, після якого записується назва класу.</p>
 
         <pre><code>#include &lt;iostream&gt;
 
@@ -446,33 +492,32 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>Player created!
 Player destroyed!</code></pre>
 
-        <p>The constructor runs when the object is created.</p>
+        <p>Конструктор викликається під час створення об’єкта.</p>
 
-        <p>The destructor runs when the local object reaches the end of its lifetime.</p>
+        <p>Деструктор викликається, коли завершується час існування локального об’єкта.</p>
 
-        <p>Destructors are especially useful for releasing resources such as files or dynamically allocated memory.</p>
+        <p>Деструктори особливо корисні для звільнення ресурсів, наприклад закриття файлів або звільнення динамічно виділеної пам’яті.</p>
 
-        <p>For simple classes, C++ usually provides a suitable destructor automatically.</p>
+        <p>Для простих класів C++ зазвичай автоматично створює відповідний деструктор.</p>
 
-        <p><strong>Remember:</strong> Constructors initialize objects, while destructors help clean up resources when objects are destroyed.</p>
+        <p><em>Пам’ятай: конструктори ініціалізують об’єкти, а деструктори допомагають звільняти ресурси під час їх знищення.</em></p>
 
 
-        <!-- SECTION 8 -->
 
-        <h2>8. The this Pointer</h2>
+        <h2>8. Вказівник this</h2>
 
-        <p>Sometimes a function parameter has the same name as a class member.</p>
+        <p>Іноді параметр функції має таку саму назву, як і поле класу.</p>
 
-        <p>How does C++ know which one we mean?</p>
+        <p>Як C++ розуміє, до якого саме значення ми звертаємося?</p>
 
-        <p>We can use a special pointer called this.</p>
+        <p>Для цього можна використати спеціальний вказівник <span class="text-pink">this</span>.</p>
 
-        <p>Inside a non-static member function, this points to the object on which the function was called.</p>
+        <p>Усередині нестатичної функції-члена <code>this</code> вказує на об’єкт, для якого було викликано цю функцію.</p>
 
         <pre><code>#include &lt;iostream&gt;
 
@@ -498,38 +543,38 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>100</code></pre>
 
-        <p>In the constructor:</p>
+        <p>У конструкторі:</p>
 
         <ul class="plain-list">
-          <li>this-&gt;health — refers to the object's data member.</li>
-          <li>health — refers to the constructor parameter.</li>
+          <li><code>this-&gt;health</code> — звертається до поля об’єкта.</li>
+          <li><code>health</code> — звертається до параметра конструктора.</li>
         </ul>
 
-        <p>The -&gt; operator accesses a member through a pointer.</p>
+        <p>Оператор <code>-&gt;</code> дозволяє звертатися до члена об’єкта через вказівник.</p>
 
-        <p>You don't need to use this in every member function, but it's helpful when names overlap or when you explicitly need to refer to the current object.</p>
+        <p>Не обов’язково використовувати <code>this</code> у кожній функції-члені. Однак він корисний, коли назви збігаються або потрібно явно звернутися до поточного об’єкта.</p>
 
-        <p><strong>Remember:</strong> this provides access to the current object inside a non-static member function.</p>
+        <p><em>Пам’ятай: вказівник <code>this</code> надає доступ до поточного об’єкта всередині нестатичної функції-члена.</em></p>
 
 
-        <!-- SECTION 9 -->
 
-        <h2>9. Classes vs Structures</h2>
+        <h2>9. Класи та структури: у чому різниця?</h2>
 
-        <p>You already learned about struct in the previous lesson.</p>
+        <p>У попередньому уроці ти вже познайомився зі структурами <code>struct</code>.</p>
 
-        <p>Here's something interesting: classes and structures are very similar in C++!</p>
+        <p>І ось що цікаво: класи та структури в C++ дуже схожі!</p>
 
-        <p>Both can contain variables, member functions, constructors, destructors, and other members.</p>
+        <p>Обидва типи можуть містити змінні, функції-члени, конструктори, деструктори та інші елементи.</p>
 
-        <p>The main language differences involve default access and default inheritance access.</p>
+        <p>Основні відмінності між ними стосуються доступу до членів за замовчуванням і типу успадкування за замовчуванням.</p>
 
         <div class="table-wrap">
           <table class="data-table">
+
             <thead>
               <tr>
                 <th>class</th>
@@ -539,85 +584,122 @@ int main() {
 
             <tbody>
               <tr>
-                <td>Members are private by default</td>
-                <td>Members are public by default</td>
+                <td>Члени за замовчуванням є приватними</td>
+                <td>Члени за замовчуванням є публічними</td>
               </tr>
 
               <tr>
-                <td>Default inheritance is private</td>
-                <td>Default inheritance is public</td>
+                <td>Успадкування за замовчуванням є приватним</td>
+                <td>Успадкування за замовчуванням є публічним</td>
               </tr>
 
               <tr>
-                <td>Often used for encapsulated objects</td>
-                <td>Often used for simple data structures</td>
+                <td>Часто використовується для об’єктів з інкапсуляцією</td>
+                <td>Часто використовується для простих структур даних</td>
               </tr>
             </tbody>
+
           </table>
         </div>
 
-        <p>For example:</p>
+        <p>Наприклад:</p>
 
         <pre><code>struct Point {
     int x;
     int y;
 };</code></pre>
 
-        <p>The members of Point are public by default.</p>
+        <p>Поля структури <code>Point</code> за замовчуванням є публічними.</p>
 
-        <p>With a class:</p>
+        <p>А якщо використати клас:</p>
 
         <pre><code>class Point {
     int x;
     int y;
 };</code></pre>
 
-        <p>The members are private by default.</p>
+        <p>Його поля за замовчуванням будуть приватними.</p>
 
-        <p>In practice, developers often use struct for simple data containers and class for objects with controlled access to their internal state.</p>
+        <p>На практиці розробники часто використовують <code>struct</code> для простих контейнерів даних, а <code>class</code> — для об’єктів із контрольованим доступом до внутрішнього стану.</p>
 
-        <p><strong>Remember:</strong> Both class and struct support object-oriented programming. Choose based on how you want your type to be used.</p>
+        <p><em>Пам’ятай: і <code>class</code>, і <code>struct</code> підтримують об’єктно-орієнтоване програмування. Обирай відповідний варіант залежно від того, як плануєш використовувати свій тип даних.</em></p>
 
       </article>
 
     </main>
-</div>
-<footer class="footer">
-<img alt="" class="footer-pattern" src="../../images/rect.svg">
-<img alt="" class="footer-clouds" src="../../images/cloud.svg">
-<div class="footer-container">
-<div class="footer-top">
-<div class="footer-brand">DopoMode</div>
-<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
-</div>
-<div class="footer-middle">
-<div class="footer-contacts">
-<p>support@dopemode.dev</p>
-<p>@dopemode_support.com</p>
-</div>
-<div class="footer-socials">
-<a class="social-item" href="#">
-<img alt="" src="../../images/instagram 1.svg">
-<span>Instagram</span>
-</a>
-<a class="social-item" href="#">
-<img alt="" src="../../images/twitter-alt-circle 1.svg">
-<span>Twitter</span>
-</a>
-<a class="social-item" href="#">
-<img alt="" src="../../images/facebook (4) 1.svg">
-<span>Facebook</span>
-</a>
-</div>
-</div>
-<div class="footer-bottom">
-<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
-<div class="footer-links">
-<a href="about_1.html">Про нас</a>
-<a href="theory.html">Теорія</a>
-</div>
-</div>
-</div>
-</footer>
+
+  </div>
+
+
+
+  <footer class="footer">
+
+    <img
+      class="footer-pattern"
+      src="../../images/rect.svg"
+      alt=""
+    >
+
+    <img
+      class="footer-clouds"
+      src="../../images/cloud.svg"
+      alt=""
+    >
+
+    <div class="footer-container">
+
+      <div class="footer-top">
+        <div class="footer-brand">DopoMode</div>
+
+        <p class="footer-tagline">
+          Програмуй розумніше. Створюй більше. Опануй C++.
+        </p>
+      </div>
+
+      <div class="footer-middle">
+
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+
+          <a class="social-item" href="#">
+            <img src="../../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+
+          <a class="social-item" href="#">
+            <img src="../../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+
+          <a class="social-item" href="#">
+            <img src="../../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          © 2026 DopeMode. Усі права захищено.
+        </p>
+
+        <div class="footer-links">
+          <a href="about_1.html">Про нас</a>
+          <a href="theory.html">Теорія</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
 </body>
 </html>

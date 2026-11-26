@@ -1,133 +1,177 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>13 Просунуте ООП</title>
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Jersey+10&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Silkscreen:wght@700&amp;display=swap" rel="stylesheet">
-<link href="../../css/lang-btn.css" rel="stylesheet">
-<link href="../../css/theory4.css" rel="stylesheet">
-<link href="../../css/theory13.css" rel="stylesheet">
-<link href="../../css/ukr-fonts.css" rel="stylesheet">
-<link href="../../css/theme.css" rel="stylesheet">
-<link href="../../css/responsive.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>13 Поглиблене ООП</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+
+  <link href="../../css/lang-btn.css" rel="stylesheet">
+  <link href="../../css/theory4.css" rel="stylesheet">
+  <link href="../../css/theory13.css" rel="stylesheet">
+  <link href="../../css/ukr-fonts.css" rel="stylesheet">
+  <link href="../../css/theme.css" rel="stylesheet">
+  <link href="../../css/responsive.css" rel="stylesheet">
+
   <script src="../../js/lang.js"></script>
   <script src="../../js/search.js" defer></script>
 </head>
+
 <body>
-<header class="header">
-<div class="header-container">
-<div class="header-left">
-<a class="header-logo" href="main.html">DopoMode</a>
-<nav class="nav">
-<a class="nav-link" href="main.html">Головна</a>
-<a class="nav-link" href="about_1.html">Про нас</a>
-<a class="nav-link active" href="theory.html">Теорія</a>
-</nav>
-</div>
-<div class="header-user">
-<a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
-<a class="profile-link" href="profile.html">
-<span class="user-name">User67</span>
-<div class="user-avatar">
-<img alt="Профіль" src="../../images/icon.png">
-</div>
-</a>
-</div>
-</div>
-</header>
-<div class="page-container">
-<aside class="sidebar">
-<h2 class="sidebar-title">Курс C++</h2>
-<div class="menu-section">
-<span class="menu-label">ТЕОРІЯ</span>
-<a class="menu-item" href="theory.html">01 Основи C++</a>
-<a class="menu-item" href="theory2.html">02 Типи даних</a>
-<a class="menu-item" href="theory3.html">03 Оператори</a>
-<a class="menu-item" href="theory4.html">04 Умови</a>
-</div>
-<div class="menu-section">
-<span class="menu-label">ПРАКТИКА</span>
-<a class="menu-item" href="theory5.html">05 Базова практика</a>
-</div>
-<div class="menu-section">
-<span class="menu-label">ТЕОРІЯ</span>
-<a class="menu-item" href="theory6.html">06 Цикли</a>
-<a class="menu-item" href="theory7.html">07 Функції</a>
-<a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
-<a class="menu-item" href="theory9.html">09 Вказівники</a>
-</div>
-<div class="menu-section">
-<span class="menu-label">ПРАКТИКА</span>
-<a class="menu-item" href="theory10.html">10 Практика з кодом</a>
-</div>
-<div class="menu-section">
-<span class="menu-label">ТЕОРІЯ</span>
-<a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
-<a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
-<a class="menu-item active" href="theory13.html">13 Просунуте ООП</a>
-<a class="menu-item" href="theory14.html">14 STL і файли</a>
-</div>
-<div class="menu-section">
-<span class="menu-label">ФІНАЛ</span>
-<a class="menu-item" href="theory15.html">15 Проєкт</a>
-</div>
-</aside>
-<main class="content-area">
+
+  <header class="header">
+    <div class="header-container">
+
+      <div class="header-left">
+        <a class="header-logo" href="main.html">DopoMode</a>
+
+        <nav class="nav">
+          <a class="nav-link" href="main.html">Головна</a>
+          <a class="nav-link" href="about_1.html">Про нас</a>
+          <a class="nav-link active" href="theory.html">Теорія</a>
+        </nav>
+      </div>
+
+      <div class="header-user">
+        <a class="lang-btn" href="language.html" title="Змінити мову">UA</a>
+
+        <a class="profile-link" href="profile.html">
+          <span class="user-name">User67</span>
+
+          <div class="user-avatar">
+            <img src="../../images/icon.png" alt="Профіль">
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <div class="page-container">
+
+    <aside class="sidebar">
+
+      <h2 class="sidebar-title">Курс C++</h2>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory.html">01 Основи C++</a>
+        <a class="menu-item" href="theory2.html">02 Типи даних</a>
+        <a class="menu-item" href="theory3.html">03 Оператори</a>
+        <a class="menu-item" href="theory4.html">04 Умови</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+
+        <a class="menu-item" href="theory5.html">05 Базова практика</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory6.html">06 Цикли</a>
+        <a class="menu-item" href="theory7.html">07 Функції</a>
+        <a class="menu-item" href="theory8.html">08 Масиви та рядки</a>
+        <a class="menu-item" href="theory9.html">09 Вказівники</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ПРАКТИКА</span>
+
+        <a class="menu-item" href="theory10.html">10 Практика з кодом</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ТЕОРІЯ</span>
+
+        <a class="menu-item" href="theory11.html">11 Структури та перелічення</a>
+        <a class="menu-item" href="theory12.html">12 Класи та об’єкти</a>
+        <a
+          class="menu-item active"
+          href="theory13.html"
+          aria-current="page"
+        >13 Поглиблене ООП</a>
+        <a class="menu-item" href="theory14.html">14 STL і файли</a>
+      </div>
+
+      <div class="menu-section">
+        <span class="menu-label">ФІНАЛ</span>
+
+        <a class="menu-item" href="theory15.html">15 Проєкт</a>
+      </div>
+
+    </aside>
+
+
+    <main class="content-area">
 
       <div class="search-bar">
-        <div class="search-input-wrap">
-          <input type="text" placeholder="Enter keyword" class="search-input">
 
-          <svg class="search-icon" width="18" height="18"
-               viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="m21 21-4.35-4.35"/>
+        <div class="search-input-wrap">
+          <input
+            type="text"
+            placeholder="Введіть ключове слово"
+            class="search-input"
+          >
+
+          <svg
+            class="search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
           </svg>
         </div>
 
-        <button class="btn-search" type="button">SEARCH</button>
+        <button class="btn-search" type="button">ПОШУК</button>
+
       </div>
 
 
-      <!-- LESSON ARTICLE -->
-
       <article class="lesson-article">
 
-        <h1>13 — Advanced OOP</h1>
+        <h1>13 — Поглиблене ООП</h1>
 
-        <p>You've already learned how to create classes, work with objects, and protect data using encapsulation.</p>
+        <p>Ти вже навчився створювати класи, працювати з об’єктами та захищати дані за допомогою інкапсуляції.</p>
 
-        <p>But what happens when different classes need to share features or behave differently?</p>
+        <p>Але що робити, коли різні класи повинні мати спільні можливості або по-різному виконувати ті самі дії?</p>
 
-        <p>That's where Advanced Object-Oriented Programming (OOP) comes in!</p>
+        <p>Саме тут у пригоді стають складніші можливості <span class="text-pink">об’єктно-орієнтованого програмування (ООП)</span>!</p>
 
-        <p>In this lesson, you'll explore inheritance, polymorphism, virtual functions, abstract classes, and other tools that help developers build flexible C++ applications.</p>
+        <p>У цьому уроці ти познайомишся з успадкуванням, поліморфізмом, віртуальними функціями, абстрактними класами та іншими інструментами, які допомагають розробникам створювати гнучкі застосунки на C++.</p>
 
 
-        <!-- SECTION 1 -->
 
-        <h2>1. Inheritance</h2>
+        <h2>1. Успадкування</h2>
 
-        <p>Imagine you're creating a game with warriors, archers, and mages.</p>
+        <p>Уяви, що ти створюєш гру з воїнами, лучниками та магами.</p>
 
-        <p>All characters have common features, such as a name, but each character type has its own abilities.</p>
+        <p>Усі персонажі мають спільні характеристики, наприклад ім’я, але кожен тип персонажа володіє власними здібностями.</p>
 
-        <p>Instead of repeating the same code, we can use inheritance.</p>
+        <p>Замість того щоб повторювати однаковий код, можна використати <span class="text-pink">успадкування</span>.</p>
 
-        <p>Inheritance allows a new class to build on an existing class.</p>
+        <p>Успадкування дозволяє створювати новий клас на основі вже наявного.</p>
 
         <ul class="plain-list">
-          <li>Base class — provides common features.</li>
-          <li>Derived class — inherits those features and can add its own.</li>
+          <li>Базовий клас — надає спільні характеристики та поведінку.</li>
+          <li>Похідний клас — успадковує ці можливості та може додавати власні.</li>
         </ul>
 
-        <p>Let's create a warrior character.</p>
+        <p>Створімо персонажа-воїна.</p>
 
         <pre><code>#include &lt;iostream&gt;
 #include &lt;string&gt;
@@ -158,61 +202,60 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>I am Alex
 Warrior attacks!</code></pre>
 
-        <h3 class="lesson-subheading">How Does It Work?</h3>
+        <h3 class="lesson-subheading">Як це працює?</h3>
 
-        <p>The Warrior class inherits from Character using:</p>
+        <p>Клас <code>Warrior</code> успадковує клас <code>Character</code> за допомогою такого запису:</p>
 
         <pre><code>class Warrior : public Character</code></pre>
 
-        <p>This means Warrior can use the public features of Character while adding new ones.</p>
+        <p>Це означає, що <code>Warrior</code> може використовувати публічні можливості класу <code>Character</code> та водночас додавати власні.</p>
 
-        <p>Here, introduce() comes from the base class, while attack() belongs to Warrior.</p>
+        <p>У цьому прикладі функція <code>introduce()</code> успадкована від базового класу, а <code>attack()</code> належить класу <code>Warrior</code>.</p>
 
-        <p><strong>Remember:</strong> Inheritance helps you share behavior between related classes without duplicating code.</p>
+        <p><em>Пам’ятай: успадкування дозволяє використовувати спільну поведінку пов’язаних класів без дублювання коду.</em></p>
 
 
-        <!-- SECTION 2 -->
 
-        <h2>2. Types of Inheritance</h2>
+        <h2>2. Види успадкування</h2>
 
-        <p>C++ supports several forms of inheritance.</p>
+        <p>C++ підтримує кілька видів успадкування.</p>
 
         <div class="table-wrap">
           <table class="data-table">
             <thead>
               <tr>
-                <th>Type</th>
-                <th>Description</th>
+                <th>Вид</th>
+                <th>Опис</th>
               </tr>
             </thead>
 
             <tbody>
               <tr>
-                <td>Single</td>
-                <td>One class inherits from one base class</td>
+                <td>Одиничне</td>
+                <td>Один клас успадковує один базовий клас</td>
               </tr>
               <tr>
-                <td>Multilevel</td>
-                <td>A derived class becomes the base for another class</td>
+                <td>Багаторівневе</td>
+                <td>Похідний клас стає базовим для іншого класу</td>
               </tr>
               <tr>
-                <td>Multiple</td>
-                <td>A class inherits from several base classes</td>
+                <td>Множинне</td>
+                <td>Один клас успадковує кілька базових класів</td>
               </tr>
               <tr>
-                <td>Hierarchical</td>
-                <td>Several classes inherit from one base class</td>
+                <td>Ієрархічне</td>
+                <td>Кілька класів успадковують один базовий клас</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p>Let's look at hierarchical inheritance.</p>
+        <p>Розгляньмо приклад ієрархічного успадкування.</p>
 
         <pre><code>#include &lt;iostream&gt;
 
@@ -239,39 +282,38 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>Breathing...
 Breathing...</code></pre>
 
-        <p>Both Dog and Cat inherit the breathe() function from Animal.</p>
+        <p>І <code>Dog</code>, і <code>Cat</code> успадковують функцію <code>breathe()</code> від класу <code>Animal</code>.</p>
 
-        <h3 class="lesson-subheading">When Should You Use Inheritance?</h3>
+        <h3 class="lesson-subheading">Коли варто використовувати успадкування?</h3>
 
-        <p>Inheritance works best when classes have a meaningful "is-a" relationship.</p>
+        <p>Успадкування найкраще підходить тоді, коли між класами існує змістовний зв’язок типу «є різновидом».</p>
 
-        <p>For example:</p>
+        <p>Наприклад:</p>
 
-        <p>A dog is an animal.</p>
+        <p>Собака — це тварина.</p>
 
-        <p>A warrior is a character.</p>
+        <p>Воїн — це персонаж.</p>
 
-        <p>However, inheritance isn't always the best choice. Sometimes combining objects is simpler, as you'll discover later in this lesson.</p>
+        <p>Проте успадкування не завжди є найкращим рішенням. Іноді простіше поєднати кілька об’єктів. Про такий підхід ти дізнаєшся наприкінці уроку.</p>
 
 
-        <!-- SECTION 3 -->
 
-        <h2>3. Polymorphism</h2>
+        <h2>3. Поліморфізм</h2>
 
-        <p>Now imagine a game containing different animals.</p>
+        <p>Тепер уяви гру, у якій є різні тварини.</p>
 
-        <p>Every animal can make a sound, but dogs bark and cats meow.</p>
+        <p>Кожна тварина може видавати звуки, але собаки гавкають, а коти нявкають.</p>
 
-        <p>How can we call the same function and get different results?</p>
+        <p>Як викликати одну й ту саму функцію, але отримати різні результати?</p>
 
-        <p>We use polymorphism!</p>
+        <p>Для цього існує <span class="text-pink">поліморфізм</span>!</p>
 
-        <p>Polymorphism allows different object types to respond differently to the same operation.</p>
+        <p>Поліморфізм дозволяє об’єктам різних типів по-різному реагувати на ту саму операцію.</p>
 
         <pre><code>#include &lt;iostream&gt;
 
@@ -311,33 +353,32 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>Woof!
 Meow!</code></pre>
 
-        <h3 class="lesson-subheading">Why Does This Work?</h3>
+        <h3 class="lesson-subheading">Чому це працює?</h3>
 
-        <p>Both objects are accessed through pointers of type Animal*.</p>
+        <p>Доступ до обох об’єктів здійснюється через вказівники типу <code>Animal*</code>.</p>
 
-        <p>However, because makeSound() is virtual, C++ calls the version belonging to the actual object.</p>
+        <p>Однак оскільки функція <code>makeSound()</code> є віртуальною, C++ викликає її версію, яка відповідає фактичному типу об’єкта.</p>
 
-        <p>The dog barks, and the cat meows.</p>
+        <p>Тому собака гавкає, а кіт нявкає.</p>
 
-        <p>This behavior is called runtime polymorphism.</p>
+        <p>Така поведінка називається <span class="text-pink">поліморфізмом часу виконання</span>.</p>
 
-        <p><strong>Remember:</strong> Polymorphism allows you to use a common interface while different objects provide their own behavior.</p>
+        <p><em>Пам’ятай: поліморфізм дозволяє використовувати спільний інтерфейс, водночас кожен тип об’єкта може реалізовувати власну поведінку.</em></p>
 
 
-        <!-- SECTION 4 -->
 
-        <h2>4. Virtual Functions</h2>
+        <h2>4. Віртуальні функції</h2>
 
-        <p>Virtual functions make runtime polymorphism possible.</p>
+        <p><span class="text-pink">Віртуальні функції</span> забезпечують поліморфізм часу виконання.</p>
 
-        <p>A virtual function is a member function that derived classes can override to provide their own behavior.</p>
+        <p>Віртуальна функція — це функція-член базового класу, яку похідні класи можуть перевизначати, щоб реалізувати власну поведінку.</p>
 
-        <p>We declare one using the virtual keyword.</p>
+        <p>Для її оголошення використовують ключове слово <code>virtual</code>.</p>
 
         <pre><code>#include &lt;iostream&gt;
 
@@ -366,37 +407,36 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>Car engine starts</code></pre>
 
-        <h3 class="lesson-subheading">What Do virtual and override Mean?</h3>
+        <h3 class="lesson-subheading">Що означають virtual та override?</h3>
 
         <ul class="plain-list">
-          <li>virtual — allows derived classes to customize behavior that is selected at runtime through a base-class pointer or reference.</li>
-          <li>override — tells the compiler that a derived function is intended to override an inherited virtual function.</li>
+          <li><code>virtual</code> — дозволяє похідним класам перевизначати поведінку, яку буде вибрано під час виконання програми через вказівник або посилання на базовий клас.</li>
+          <li><code>override</code> — повідомляє компілятору, що функція похідного класу має перевизначати успадковану віртуальну функцію.</li>
         </ul>
 
-        <p>The override keyword is especially useful because the compiler can detect mistakes in function names or parameter types.</p>
+        <p>Ключове слово <code>override</code> особливо корисне, оскільки компілятор може виявляти помилки в назвах функцій або типах їхніх параметрів.</p>
 
-        <p>Notice the virtual destructor in the base class:</p>
+        <p>Зверни увагу на віртуальний деструктор базового класу:</p>
 
         <pre><code>virtual ~Vehicle() = default;</code></pre>
 
-        <p>This is an important practice for polymorphic base classes, especially when derived objects might be destroyed through base-class pointers.</p>
+        <p>Це важлива практика для поліморфних базових класів, особливо якщо об’єкти похідних класів можуть знищуватися через вказівники на базовий клас.</p>
 
-        <p><strong>Remember:</strong> Virtual functions allow the correct derived-class behavior to be selected when working through base-class pointers or references.</p>
+        <p><em>Пам’ятай: віртуальні функції дозволяють викликати відповідну реалізацію похідного класу під час роботи через вказівники або посилання на базовий клас.</em></p>
 
 
-        <!-- SECTION 5 -->
 
-        <h2>5. Abstract Classes</h2>
+        <h2>5. Абстрактні класи</h2>
 
-        <p>Sometimes we want a class to define what its derived classes must do without providing every implementation.</p>
+        <p>Іноді нам потрібно, щоб клас визначав, які дії повинні виконувати його похідні класи, але не надавав реалізацію кожної з цих дій.</p>
 
-        <p>For example, every shape should be able to calculate its area, but rectangles and circles use different formulas.</p>
+        <p>Наприклад, кожна геометрична фігура повинна вміти обчислювати свою площу, але прямокутник і коло використовують різні формули.</p>
 
-        <p>An abstract class helps us define this common requirement.</p>
+        <p>Таку спільну вимогу можна визначити за допомогою <span class="text-pink">абстрактного класу</span>.</p>
 
         <pre><code>#include &lt;iostream&gt;
 
@@ -430,36 +470,35 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>15</code></pre>
 
-        <h3 class="lesson-subheading">What Makes a Class Abstract?</h3>
+        <h3 class="lesson-subheading">Що робить клас абстрактним?</h3>
 
-        <p>Look at this line:</p>
+        <p>Зверни увагу на цей рядок:</p>
 
         <pre><code>virtual double area() const = 0;</code></pre>
 
-        <p>The = 0 makes area() a pure virtual function.</p>
+        <p>Запис <code>= 0</code> робить <code>area()</code> <span class="text-pink">чистою віртуальною функцією</span>.</p>
 
-        <p>Because Shape contains a pure virtual function, we cannot create a Shape object directly.</p>
+        <p>Оскільки клас <code>Shape</code> містить чисту віртуальну функцію, ми не можемо безпосередньо створити об’єкт типу <code>Shape</code>.</p>
 
-        <p>The Rectangle class provides an implementation of area(), making it possible to create rectangle objects.</p>
+        <p>Клас <code>Rectangle</code> надає реалізацію функції <code>area()</code>, тому можна створювати об’єкти прямокутників.</p>
 
-        <p><strong>Remember:</strong> Abstract classes define common interfaces that concrete derived classes can implement.</p>
+        <p><em>Пам’ятай: абстрактні класи визначають спільні інтерфейси, які можуть реалізовувати конкретні похідні класи.</em></p>
 
 
-        <!-- SECTION 6 -->
 
-        <h2>6. Operator Overloading</h2>
+        <h2>6. Перевантаження операторів</h2>
 
-        <p>You've already used operators such as +, -, and ==.</p>
+        <p>Ти вже використовував оператори <code>+</code>, <code>-</code> та <code>==</code>.</p>
 
-        <p>But what if you create your own class and want those operators to work with its objects?</p>
+        <p>Але що робити, якщо ти створив власний клас і хочеш, щоб ці оператори працювали з його об’єктами?</p>
 
-        <p>C++ allows you to define how existing operators behave with custom types. This is called operator overloading.</p>
+        <p>C++ дозволяє визначати поведінку наявних операторів для власних типів даних. Це називається <span class="text-pink">перевантаженням операторів</span>.</p>
 
-        <p>Let's create a class representing a point in two-dimensional space.</p>
+        <p>Створімо клас, який представляє точку у двовимірному просторі.</p>
 
         <pre><code>#include &lt;iostream&gt;
 
@@ -489,44 +528,43 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>6, 8</code></pre>
 
-        <h3 class="lesson-subheading">How Does It Work?</h3>
+        <h3 class="lesson-subheading">Як це працює?</h3>
 
-        <p>The function:</p>
+        <p>Функція:</p>
 
         <pre><code>Point operator+(const Point&amp; other) const</code></pre>
 
-        <p>defines how two Point objects are added.</p>
+        <p>визначає, як додавати два об’єкти типу <code>Point</code>.</p>
 
-        <p>It creates a new point by adding their coordinates.</p>
+        <p>Вона створює нову точку, додаючи відповідні координати двох точок.</p>
 
-        <p>So this:</p>
+        <p>Тому цей запис:</p>
 
         <pre><code>Point result = p1 + p2;</code></pre>
 
-        <p>works much like addition with ordinary numbers.</p>
+        <p>працює подібно до звичайного додавання чисел.</p>
 
-        <p>Operator overloading can make your classes more convenient, but the meaning of an operator should remain clear and predictable.</p>
+        <p>Перевантаження операторів може зробити використання власних класів зручнішим, але значення оператора має залишатися зрозумілим і передбачуваним.</p>
 
-        <p><strong>Remember:</strong> Operator overloading lets custom types work naturally with existing C++ operators.</p>
+        <p><em>Пам’ятай: перевантаження операторів дозволяє власним типам даних природно працювати з наявними операторами C++.</em></p>
 
 
-        <!-- SECTION 7 -->
 
-        <h2>7. Composition vs Inheritance</h2>
+        <h2>7. Композиція та успадкування</h2>
 
-        <p>Not every relationship between classes should use inheritance.</p>
+        <p>Не кожен зв’язок між класами варто реалізовувати через успадкування.</p>
 
-        <p>Imagine a car and its engine.</p>
+        <p>Уяви автомобіль і його двигун.</p>
 
-        <p>A car has an engine, but a car is not an engine.</p>
+        <p>Автомобіль має двигун, але автомобіль не є двигуном.</p>
 
-        <p>This relationship is better represented using composition.</p>
+        <p>Такий зв’язок краще представляти за допомогою <span class="text-pink">композиції</span>.</p>
 
-        <p>Composition means building a class using objects of other classes.</p>
+        <p>Композиція означає створення класу, який містить об’єкти інших класів.</p>
 
         <pre><code>#include &lt;iostream&gt;
 
@@ -555,84 +593,122 @@ int main() {
     return 0;
 }</code></pre>
 
-        <p class="output-label">Output:</p>
+        <p class="output-label">Вивід:</p>
 
         <pre class="output"><code>Engine started!</code></pre>
 
-        <p>The Car class contains an Engine object and uses its functionality.</p>
+        <p>Клас <code>Car</code> містить об’єкт <code>Engine</code> і використовує його функціональність.</p>
 
-        <h3 class="lesson-subheading">What's the Difference?</h3>
+        <h3 class="lesson-subheading">У чому різниця?</h3>
 
         <div class="table-wrap">
           <table class="data-table comparison-table">
             <thead>
               <tr>
-                <th>Inheritance</th>
-                <th>Composition</th>
+                <th>Успадкування</th>
+                <th>Композиція</th>
               </tr>
             </thead>
 
             <tbody>
               <tr>
-                <td>Represents an "is-a" relationship</td>
-                <td>Represents a "has-a" relationship</td>
+                <td>Представляє зв’язок «є різновидом»</td>
+                <td>Представляє зв’язок «має у своєму складі»</td>
               </tr>
+
               <tr>
-                <td>Builds on a base class</td>
-                <td>Combines objects</td>
+                <td>Створює новий клас на основі базового</td>
+                <td>Поєднує об’єкти різних класів</td>
               </tr>
+
               <tr>
-                <td>Shares an inherited interface or behavior</td>
-                <td>Uses contained objects to provide functionality</td>
+                <td>Використовує успадкований інтерфейс або поведінку</td>
+                <td>Використовує функціональність об’єктів, які входять до складу класу</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p>Both approaches are useful, but composition is often more flexible when classes don't have a genuine inheritance relationship.</p>
+        <p>Обидва підходи корисні, але композиція часто є гнучкішою, коли між класами немає справжнього зв’язку успадкування.</p>
 
-        <p><strong>Remember:</strong> Use inheritance for meaningful type relationships and composition when one object contains another.</p>
+        <p><em>Пам’ятай: використовуй успадкування для змістовних зв’язків між типами, а композицію — коли один об’єкт містить інший.</em></p>
 
       </article>
 
     </main>
-</div>
-<footer class="footer">
-<img alt="" class="footer-pattern" src="../../images/rect.svg">
-<img alt="" class="footer-clouds" src="../../images/cloud.svg">
-<div class="footer-container">
-<div class="footer-top">
-<div class="footer-brand">DopoMode</div>
-<p class="footer-tagline">Програмуй розумніше. Створюй більше. Опануй C++.</p>
-</div>
-<div class="footer-middle">
-<div class="footer-contacts">
-<p>support@dopemode.dev</p>
-<p>@dopemode_support.com</p>
-</div>
-<div class="footer-socials">
-<a class="social-item" href="#">
-<img alt="" src="../../images/instagram 1.svg">
-<span>Instagram</span>
-</a>
-<a class="social-item" href="#">
-<img alt="" src="../../images/twitter-alt-circle 1.svg">
-<span>Twitter</span>
-</a>
-<a class="social-item" href="#">
-<img alt="" src="../../images/facebook (4) 1.svg">
-<span>Facebook</span>
-</a>
-</div>
-</div>
-<div class="footer-bottom">
-<p class="copyright">© 2026 DopeMode. Усі права захищено.</p>
-<div class="footer-links">
-<a href="about_1.html">Про нас</a>
-<a href="theory.html">Теорія</a>
-</div>
-</div>
-</div>
-</footer>
+
+  </div>
+
+
+
+  <footer class="footer">
+
+    <img
+      class="footer-pattern"
+      src="../../images/rect.svg"
+      alt=""
+    >
+
+    <img
+      class="footer-clouds"
+      src="../../images/cloud.svg"
+      alt=""
+    >
+
+    <div class="footer-container">
+
+      <div class="footer-top">
+        <div class="footer-brand">DopoMode</div>
+
+        <p class="footer-tagline">
+          Програмуй розумніше. Створюй більше. Опануй C++.
+        </p>
+      </div>
+
+      <div class="footer-middle">
+
+        <div class="footer-contacts">
+          <p>support@dopemode.dev</p>
+          <p>@dopemode_support.com</p>
+        </div>
+
+        <div class="footer-socials">
+
+          <a class="social-item" href="#">
+            <img src="../../images/instagram 1.svg" alt="">
+            <span>Instagram</span>
+          </a>
+
+          <a class="social-item" href="#">
+            <img src="../../images/twitter-alt-circle 1.svg" alt="">
+            <span>Twitter</span>
+          </a>
+
+          <a class="social-item" href="#">
+            <img src="../../images/facebook (4) 1.svg" alt="">
+            <span>Facebook</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          © 2026 DopeMode. Усі права захищено.
+        </p>
+
+        <div class="footer-links">
+          <a href="about_1.html">Про нас</a>
+          <a href="theory.html">Теорія</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
 </body>
 </html>

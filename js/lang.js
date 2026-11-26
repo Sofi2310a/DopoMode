@@ -65,6 +65,18 @@
 
   let authed = (getItem('dopomode-auth') === '1');
 
+  if (!authed && file === 'profile.html') {
+    location.replace('log_in.html');
+    return;
+  }
+  if (!authed && (file === 'main.html' || file === 'about_1.html')) {
+    location.replace(file === 'main.html' ? '../index.html' : 'about.html');
+    return;
+  }
+  if (authed && file === 'about.html') {
+    location.replace('about_1.html');
+    return;
+  }
   if (authed && isLangIndex) {
     location.replace(base + 'main.html');
     return;
@@ -115,6 +127,11 @@
   function openLangFolder(chosenLang, event) {
     let targetFolder = (chosenLang === 'ukr') ? 'ukr' : 'eng';
     let homeUrl = getHomePage(targetFolder);
+    const last = getItem('dopomode-last');
+    if (last && /^(?:about(?:_1)?|main|profile|log_in|sign_in|forget_pass|theory(?:[2-9]|1[0-5])?)\.html$/.test(last)) {
+      // Resolve from the language folder regardless of authentication state.
+      homeUrl = new URL('../../' + targetFolder + '/pages/' + last, location.href).href;
+    }
 
     if (event) {
       event.preventDefault();
@@ -160,14 +177,11 @@
       });
     }
 
-    if (file === 'log_in.html' || file === 'sign_in.html') {
-      document.addEventListener('click', function (e) {
-        if (e.target.closest('.blue-btn, .submit-btn')) {
-          window.DopoAuth.login();
-        }
-      });
-      document.addEventListener('submit', function () {
-        window.DopoAuth.login();
+    if (['log_in.html', 'sign_in.html', 'forget_pass.html'].includes(file)) {
+      document.addEventListener('submit', function (e) {
+        e.preventDefault();
+        window.DopoAuth.login(); // Local demo state only, not authentication.
+        location.href = 'main.html';
       });
     }
 
@@ -178,6 +192,28 @@
         window.DopoAuth.logout();
         location.href = out.getAttribute('href');
       });
+    }
+
+    if (!authed) {
+      const header = document.querySelector('header');
+      if (header) {
+        header.querySelectorAll('.profile-link').forEach(function (profile) {
+          const login = document.createElement('a');
+          login.className = 'btn-login guest-auth';
+          login.href = base + 'log_in.html';
+          login.textContent = isUkr ? 'Увійти' : 'Log in';
+          const signup = document.createElement('a');
+          signup.className = 'btn-signin guest-auth';
+          signup.href = base + 'sign_in.html';
+          signup.textContent = isUkr ? 'Реєстрація' : 'Sign in';
+          profile.replaceWith(login, signup);
+        });
+        header.querySelectorAll('nav a, a.logo, a.header-logo').forEach(function (link) {
+          const href = link.getAttribute('href');
+          if (href === 'main.html') link.href = '../index.html';
+          if (href === 'about_1.html') link.href = 'about.html';
+        });
+      }
     }
 
     if (authed) {
@@ -204,7 +240,12 @@
           if (inPages) {
             imgPath = '../../images/user.png';
           }
-          chip.innerHTML = '<img alt="" src="' + imgPath + '"><span>User67</span>';
+          const img = document.createElement('img');
+          img.alt = '';
+          img.src = imgPath;
+          const label = document.createElement('span');
+          label.textContent = 'User67';
+          chip.append(label, img);
 
           let targetEl = loginBtn || signinBtn;
           targetEl.parentNode.insertBefore(chip, targetEl);

@@ -68,6 +68,7 @@ int main() {
     async function runWandbox(code, std) {
       const res = await fetch('https://wandbox.org/api/compile.json', {
         method: 'POST',
+        signal: AbortSignal.timeout(20000),
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           compiler: 'gcc-head',
@@ -78,18 +79,20 @@ int main() {
       });
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const d = await res.json();
-      if (d.compiler_error && d.status !== '0' && !d.program_output) {
+      if (d.compiler_error && String(d.status) !== '0' && !d.program_output) {
         return { text: d.compiler_error, ok: false };
       }
       let text = (d.program_output || '') + (d.program_error ? '\n' + d.program_error : '');
-      if (d.compiler_error && d.status !== '0') text = d.compiler_error + '\n' + text;
-      if (!text.trim()) text = T.noOutput;
-      return { text: text, ok: d.status === '0' };
+      if (d.compiler_error && String(d.status) !== '0') text = d.compiler_error + '\n' + text;
+      if (d.signal) text += '\n' + d.signal;
+      if (!text.trim()) text = String(d.status) === '0' ? T.noOutput : T.failed;
+      return { text: text, ok: String(d.status) === '0' };
     }
 
     async function runGodbolt(code, std) {
       const res = await fetch('https://godbolt.org/api/compiler/g142/compile', {
         method: 'POST',
+        signal: AbortSignal.timeout(20000),
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
           source: code,
@@ -128,9 +131,11 @@ int main() {
       }
 
       async function run() {
+      if (runBtn.disabled) return;
         const code = codeEl.value;
         const std = stdSelect.value;
         runBtn.disabled = true;
+      resetBtn.disabled = true;
         runBtn.textContent = T.running;
         show(T.compiling);
         try {
@@ -142,6 +147,7 @@ int main() {
           show(T.noServer, 'err');
         } finally {
           runBtn.disabled = false;
+        resetBtn.disabled = false;
           runBtn.textContent = T.run;
         }
       }
